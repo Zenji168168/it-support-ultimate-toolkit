@@ -1,0 +1,17 @@
+﻿# Binaries built during packaging
+*.download
+*.tmp
+*.bak
+*.old
+
+# Node modules
+node_modules/
+
+# Edge profile data
+Profile/
+
+# Temporary files
+scratch/
+.vs/
+bin/
+obj/

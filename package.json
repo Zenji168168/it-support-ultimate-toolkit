@@ -1,0 +1,31 @@
+{
+  "name": "it-support-ultimate-toolkit",
+  "version": "3.6.0",
+  "description": "IT Support Ultimate Toolkit Desktop Edition by MeukTHAREACH",
+  "main": "main.js",
+  "scripts": {
+    "start": "node server.js",
+    "desktop": "electron .",
+    "build:exe": "electron-builder --win portable"
+  },
+  "build": {
+    "appId": "com.meukthareach.ittoolkit",
+    "productName": "IT Support Ultimate Toolkit",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": ["portable", "nsis"]
+    }
+  },
+  "keywords": [
+    "it-support",
+    "network-tools",
+    "sysadmin",
+    "windows",
+    "linux",
+    "cisco"
+  ],
+  "author": "MeukTHAREACH",
+  "license": "MIT"
+}
