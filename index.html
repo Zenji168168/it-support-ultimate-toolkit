@@ -1220,7 +1220,7 @@
                 <div class="sys-badge" style="display:inline-flex; align-items:center; gap:8px;">
                     <img src="app-icon.png" alt="App Icon" style="width:18px; height:18px; object-fit:contain; border-radius:4px; vertical-align:middle;">
                     <span class="status-dot"></span>
-                    <span id="txtDeskStatus">74 Pro IT & CCTV Tools Ready</span>
+                    <span id="txtDeskStatus">96 Pro IT & CCTV Tools Ready</span>
                 </div>
             </div>
 
@@ -1314,10 +1314,13 @@
             <div class="quick-access-bar" id="quickAccessStrip">
                 <div class="quick-access-header">
                     <span style="display:inline-flex; align-items:center; gap:6px;">⚡ <span id="txtQuickAccessTitle">Frontline IT Quick Access (1-Click Launch)</span></span>
-                    <span style="font-size:11.5px; opacity:0.8;">74 Pro Utilities Ready</span>
+                    <span style="font-size:11.5px; opacity:0.8;">96 Pro Utilities Ready</span>
                 </div>
                 <div class="quick-access-pills">
                     <button type="button" class="quick-pill" onclick="jumpToTool('network', 'subnet')">🧮 Subnet Calculator</button>
+                    <button type="button" class="quick-pill" onclick="jumpToTool('network', 'dhcpOptions')">⚡ DHCP Options</button>
+                    <button type="button" class="quick-pill" onclick="jumpToTool('windows', 'm365Powershell')">☁️ M365 CLI</button>
+                    <button type="button" class="quick-pill" onclick="jumpToTool('devices', 'ciscoAcl')">🧱 Cisco ACL</button>
                     <button type="button" class="quick-pill" onclick="jumpToTool('devices', 'genVlanTrunk')">⚡ VLAN & Trunk Gen</button>
                     <button type="button" class="quick-pill" onclick="jumpToTool('devices', 'vpnMatcher')">🔐 Dual IPsec VPN</button>
                     <button type="button" class="quick-pill" onclick="jumpToTool('devices', 'natForwardGen')">🔀 NAT & Port Forward</button>
@@ -1426,6 +1429,9 @@
                     <button class="tab-btn" onclick="showTool('portLookup', this)">Port Lookup (85+)</button>
                     <button class="tab-btn" onclick="showTool('raidCalc', this)">RAID Capacity Calc</button>
                     <button class="tab-btn" onclick="showTool('wifiPlanner', this)">Wi-Fi RF & Channel Planner</button>
+                    <button class="tab-btn" onclick="showTool('dhcpOptions', this)" style="color:var(--primary); font-weight:700;">⚡ DHCP Options (43/66/150)</button>
+                    <button class="tab-btn" onclick="showTool('qosDscp', this)">QoS DSCP & CoS Matrix</button>
+                    <button class="tab-btn" onclick="showTool('bgpOspfGen', this)">OSPF & BGP Routing CLI</button>
                 </div>
 
                 <!-- Windows Tabs -->
@@ -1438,6 +1444,10 @@
                     <button class="tab-btn" onclick="showTool('printerFix', this)">Printer & Spooler Auto-Fix</button>
                     <button class="tab-btn" onclick="showTool('hwDiag', this)">Battery & Hardware Health</button>
                     <button class="tab-btn" onclick="showTool('robocopyGen', this)">Robocopy Backup Builder</button>
+                    <button class="tab-btn" onclick="showTool('m365Powershell', this)" style="color:var(--primary); font-weight:700;">☁️ M365 & Exchange CLI</button>
+                    <button class="tab-btn" onclick="showTool('bitlockerTpm', this)">🔐 BitLocker & TPM Rescue</button>
+                    <button class="tab-btn" onclick="showTool('adDisaster', this)">🛡️ AD FSMO & DC Health</button>
+                    <button class="tab-btn" onclick="showTool('winNetReset', this)">🔄 Network Stack Reset</button>
                 </div>
 
                 <!-- Linux Tabs -->
@@ -1447,6 +1457,9 @@
                     <button class="tab-btn" onclick="showTool('chmod', this)">CHMOD Calc</button>
                     <button class="tab-btn" onclick="showTool('cronJob', this)">Cron Generator</button>
                     <button class="tab-btn" onclick="showTool('textCompare', this)">Config Diff Compare</button>
+                    <button class="tab-btn" onclick="showTool('esxiProxmox', this)" style="color:var(--primary); font-weight:700;">🖥️ ESXi & Proxmox Toolkit</button>
+                    <button class="tab-btn" onclick="showTool('dockerCompose', this)">🐳 Docker Compose Gen</button>
+                    <button class="tab-btn" onclick="showTool('sslOpenSsl', this)">🔒 OpenSSL Cert & CSR</button>
                 </div>
 
                 <!-- Coding Tabs -->
@@ -1472,6 +1485,9 @@
                     <button class="tab-btn" onclick="showTool('cctvTroubleshoot', this)">Troubleshooting & Reset</button>
                     <button class="tab-btn" onclick="showTool('cctvPoe', this)">PoE Power & Distance</button>
                     <button class="tab-btn" onclick="showTool('cctvRemote', this)">Remote & Port Forwarding</button>
+                    <button class="tab-btn" onclick="showTool('cctvLensCalc', this)" style="color:var(--primary); font-weight:700;">📐 Lens Focal & DORI Calc</button>
+                    <button class="tab-btn" onclick="showTool('cctvDualNic', this)">🔀 NVR Dual-NIC Topology</button>
+                    <button class="tab-btn" onclick="showTool('cctvAccessControl', this)">🚪 Access Control & Wiegand</button>
                 </div>
 
                 <!-- 6. Enterprise Device Configuration Tabs -->
@@ -1489,6 +1505,9 @@
                     <button class="tab-btn" onclick="showTool('vpnMatcher', this)" style="color:var(--secondary); font-weight:700;">🔐 IPsec VPN Matcher</button>
                     <button class="tab-btn" onclick="showTool('natForwardGen', this)">🔀 NAT & Port Forward</button>
                     <button class="tab-btn" onclick="showTool('credDb', this)">🔑 Default Passwords DB</button>
+                    <button class="tab-btn" onclick="showTool('fortiVdom', this)">🛡️ FortiGate VDOM CLI</button>
+                    <button class="tab-btn" onclick="showTool('ciscoAcl', this)">🧱 Cisco ACL Builder</button>
+                    <button class="tab-btn" onclick="showTool('upsRuntime', this)">🔋 UPS Battery & Load Calc</button>
                 </div>
 
                 <!-- 7. IT Troubleshooting & Knowledge Base Tabs -->
@@ -1508,6 +1527,12 @@
                     <button class="tab-btn" onclick="showTool('interactiveTroubleshoot', this)" style="color:var(--danger); font-weight:700;">🧙‍♂️ Interactive SOP Wizard</button>
                     <button class="tab-btn" onclick="showTool('errorDecoder', this)" style="color:var(--primary); font-weight:700;">🔍 Syslog & Error Decoder</button>
                     <button class="tab-btn" onclick="showTool('quickCheatSheets', this)">📋 Emergency Cheat Sheets</button>
+                    <button class="tab-btn" onclick="showTool('docRansomwareResponse', this)" style="color:var(--danger); font-weight:700;">☣️ Ransomware Response SOP</button>
+                    <button class="tab-btn" onclick="showTool('docBackupDisaster', this)">💾 Disaster Recovery 3-2-1</button>
+                    <button class="tab-btn" onclick="showTool('docOfficeRelocation', this)">🏢 Office Move IT Checklist</button>
+                    <button class="tab-btn" onclick="showTool('docOnboarding', this)">👥 Onboard & Offboarding SOP</button>
+                    <button class="tab-btn" onclick="showTool('docVoipTroubleshoot', this)">📞 VoIP & SIP Audio SOP</button>
+                    <button class="tab-btn" onclick="showTool('docThermalDatacenter', this)">🌡️ Datacenter Thermal SOP</button>
                 </div>
             </div>
 
@@ -3995,8 +4020,944 @@ Write-Host "SMB Sharing Configuration Repaired!" -ForegroundColor Green</textare
                 </div>
             </div>
 
+            
+            <!-- =================================================================== -->
+            <!-- 1.17 DHCP OPTIONS (43, 60, 66, 150) HEX GENERATOR (dhcpOptions) -->
+            <!-- =================================================================== -->
+            <div id="dhcpOptions" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-primary">Network Protocol</span>
+                    <span class="badge badge-success">AP & VoIP Provisioning</span>
+                </div>
+                <h3>⚡ DHCP Options 43, 60, 66 & 150 Hex Generator</h3>
+                <p class="tool-desc-text">បង្កើតកូដ Hex សម្រាប់ DHCP Option 43 (ស្វែងរក IP Controller សម្រាប់ Cisco WLC, Ruijie Cloud, FortiAP, UniFi) និង Option 66/150 សម្រាប់ Auto-Provisioning ទូរស័ព្ទ IP Phone (VoIP/TFTP)។</p>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px;">
+                    <div>
+                        <label>ជ្រើសរើសប្រភេទឧបករណ៍ (Device & Option Type):</label>
+                        <select id="dhcpVendorType" onchange="calcDhcpOptions()">
+                            <option value="cisco_wlc">Cisco WLC (Option 43 - Sub-option 0xF1)</option>
+                            <option value="ruijie_ap">Ruijie / Reyee MACC Cloud (Option 138 / 43)</option>
+                            <option value="fortiap">Fortinet FortiAP Controller (Option 138 / 43)</option>
+                            <option value="unifi">Ubiquiti UniFi AP (Option 43 - Sub-option 0x01)</option>
+                            <option value="voip_tftp">VoIP IP Phone TFTP Server (Option 150 / 66)</option>
+                            <option value="generic_hex">Generic IP to Hex String</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>IP Address Controller / Server (បញ្ចូល IP មួយ ឬច្រើនខណ្ឌដោយក្បៀស):</label>
+                        <input type="text" id="dhcpIpInput" value="192.168.10.50" placeholder="ឧ. 192.168.10.50 ឬ 192.168.10.50, 192.168.10.51" oninput="calcDhcpOptions()">
+                    </div>
+                </div>
+
+                <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); border-radius:10px; padding:12px; margin-bottom:12px;">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+                        <strong style="color:var(--primary); font-size:13px;">🔑 Calculated Hex String:</strong>
+                        <span id="dhcpHexLen" style="font-size:11px; color:var(--text-muted);">Length: 6 Bytes</span>
+                    </div>
+                    <div class="input-with-copy">
+                        <input type="text" id="dhcpHexResult" readonly style="font-weight:700; color:var(--success); font-family:monospace; font-size:13.5px;">
+                        <button class="copy-btn" onclick="copyField('dhcpHexResult')">Copy Hex</button>
+                    </div>
+                </div>
+
+                <label>Cisco IOS Switch / Router DHCP Config:</label>
+                <div class="input-with-copy" style="margin-bottom:10px;">
+                    <textarea id="dhcpCiscoCli" readonly rows="3" style="font-family:monospace; font-size:12px; resize:none;"></textarea>
+                    <button class="copy-btn" onclick="copyField('dhcpCiscoCli')">Copy</button>
+                </div>
+
+                <label>MikroTik RouterOS DHCP Option Config:</label>
+                <div class="input-with-copy" style="margin-bottom:10px;">
+                    <textarea id="dhcpMikrotikCli" readonly rows="2" style="font-family:monospace; font-size:12px; resize:none;"></textarea>
+                    <button class="copy-btn" onclick="copyField('dhcpMikrotikCli')">Copy</button>
+                </div>
+
+                <label>Windows Server DHCP (netsh / PowerShell CLI):</label>
+                <div class="input-with-copy">
+                    <textarea id="dhcpWinCli" readonly rows="2" style="font-family:monospace; font-size:12px; resize:none;"></textarea>
+                    <button class="copy-btn" onclick="copyField('dhcpWinCli')">Copy</button>
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 1.18 QOS DSCP & COS 802.1P PRIORITY MATRIX (qosDscp) -->
+            <!-- =================================================================== -->
+            <div id="qosDscp" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-warning">Network Quality</span>
+                    <span class="badge badge-primary">VoIP & Traffic Prioritization</span>
+                </div>
+                <h3>📊 QoS DSCP & CoS 802.1p Priority Matrix & Queue Builder</h3>
+                <p class="tool-desc-text">ផ្ទៀងផ្ទាត់កម្រិតអាទិភាព DSCP (L3) និង CoS 802.1p (L2) សម្រាប់កំណត់អទិភាពលើ Traffic សំខាន់ៗដូចជា Voice/VoIP, Zoom/Teams, Video Streaming និងបង្កើត Script MQC Cisco & MikroTik Queue។</p>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px;">
+                    <div>
+                        <label>ជ្រើសរើសកម្មវិធី ឬកម្រិត Service (Traffic Class):</label>
+                        <select id="qosClassSelect" onchange="calcQosDscp()">
+                            <option value="EF">VoIP Audio (RTP Stream) • EF (Expedited Forwarding - DSCP 46)</option>
+                            <option value="CS3">VoIP Call Signaling (SIP/H.323) • CS3 / AF31 (DSCP 24/26)</option>
+                            <option value="AF41">Interactive Video (Zoom, Teams, Meet) • AF41 (DSCP 34)</option>
+                            <option value="AF31">Streaming Video (CCTV / RTSP / YouTube) • AF31 (DSCP 26)</option>
+                            <option value="AF21">High-Priority Business Data (ERP/Database) • AF21 (DSCP 18)</option>
+                            <option value="CS0">Standard Web & General Data • Best Effort (CS0 - DSCP 0)</option>
+                            <option value="CS1">Bulk Downloads & Background • Scavenger (CS1 - DSCP 8)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Interface Name (សម្រាប់ដាក់ QoS Policy):</label>
+                        <input type="text" id="qosIntName" value="GigabitEthernet1/0/1" oninput="calcQosDscp()">
+                    </div>
+                </div>
+
+                <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(140px, 1fr)); gap:10px; margin-bottom:14px;">
+                    <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:10px; border-radius:8px; text-align:center;">
+                        <div style="font-size:11px; color:var(--text-muted);">DSCP Decimal</div>
+                        <div id="qosValDecimal" style="font-size:18px; font-weight:700; color:var(--primary);">46</div>
+                    </div>
+                    <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:10px; border-radius:8px; text-align:center;">
+                        <div style="font-size:11px; color:var(--text-muted);">DSCP Name</div>
+                        <div id="qosValName" style="font-size:18px; font-weight:700; color:var(--success);">EF</div>
+                    </div>
+                    <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:10px; border-radius:8px; text-align:center;">
+                        <div style="font-size:11px; color:var(--text-muted);">DSCP Binary (6-bit)</div>
+                        <div id="qosValBinary" style="font-size:18px; font-weight:700; color:var(--text-main); font-family:monospace;">101110</div>
+                    </div>
+                    <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:10px; border-radius:8px; text-align:center;">
+                        <div style="font-size:11px; color:var(--text-muted);">ToS Byte (Hex)</div>
+                        <div id="qosValTos" style="font-size:18px; font-weight:700; color:var(--warning); font-family:monospace;">0xB8</div>
+                    </div>
+                    <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:10px; border-radius:8px; text-align:center;">
+                        <div style="font-size:11px; color:var(--text-muted);">CoS 802.1p (L2)</div>
+                        <div id="qosValCos" style="font-size:18px; font-weight:700; color:var(--danger);">5 (Voice)</div>
+                    </div>
+                </div>
+
+                <label>Cisco MQC QoS Queue Configuration:</label>
+                <div class="input-with-copy" style="margin-bottom:10px;">
+                    <textarea id="qosCiscoCli" readonly rows="5" style="font-family:monospace; font-size:12px; resize:none;"></textarea>
+                    <button class="copy-btn" onclick="copyField('qosCiscoCli')">Copy</button>
+                </div>
+
+                <label>MikroTik Mangle & Queue Tree Script:</label>
+                <div class="input-with-copy">
+                    <textarea id="qosMikroCli" readonly rows="4" style="font-family:monospace; font-size:12px; resize:none;"></textarea>
+                    <button class="copy-btn" onclick="copyField('qosMikroCli')">Copy</button>
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 1.19 OSPF & BGP ROUTING DYNAMIC CLI BUILDER (bgpOspfGen) -->
+            <!-- =================================================================== -->
+            <div id="bgpOspfGen" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-primary">Enterprise Routing</span>
+                    <span class="badge badge-info">Cisco • MikroTik • FortiGate</span>
+                </div>
+                <h3>🌐 OSPF & BGP Enterprise Routing Dynamic CLI Generator</h3>
+                <p class="tool-desc-text">បង្កើត Script កំណត់ OSPF Area 0 (Backbone) និង BGP Peering (eBGP/iBGP) ជាមួយ Router ID, MD5 Authentication, និង Network Advertisement សម្រាប់ Cisco, MikroTik v7, និង FortiGate។</p>
+
+                <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); gap:10px; margin-bottom:12px;">
+                    <div>
+                        <label>Protocol:</label>
+                        <select id="rtProto" onchange="generateBgpOspf()">
+                            <option value="ospf">OSPF (Open Shortest Path First)</option>
+                            <option value="bgp">BGP (Border Gateway Protocol)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Router ID:</label>
+                        <input type="text" id="rtRouterId" value="10.255.255.1" oninput="generateBgpOspf()">
+                    </div>
+                    <div id="grpOspfArea">
+                        <label>OSPF Area / Process ID:</label>
+                        <input type="text" id="rtOspfArea" value="0" placeholder="0 = Area 0 Backbone" oninput="generateBgpOspf()">
+                    </div>
+                    <div id="grpBgpAs" style="display:none;">
+                        <label>Local AS / Remote AS:</label>
+                        <input type="text" id="rtBgpAs" value="65001" placeholder="Local AS" oninput="generateBgpOspf()">
+                    </div>
+                </div>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px;">
+                    <div>
+                        <label>Network Statements / Advertised Subnets (មួយជួរមួយ Subnet):</label>
+                        <textarea id="rtNetworks" rows="3" oninput="generateBgpOspf()" style="font-family:monospace; font-size:12px;">192.168.1.0/24
+192.168.20.0/24
+10.10.10.0/30</textarea>
+                    </div>
+                    <div id="grpBgpNeighbor" style="display:none;">
+                        <label>BGP Neighbor IP & Remote AS:</label>
+                        <input type="text" id="rtNeighborIp" value="10.10.10.2" placeholder="Neighbor IP" oninput="generateBgpOspf()" style="margin-bottom:6px;">
+                        <input type="text" id="rtRemoteAs" value="65002" placeholder="Remote AS" oninput="generateBgpOspf()">
+                    </div>
+                    <div id="grpOspfPassive">
+                        <label>Passive Interface (LAN Ports - មិនបញ្ជូន Hello Packets):</label>
+                        <input type="text" id="rtPassiveInt" value="GigabitEthernet0/1" oninput="generateBgpOspf()" style="margin-bottom:6px;">
+                        <label>MD5 Auth Key (Optional):</label>
+                        <input type="text" id="rtMd5Key" value="CiscoSecretKey" oninput="generateBgpOspf()">
+                    </div>
+                </div>
+
+                <div style="display:flex; gap:8px; margin-bottom:8px;">
+                    <button class="tab-btn active" onclick="setRtVendor('cisco', this)">Cisco IOS</button>
+                    <button class="tab-btn" onclick="setRtVendor('mikrotik', this)">MikroTik RouterOS v7</button>
+                    <button class="tab-btn" onclick="setRtVendor('fortigate', this)">Fortinet FortiOS</button>
+                </div>
+
+                <div class="input-with-copy">
+                    <textarea id="rtResultCli" readonly rows="8" style="font-family:monospace; font-size:12px;"></textarea>
+                    <button class="copy-btn" onclick="copyField('rtResultCli')">Copy CLI</button>
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 2.9 M365 & EXCHANGE ONLINE POWERSHELL SUITE (m365Powershell) -->
+            <!-- =================================================================== -->
+            <div id="m365Powershell" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-primary">Cloud Sysadmin</span>
+                    <span class="badge badge-info">Microsoft 365 & Exchange</span>
+                </div>
+                <h3>☁️ Microsoft 365 & Exchange Online PowerShell Generator</h3>
+                <p class="tool-desc-text">បង្កើតកូដ PowerShell រហ័សសម្រាប់គ្រប់គ្រង Microsoft 365: បម្លែង Mailbox ទៅ Shared Mailbox (ដើម្បី Free License), ផ្ទេរសិទ្ធិ Send-As/FullAccess, កំណត់ Out of Office, បង្ខំ Reset MFA, និងទាញរបាយការណ៍។</p>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px;">
+                    <div>
+                        <label>ជ្រើសរើសកិច្ចការ (M365 Admin Task):</label>
+                        <select id="m365TaskSelect" onchange="generateM365Cli()">
+                            <option value="connect">1. ភ្ជាប់ទៅ Exchange Online & Graph PowerShell</option>
+                            <option value="shared_mbx">2. បម្លែង User Mailbox ទៅជា Shared Mailbox (Free License)</option>
+                            <option value="delegate_perm">3. ផ្ទេរសិទ្ធិ Mailbox (Full Access & Send As)</option>
+                            <option value="oof_auto">4. កំណត់សារឆ្លើយតបស្វ័យប្រវត្តិ (Out of Office / Auto-Reply)</option>
+                            <option value="reset_mfa">5. បង្ខំ Re-register MFA & Revoke Tokens ពេលបាត់ទូរស័ព្ទ</option>
+                            <option value="forwarding">6. កំណត់ Auto-Forwarding Email ទៅបុគ្គលិកផ្សេង</option>
+                            <option value="export_sizes">7. Export បញ្ជីទំហំ Mailbox ទាំងអស់ជាឯកសារ CSV</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>User Principal Name / Email (UPN):</label>
+                        <input type="text" id="m365UserUpn" value="user@company.com" oninput="generateM365Cli()">
+                    </div>
+                </div>
+
+                <div id="m365ExtraFields" style="margin-bottom:12px;">
+                    <!-- Dynamically populated based on task -->
+                </div>
+
+                <label>Executable PowerShell Script (Run in PowerShell 7 / Windows PowerShell):</label>
+                <div class="input-with-copy">
+                    <textarea id="m365CliResult" readonly rows="6" style="font-family:monospace; font-size:12px;"></textarea>
+                    <button class="copy-btn" onclick="copyField('m365CliResult')">Copy Script</button>
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 2.10 BITLOCKER & TPM EMERGENCY MANAGEMENT SUITE (bitlockerTpm) -->
+            <!-- =================================================================== -->
+            <div id="bitlockerTpm" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-warning">Endpoint Security</span>
+                    <span class="badge badge-primary">Disk Encryption</span>
+                </div>
+                <h3>🔐 BitLocker & TPM Emergency Rescue & Management Suite</h3>
+                <p class="tool-desc-text">ដោះស្រាយបញ្ហា Drive ជាប់ BitLocker Lock, Backup Recovery Key ទៅ Active Directory/Azure AD, ផ្អាកការពារ (Suspend) មុនពេល Flash BIOS, និងពិនិត្យស្ថានភាពបន្ទះឈីប TPM 2.0។</p>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px;">
+                    <div>
+                        <label>ជ្រើសរើសសកម្មភាព (BitLocker Action):</label>
+                        <select id="blActionSelect" onchange="generateBitlockerCli()">
+                            <option value="status">1. ពិនិត្យស្ថានភាព Encryption គ្រប់ Drive (manage-bde -status)</option>
+                            <option value="suspend">2. ផ្អាកការពារបណ្តោះអាសន្ន 1 Reboot មុន Flash BIOS (Suspend)</option>
+                            <option value="resume">3. បើកដំណើរការការពារឡើងវិញ (Resume Protection)</option>
+                            <option value="backup_ad">4. បញ្ជូន Recovery Key ទៅតម្កល់ក្នុង Active Directory / Entra ID</option>
+                            <option value="unlock_key">5. បង្ខំ Unlock Drive ជាប់សោរតាម 48-digit Recovery Key</option>
+                            <option value="tpm_check">6. ពិនិត្យស្ថានភាពបន្ទះឈីប TPM 2.0 Readiness</option>
+                            <option value="turn_on_xts">7. Enable BitLocker XTS-AES 256-bit ជាមួយ TPM + PIN</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Drive Letter (e.g. C:, D:):</label>
+                        <input type="text" id="blDriveLetter" value="C:" oninput="generateBitlockerCli()">
+                    </div>
+                </div>
+
+                <div id="blExtraBox" style="margin-bottom:10px; display:none;">
+                    <label>48-Digit BitLocker Recovery Password:</label>
+                    <input type="text" id="blRecoveryPass" placeholder="XXXXXX-XXXXXX-XXXXXX-XXXXXX-XXXXXX-XXXXXX-XXXXXX-XXXXXX" oninput="generateBitlockerCli()">
+                </div>
+
+                <label>Admin Command Prompt / PowerShell CLI:</label>
+                <div class="input-with-copy">
+                    <textarea id="blCliResult" readonly rows="5" style="font-family:monospace; font-size:12px;"></textarea>
+                    <button class="copy-btn" onclick="copyField('blCliResult')">Copy Command</button>
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 2.11 AD FSMO ROLES & DOMAIN HEALTH (adDisaster) -->
+            <!-- =================================================================== -->
+            <div id="adDisaster" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-danger">Domain Disaster</span>
+                    <span class="badge badge-primary">Active Directory</span>
+                </div>
+                <h3>🛡️ Active Directory FSMO Roles, DC Health & Disaster Recovery</h3>
+                <p class="tool-desc-text">ផ្ទេរ ឬដណ្តើមសិទ្ធិ FSMO Roles (Schema, Domain Naming, PDC, RID, Infrastructure Master), ពិនិត្យសុខភាព Replication រវាង Domain Controllers និងជួសជុល Trust Relationship កុំព្យូទ័រ Client ជាប់គាំង។</p>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px;">
+                    <div>
+                        <label>ជ្រើសរើសប្រតិបត្តិការ (AD Task):</label>
+                        <select id="adTaskSelect" onchange="generateAdHealthCli()">
+                            <option value="query_fsmo">1. ពិនិត្យមើល Domain Controller ណាដែលកាន់កាប់ FSMO ទាំង ៥</option>
+                            <option value="transfer_fsmo">2. ផ្ទេរសិទ្ធិ FSMO ដោយសន្តិវិធី (Graceful Role Transfer)</option>
+                            <option value="seize_fsmo">3. ដណ្តើមសិទ្ធិ FSMO ពេល Server មេខូចខាត (Seize Role via ntdsutil)</option>
+                            <option value="repl_health">4. ពិនិត្យសុខភាព AD Replication & DCDiag Full Test</option>
+                            <option value="repair_trust">5. ជួសជុលកុំព្យូទ័រ Client ជាប់ lỗi "Trust Relationship Failed"</option>
+                            <option value="recycle_bin">6. ស្រោចស្រង់ User / Computer ពី AD Recycle Bin</option>
+                            <option value="metadata_cleanup">7. លុប Domain Controller ដែលងាប់ចោល (Metadata Cleanup)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Target Domain Controller Name (FQDN or Hostname):</label>
+                        <input type="text" id="adTargetDc" value="DC02.corp.local" oninput="generateAdHealthCli()">
+                    </div>
+                </div>
+
+                <label>PowerShell / CMD Commands:</label>
+                <div class="input-with-copy">
+                    <textarea id="adCliResult" readonly rows="5" style="font-family:monospace; font-size:12px;"></textarea>
+                    <button class="copy-btn" onclick="copyField('adCliResult')">Copy Command</button>
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 2.12 WINSOCK & NETWORK STACK RESET (winNetReset) -->
+            <!-- =================================================================== -->
+            <div id="winNetReset" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-success">Instant Repair</span>
+                    <span class="badge badge-primary">Windows Networking</span>
+                </div>
+                <h3>🔄 Windows Network Stack, Winsock & Adapter Emergency Reset</h3>
+                <p class="tool-desc-text">ដោះស្រាយបញ្ហាកុំព្យូទ័រ Windows ភ្ជាប់ Wi-Fi ឬ LAN មានសញ្ញាឧទានលឿង "No Internet / Unidentified Network", ជាប់ Proxy មិនចេញ Internet, ឬខូច Winsock Catalog ដោយស្វ័យប្រវត្តិ។</p>
+
+                <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); border-radius:10px; padding:12px; margin-bottom:12px; font-size:12.5px; line-height:1.6;">
+                    <strong>🛠️ សកម្មភាពដែល Script នេះនឹងធ្វើការជួសជុល:</strong>
+                    <ul style="margin:6px 0 0 0; padding-left:20px; color:var(--text-muted);">
+                        <li>Reset Winsock Catalog & TCP/IP Protocol Stack (IPv4 & IPv6)</li>
+                        <li>Flush DNS Cache & Re-register NetBIOS Name Resolution</li>
+                        <li>Release & Renew DHCP IP Address ពី Router</li>
+                        <li>Clear ARP Cache Table & Reset Windows Firewall មកកាន់ Default</li>
+                        <li>Restart Network Adapter Drivers ភ្លាមៗដោយមិនបាច់ Restart Windows</li>
+                    </ul>
+                </div>
+
+                <div class="input-with-copy" style="margin-bottom:10px;">
+                    <textarea id="winNetResetScript" readonly rows="7" style="font-family:monospace; font-size:11.5px;"></textarea>
+                    <button class="copy-btn" onclick="copyField('winNetResetScript')">Copy Batch Script</button>
+                </div>
+
+                <button type="button" class="btn-action btn-primary" onclick="downloadNetResetBat()" style="padding:10px 18px; font-weight:700;">
+                    💾 Download 1-Click Repair Batch File (Fix-Network.bat)
+                </button>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 3.6 VMWARE ESXI & PROXMOX VE CLI TOOLKIT (esxiProxmox) -->
+            <!-- =================================================================== -->
+            <div id="esxiProxmox" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-info">Virtualization Pro</span>
+                    <span class="badge badge-primary">Hypervisor Admin</span>
+                </div>
+                <h3>🖥️ VMware ESXi & Proxmox VE CLI Emergency Toolkit</h3>
+                <p class="tool-desc-text">បណ្តុំកូដសង្គ្រោះ Hypervisor ពេលជួបបញ្ហា: បង្ខំ Kill VM ដែលគាំងមិនព្រម Shutdown លើ ESXi, Restart Management Agent, ដោះសោរ VM Locked លើ Proxmox, និងជួសជុល Quorum Cluster។</p>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px;">
+                    <div>
+                        <label>ជ្រើសរើស Hypervisor Platform:</label>
+                        <select id="hypPlatform" onchange="generateEsxiProxmoxCli()">
+                            <option value="esxi">VMware ESXi 6.7 / 7.0 / 8.0</option>
+                            <option value="proxmox">Proxmox VE 7.x / 8.x</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>សកម្មភាពសង្គ្រោះបន្ទាន់ (Emergency Action):</label>
+                        <select id="hypAction" onchange="generateEsxiProxmoxCli()">
+                            <!-- Populated dynamically -->
+                        </select>
+                    </div>
+                </div>
+
+                <div id="hypParamsBox" style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px;">
+                    <div>
+                        <label id="hypIdLabel">VM World ID / VMID:</label>
+                        <input type="text" id="hypVmId" value="100" oninput="generateEsxiProxmoxCli()">
+                    </div>
+                    <div>
+                        <label>Host / Datastore Name (Optional):</label>
+                        <input type="text" id="hypDsName" value="datastore1" oninput="generateEsxiProxmoxCli()">
+                    </div>
+                </div>
+
+                <label>SSH Terminal Command (Run as root):</label>
+                <div class="input-with-copy">
+                    <textarea id="hypCliResult" readonly rows="5" style="font-family:monospace; font-size:12px;"></textarea>
+                    <button class="copy-btn" onclick="copyField('hypCliResult')">Copy Command</button>
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 3.7 DOCKER COMPOSE PRODUCTION GENERATOR (dockerCompose) -->
+            <!-- =================================================================== -->
+            <div id="dockerCompose" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-success">DevOps & Containers</span>
+                    <span class="badge badge-primary">Self-Hosted Services</span>
+                </div>
+                <h3>🐳 Docker Compose Production Template & Maintenance Generator</h3>
+                <p class="tool-desc-text">បង្កើតឯកសារ docker-compose.yml ស្តង់ដារសម្រាប់ដំឡើង Services ពេញនិយមក្នុង Server ក្រុមហ៊ុនដូចជា Nginx Proxy Manager, Portainer, Pi-hole DNS, Uptime Kuma និងកូដសម្អាត Disk Space។</p>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px;">
+                    <div>
+                        <label>ជ្រើសរើស Service Template:</label>
+                        <select id="dkService" onchange="generateDockerCompose()">
+                            <option value="nginx_proxy">Nginx Proxy Manager (Reverse Proxy + Free SSL)</option>
+                            <option value="portainer">Portainer CE (Web GUI Container Management)</option>
+                            <option value="pihole">Pi-hole (Network Ad-blocker & Local DNS)</option>
+                            <option value="uptime_kuma">Uptime Kuma (Server & Web Status Monitoring)</option>
+                            <option value="nextcloud">Nextcloud (Private Enterprise Cloud Storage)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Host Exposed Port:</label>
+                        <input type="text" id="dkPort" value="81" oninput="generateDockerCompose()">
+                    </div>
+                </div>
+
+                <label>Generated docker-compose.yml File:</label>
+                <div class="input-with-copy" style="margin-bottom:10px;">
+                    <textarea id="dkComposeResult" readonly rows="8" style="font-family:monospace; font-size:12px;"></textarea>
+                    <button class="copy-btn" onclick="copyField('dkComposeResult')">Copy YAML</button>
+                </div>
+
+                <label>Essential Container Management CLI:</label>
+                <div class="input-with-copy">
+                    <textarea id="dkMgmtCli" readonly rows="3" style="font-family:monospace; font-size:12px;"></textarea>
+                    <button class="copy-btn" onclick="copyField('dkMgmtCli')">Copy CLI</button>
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 4.12 OPENSSL CERTIFICATE & CSR SUITE (sslOpenSsl) -->
+            <!-- =================================================================== -->
+            <div id="sslOpenSsl" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-danger">Cybersecurity</span>
+                    <span class="badge badge-primary">PKI & TLS/SSL</span>
+                </div>
+                <h3>🔒 OpenSSL Certificate Generator, CSR & Conversion Suite</h3>
+                <p class="tool-desc-text">បង្កើត Private Key & CSR សម្រាប់ទិញ SSL, បង្កើត Self-Signed Wildcard Certificate ប្រើប្រាស់ផ្ទៃក្នុង, បម្លែងទម្រង់ CRT ទៅ PFX (សម្រាប់ IIS), និងពិនិត្យកាលបរិច្ឆេទផុតកំណត់នៃ SSL លើ Domain។</p>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px;">
+                    <div>
+                        <label>ជ្រើសរើសកិច្ចការ SSL (Task):</label>
+                        <select id="sslTask" onchange="generateOpenSslCli()">
+                            <option value="csr">1. បង្កើត 2048-bit Private Key & CSR សម្រាប់ទិញ SSL</option>
+                            <option value="self_signed">2. បង្កើត Self-Signed Wildcard SSL (*.domain.com) រយៈពេល 10 ឆ្នាំ</option>
+                            <option value="crt_to_pfx">3. បម្លែង CRT + Key ទៅជា PFX (PKCS#12 សម្រាប់ Windows IIS)</option>
+                            <option value="pfx_to_crt">4. ពន្លាតយក Private Key & CRT ចេញពីឯកសារ PFX</option>
+                            <option value="check_expiry">5. ពិនិត្យកាលបរិច្ឆេទផុតកំណត់ SSL លើ Remote Web Server</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Common Name / Domain Name:</label>
+                        <input type="text" id="sslDomain" value="server.company.local" oninput="generateOpenSslCli()">
+                    </div>
+                </div>
+
+                <label>OpenSSL Terminal Command:</label>
+                <div class="input-with-copy">
+                    <textarea id="sslCliResult" readonly rows="5" style="font-family:monospace; font-size:12px;"></textarea>
+                    <button class="copy-btn" onclick="copyField('sslCliResult')">Copy Command</button>
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 5.7 CCTV LENS FOCAL LENGTH & DORI CALCULATOR (cctvLensCalc) -->
+            <!-- =================================================================== -->
+            <div id="cctvLensCalc" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-primary">Surveillance Engineering</span>
+                    <span class="badge badge-success">DORI Standard (EN 62676-4)</span>
+                </div>
+                <h3>📐 CCTV Lens Focal Length, Field of View (FOV) & DORI Calculator</h3>
+                <p class="tool-desc-text">គណនាទំហំមុំកាមេរ៉ា (Angle of View), ទទឹងផ្លូវដែលកាមេរ៉ាមើលឃើញ (Field of View), និងចម្ងាយស្តង់ដារ DORI (Detection, Observation, Recognition, Identification) សម្រាប់ចាប់មុខមនុស្ស ឬស្លាកលេខឡានច្បាស់។</p>
+
+                <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(160px, 1fr)); gap:10px; margin-bottom:12px;">
+                    <div>
+                        <label>ទំហំ Sensor របស់ Camera:</label>
+                        <select id="lensSensor" onchange="calcCctvLens()">
+                            <option value="1/2.8">1/2.8" CMOS (Hikvision/Dahua 2MP-4MP)</option>
+                            <option value="1/3">1/3" CMOS (Standard 2MP-4MP)</option>
+                            <option value="1/2.7">1/2.7" CMOS (Low-light 4MP-5MP)</option>
+                            <option value="1/1.8">1/1.8" CMOS (ColorVu / Full-color 4K)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>កម្រាស់កែវឡេន (Focal Length):</label>
+                        <select id="lensFocal" onchange="calcCctvLens()">
+                            <option value="2.8">2.8 mm (មុំទូលាយ ~103° សម្រាប់ក្នុងបន្ទប់/Office)</option>
+                            <option value="3.6">3.6 mm (មុំមធ្យម ~85°)</option>
+                            <option value="4.0" selected>4.0 mm (ទូទៅ ~80° សម្រាប់ច្រកទ្វារ/មុខផ្ទះ)</option>
+                            <option value="6.0">6.0 mm (មុំតូច ~53° សម្រាប់ច្រកផ្លូវដើរ/ឃ្លាំង)</option>
+                            <option value="8.0">8.0 mm (ចម្ងាយឆ្ងាយ ~40°)</option>
+                            <option value="12.0">12.0 mm (Telephoto ~25° ចាប់ស្លាកលេខឡាន)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>ចម្ងាយពីកាមេរ៉ាទៅគោលដៅ (ម៉ែត្រ):</label>
+                        <input type="number" id="lensDist" value="15" min="1" max="200" oninput="calcCctvLens()">
+                    </div>
+                </div>
+
+                <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(130px, 1fr)); gap:10px; margin-bottom:14px;">
+                    <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:10px; border-radius:8px; text-align:center;">
+                        <div style="font-size:11px; color:var(--text-muted);">Horizontal FOV</div>
+                        <div id="lensResAngle" style="font-size:18px; font-weight:700; color:var(--primary);">82.6°</div>
+                    </div>
+                    <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:10px; border-radius:8px; text-align:center;">
+                        <div style="font-size:11px; color:var(--text-muted);">Scene Width at Target</div>
+                        <div id="lensResWidth" style="font-size:18px; font-weight:700; color:var(--success);">26.3 m</div>
+                    </div>
+                    <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:10px; border-radius:8px; text-align:center;">
+                        <div style="font-size:11px; color:var(--text-muted);">Detect (25 px/m)</div>
+                        <div id="doriDetect" style="font-size:18px; font-weight:700; color:var(--text-main);">60 m</div>
+                    </div>
+                    <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:10px; border-radius:8px; text-align:center;">
+                        <div style="font-size:11px; color:var(--text-muted);">Recognize (125 px/m)</div>
+                        <div id="doriRecog" style="font-size:18px; font-weight:700; color:var(--warning);">12 m</div>
+                    </div>
+                    <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:10px; border-radius:8px; text-align:center;">
+                        <div style="font-size:11px; color:var(--text-muted);">Identify Face (250 px/m)</div>
+                        <div id="doriIdent" style="font-size:18px; font-weight:700; color:var(--danger);">6 m</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 5.8 NVR DUAL-NIC TOPOLOGY & ISOLATED CCTV ARCHITECT (cctvDualNic) -->
+            <!-- =================================================================== -->
+            <div id="cctvDualNic" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-info">Network Architecture</span>
+                    <span class="badge badge-primary">CCTV Isolation</span>
+                </div>
+                <h3>🔀 NVR Dual-NIC Topology & CCTV VLAN Network Architect</h3>
+                <p class="tool-desc-text">រៀបចំប្រព័ន្ធបណ្តាញកាមេរ៉ា CCTV តាមស្តង់ដារសុវត្ថិភាពខ្ពស់: ញែកកាមេរ៉ាទាំងអស់ឱ្យនៅដាច់ដោយឡែកក្នុង CCTV Switch ដើម្បីកុំឱ្យ Broadcast Storm ធ្វើឱ្យកុំព្យូទ័រ Client យឺត និងការពារការលួច Hack ចូលប្រព័ន្ធ Network ក្រុមហ៊ុន។</p>
+
+                <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); border-radius:12px; padding:16px; margin-bottom:14px; font-family:monospace; font-size:12px; line-height:1.7;">
+                    <div style="color:var(--primary); font-weight:700; font-size:13px; margin-bottom:6px;">🏗️ Recommended Enterprise Topology Diagram:</div>
+                    [INTERNET / ROUTER] (Gateway: 192.168.1.1/24)<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;[CORPORATE LAN SWITCH] ─── (Workstations, Wi-Fi APs, Laptops)<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│ (Connects to LAN 1)<br>
+                    ┌─────────────────────────┐<br>
+                    │ &nbsp;&nbsp;&nbsp;NVR (DUAL NETWORK) &nbsp;&nbsp;│<br>
+                    │ LAN 1: 192.168.1.200/24 │ ─── Gateway: 192.168.1.1 (Management / Remote App)<br>
+                    │ LAN 2: 172.16.10.1/24 &nbsp;│ ─── Gateway: [NONE] (Isolated Camera Subnet)<br>
+                    └─────────────────────────┘<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│ (Connects to LAN 2)<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;[DEDICATED POE SWITCH] (100% Offline Camera Subnet)<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── Camera 01 (172.16.10.101)<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── Camera 02 (172.16.10.102)<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── Camera XX (172.16.10.XXX)<br>
+                </div>
+
+                <div style="background:rgba(16, 185, 129, 0.1); border-left:4px solid var(--success); padding:12px; border-radius:8px; font-size:12.5px; line-height:1.5;">
+                    💡 <strong>អត្ថប្រយោជន៍ចម្បង:</strong> នៅលើ LAN 2 (Camera Network) <strong>ដាច់ខាតកុំដាក់ Default Gateway</strong>។ វិធីនេះធ្វើឱ្យកាមេរ៉ាមិនអាចចេញទៅ Internet បានឡើយ (Zero Internet Exposure) រីឯ NVR អាចមើលពីក្រៅបានធម្មតាតាមរយៈ LAN 1 ដោយមាន Firewall រារាំង!
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 5.9 ACCESS CONTROL & WIEGAND PINOUT GUIDE (cctvAccessControl) -->
+            <!-- =================================================================== -->
+            <div id="cctvAccessControl" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-warning">Physical Security</span>
+                    <span class="badge badge-primary">Biometric & Door Access</span>
+                </div>
+                <h3>🚪 Access Control, Wiegand Protocol & Electric Lock Wiring Guide</h3>
+                <p class="tool-desc-text">គំនូសប្លង់តខ្សែម៉ាស៊ីនស្កេនមេដៃ/កាត (ZKTeco, Hikvision, Dahua) ទៅកាន់សោរអេឡិចត្រូនិក Magnetic Lock (Fail-Safe NC), Electric Strike (Fail-Secure NO), ប៊ូតុងចុចបើកទ្វារ Push-to-Exit និង Break Glass។</p>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px;">
+                    <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:14px; border-radius:10px;">
+                        <h4 style="margin:0 0 8px 0; color:var(--primary); font-size:13px;">📟 Wiegand 26/34-bit Standard Pinout:</h4>
+                        <table style="width:100%; font-size:12px; border-collapse:collapse;">
+                            <tr style="border-bottom:1px solid var(--border-color);"><td style="padding:4px; font-weight:700;">+12V DC</td><td style="color:#ef4444;">ខ្សែក្រហម (Red) - ភ្លើងវិជ្ជមាន 12V</td></tr>
+                            <tr style="border-bottom:1px solid var(--border-color);"><td style="padding:4px; font-weight:700;">GND</td><td style="color:#111827;">ខ្សែខ្មៅ (Black) - ភ្លើងអវិជ្ជមាន Ground</td></tr>
+                            <tr style="border-bottom:1px solid var(--border-color);"><td style="padding:4px; font-weight:700;">Data 0 (D0)</td><td style="color:#10b981;">ខ្សែបៃតង (Green) - Wiegand Data 0</td></tr>
+                            <tr style="border-bottom:1px solid var(--border-color);"><td style="padding:4px; font-weight:700;">Data 1 (D1)</td><td style="color:#64748b;">ខ្សេស (White) - Wiegand Data 1</td></tr>
+                            <tr style="border-bottom:1px solid var(--border-color);"><td style="padding:4px; font-weight:700;">LED Status</td><td style="color:#3b82f6;">ខៀវ (Blue) - Indicator LED Trigger</td></tr>
+                            <tr><td style="padding:4px; font-weight:700;">Buzzer</td><td style="color:#f59e0b;">លឿង (Yellow) - Audible Beep Trigger</td></tr>
+                        </table>
+                    </div>
+
+                    <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:14px; border-radius:10px;">
+                        <h4 style="margin:0 0 8px 0; color:var(--success); font-size:13px;">🔒 Lock Types: Fail-Safe vs Fail-Secure:</h4>
+                        <div style="font-size:12px; line-height:1.6;">
+                            <strong style="color:var(--primary);">1. Magnetic Lock (EM Lock):</strong><br>
+                            - ប្រភេទ <strong>Fail-Safe (Normally Closed - NC)</strong><br>
+                            - ពេលដាច់ភ្លើង = ទ្វាររបើក (សុវត្ថិភាពពេលមានអគ្គិភ័យ Fire Safety)<br>
+                            - តខ្សែពី Power Supply (+) ── NC Relay ── (+) EM Lock<br><br>
+                            <strong style="color:var(--warning);">2. Electric Drop Bolt / Strike:</strong><br>
+                            - ប្រភេទ <strong>Fail-Secure (Normally Open - NO)</strong><br>
+                            - ពេលដាច់ភ្លើង = ទ្វារនៅតែចាក់សោរ (សុវត្ថិភាពការពារចោរ)<br>
+                            - តខ្សែពី Power Supply (+) ── NO Relay ── (+) Strike
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 6.14 FORTIGATE VDOM & MULTI-TENANT CLI (fortiVdom) -->
+            <!-- =================================================================== -->
+            <div id="fortiVdom" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-primary">Fortinet Firewall</span>
+                    <span class="badge badge-info">Virtual Domains</span>
+                </div>
+                <h3>🛡️ FortiGate VDOM & Multi-Tenant Architecture CLI Generator</h3>
+                <p class="tool-desc-text">បង្កើត Script បើកដំណើរការ VDOM Mode លើ FortiOS, បង្កើត Virtual Domains សម្រាប់ចែកអតិថិជនច្រើន (Multi-Tenancy), និងភ្ជាប់ខ្សែនិម្មិត Inter-VDOM Virtual Link រវាង Root និង Customer VDOM។</p>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px;">
+                    <div>
+                        <label>VDOM Name:</label>
+                        <input type="text" id="vdomName" value="CustomerA" oninput="generateFortiVdom()">
+                    </div>
+                    <div>
+                        <label>Assigned Physical Interface:</label>
+                        <input type="text" id="vdomInterface" value="port4" oninput="generateFortiVdom()">
+                    </div>
+                </div>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px;">
+                    <div>
+                        <label>Inter-VDOM Link Name:</label>
+                        <input type="text" id="vdomLinkName" value="vlink_custA" oninput="generateFortiVdom()">
+                    </div>
+                    <div>
+                        <label>Inter-VDOM Subnet (Point-to-Point):</label>
+                        <input type="text" id="vdomLinkSubnet" value="10.254.1.0/30" oninput="generateFortiVdom()">
+                    </div>
+                </div>
+
+                <label>FortiOS CLI Configuration Commands:</label>
+                <div class="input-with-copy">
+                    <textarea id="vdomCliResult" readonly rows="7" style="font-family:monospace; font-size:12px;"></textarea>
+                    <button class="copy-btn" onclick="copyField('vdomCliResult')">Copy CLI</button>
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 6.15 CISCO STANDARD & EXTENDED ACL BUILDER (ciscoAcl) -->
+            <!-- =================================================================== -->
+            <div id="ciscoAcl" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-danger">Network Security</span>
+                    <span class="badge badge-primary">Cisco IOS</span>
+                </div>
+                <h3>🧱 Cisco Standard & Extended Access Control List (ACL) Builder</h3>
+                <p class="tool-desc-text">បង្កើត ACL កម្រិត Standard (1-99) និង Extended (100-199 / Named ACL) សម្រាប់បិទ ឬបើក Traffic តាម IP, Port (HTTP/S, SSH, RDP, DNS, ICMP Ping), និងអនុវត្តលើ Interface ត្រឹមត្រូវ។</p>
+
+                <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(160px, 1fr)); gap:10px; margin-bottom:12px;">
+                    <div>
+                        <label>ACL Type:</label>
+                        <select id="aclType" onchange="generateCiscoAcl()">
+                            <option value="extended_named">Extended Named ACL (ip access-list extended)</option>
+                            <option value="extended_num">Extended Numbered (100 - 199)</option>
+                            <option value="standard_named">Standard Named (Source Only)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>ACL Name / Number:</label>
+                        <input type="text" id="aclName" value="SECURE_OFFICE_IN" oninput="generateCiscoAcl()">
+                    </div>
+                    <div>
+                        <label>Action:</label>
+                        <select id="aclAction" onchange="generateCiscoAcl()">
+                            <option value="permit">Permit (អនុញ្ញាត)</option>
+                            <option value="deny">Deny (រារាំង / បិទ)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Protocol & Port:</label>
+                        <select id="aclProto" onchange="generateCiscoAcl()">
+                            <option value="tcp_web">TCP Web (HTTP 80 + HTTPS 443)</option>
+                            <option value="tcp_ssh">SSH (TCP 22)</option>
+                            <option value="tcp_rdp">Remote Desktop RDP (TCP 3389)</option>
+                            <option value="udp_dns">DNS (UDP 53)</option>
+                            <option value="icmp">ICMP Ping / Traceroute</option>
+                            <option value="ip_all">All IP Traffic (Full Access)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; margin-bottom:12px;">
+                    <div>
+                        <label>Source IP / Subnet:</label>
+                        <input type="text" id="aclSource" value="192.168.10.0/24" oninput="generateCiscoAcl()">
+                    </div>
+                    <div>
+                        <label>Destination IP / Subnet:</label>
+                        <input type="text" id="aclDest" value="any" oninput="generateCiscoAcl()">
+                    </div>
+                    <div>
+                        <label>Target Interface & Direction:</label>
+                        <input type="text" id="aclInterface" value="GigabitEthernet0/0 in" oninput="generateCiscoAcl()">
+                    </div>
+                </div>
+
+                <label>Generated Cisco IOS ACL Commands:</label>
+                <div class="input-with-copy">
+                    <textarea id="aclCliResult" readonly rows="6" style="font-family:monospace; font-size:12px;"></textarea>
+                    <button class="copy-btn" onclick="copyField('aclCliResult')">Copy ACL</button>
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 6.16 ENTERPRISE UPS BATTERY & RUNTIME CALCULATOR (upsRuntime) -->
+            <!-- =================================================================== -->
+            <div id="upsRuntime" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-warning">Datacenter Power</span>
+                    <span class="badge badge-primary">UPS & Battery Sizing</span>
+                </div>
+                <h3>🔋 Enterprise UPS Battery Sizing & Outage Runtime Calculator</h3>
+                <p class="tool-desc-text">គណនារយៈពេលទ្រទ្រង់ភ្លើង (Backup Runtime) របស់ទូ UPS ក្នុងបន្ទប់ Server Room ផ្អែកលើទំហំបន្ទុកភ្លើងសរុប (Watts), ទំហំអាគុយ (Ah), ចំនួនអាគុយ (DC Bus Voltage) និងប្រសិទ្ធភាព Inverter។</p>
+
+                <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(160px, 1fr)); gap:10px; margin-bottom:12px;">
+                    <div>
+                        <label>បន្ទុកភ្លើងឧបករណ៍សរុប (Total Load Watts):</label>
+                        <input type="number" id="upsLoadWatts" value="650" min="50" max="50000" oninput="calcUpsRuntime()">
+                    </div>
+                    <div>
+                        <label>UPS Power Factor:</label>
+                        <select id="upsPowerFactor" onchange="calcUpsRuntime()">
+                            <option value="0.9" selected>0.9 (Enterprise Online UPS - APC/Eaton/Vertiv)</option>
+                            <option value="0.8">0.8 (Standard Line-Interactive UPS)</option>
+                            <option value="1.0">1.0 (Modern Unity Power Factor)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>DC Bus Voltage (វ៉ុលអាគុយសរុប):</label>
+                        <select id="upsDcVoltage" onchange="calcUpsRuntime()">
+                            <option value="12">12 VDC (1x 12V Battery - Desktop UPS)</option>
+                            <option value="24">24 VDC (2x 12V Batteries in Series)</option>
+                            <option value="48" selected>48 VDC (4x 12V Batteries - Rackmount 2KVA-3KVA)</option>
+                            <option value="96">96 VDC (8x 12V Batteries - 6KVA-10KVA)</option>
+                            <option value="192">192 VDC (16x 12V Batteries - 10KVA-20KVA)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>ទំហំអាគុយសរុប (Battery Capacity Ah):</label>
+                        <input type="number" id="upsBatteryAh" value="9" min="5" max="500" oninput="calcUpsRuntime()">
+                    </div>
+                </div>
+
+                <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(140px, 1fr)); gap:10px; margin-bottom:14px;">
+                    <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:10px; border-radius:8px; text-align:center;">
+                        <div style="font-size:11px; color:var(--text-muted);">Estimated Runtime</div>
+                        <div id="upsResRuntime" style="font-size:18px; font-weight:700; color:var(--primary);">35 Minutes</div>
+                    </div>
+                    <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:10px; border-radius:8px; text-align:center;">
+                        <div style="font-size:11px; color:var(--text-muted);">Current Draw (DC)</div>
+                        <div id="upsResCurrent" style="font-size:18px; font-weight:700; color:var(--warning);">15.2 Amps</div>
+                    </div>
+                    <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:10px; border-radius:8px; text-align:center;">
+                        <div style="font-size:11px; color:var(--text-muted);">Min Recommended UPS</div>
+                        <div id="upsResVa" style="font-size:18px; font-weight:700; color:var(--success);">1000 VA</div>
+                    </div>
+                    <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:10px; border-radius:8px; text-align:center;">
+                        <div style="font-size:11px; color:var(--text-muted);">Total Battery Energy</div>
+                        <div id="upsResEnergy" style="font-size:18px; font-weight:700; color:var(--text-main);">432 Wh</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 7.16 RANSOMWARE INCIDENT RESPONSE & CONTAINMENT SOP (docRansomwareResponse) -->
+            <!-- =================================================================== -->
+            <div id="docRansomwareResponse" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-danger">CRITICAL INCIDENT</span>
+                    <span class="badge badge-warning">Containment Protocol</span>
+                </div>
+                <h3>☣️ Ransomware Incident Response & Emergency Containment SOP</h3>
+                <p class="tool-desc-text">វិធានការសង្គ្រោះបន្ទាន់កម្រិតខ្ពស់បំផុតពេលក្រុមហ៊ុនរងការវាយប្រហារដោយមេរោគជម្រិតទារប្រាក់ (Ransomware) ដើម្បីទប់ស្កាត់ការឆ្លងរាលដាល និងរក្សាភស្តុតាងសង្គ្រោះទិន្នន័យ។</p>
+
+                <div style="display:grid; grid-template-columns:1fr; gap:10px;">
+                    <div style="background:rgba(239, 68, 68, 0.08); border-left:4px solid var(--danger); padding:14px; border-radius:8px;">
+                        <h4 style="margin:0 0 6px 0; color:var(--danger); font-size:14px;">🚨 ដំណាក់កាលទី ១: ផ្តាច់ប្រព័ន្ធភ្លាមៗ (First 5 Minutes)</h4>
+                        <div style="font-size:12.5px; line-height:1.6; color:var(--text-main);">
+                            1. <strong>ដកខ្សែបណ្តាញ Network (LAN) និងបិទ Wi-Fi ភ្លាមៗ</strong> ចំពោះម៉ាស៊ីនណាដែលសង្ស័យថាបានឆ្លង។<br>
+                            2. <strong>ដាច់ខាតកុំ Shutdown ឬបិទភ្លើងកុំព្យូទ័រ!</strong> ការបិទម៉ាស៊ីននឹងធ្វើឱ្យបាត់បង់ទិន្នន័យ Encryption Keys ក្នុង RAM Memory ដែលអ្នកជំនាញអាចទាញយកបាន។<br>
+                            3. <strong>ផ្តាច់ Core Switch / VLAN Isolation:</strong> ផ្តាច់ Port ឬបិទ Interface Switch ដែលភ្ជាប់ទៅកាន់ Backup Storage និង NAS ជាបន្ទាន់!
+                        </div>
+                    </div>
+
+                    <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:14px; border-radius:8px;">
+                        <h4 style="margin:0 0 6px 0; color:var(--warning); font-size:14px;">🔍 ដំណាក់កាលទី ២: ស្វែងរកប្រភពដើម (Identify Patient Zero)</h4>
+                        <div style="font-size:12.5px; line-height:1.6; color:var(--text-main);">
+                            1. ពិនិត្យ File Ownership លើ Shared Folder ដើម្បីដឹងថា User ណាជាអ្នកបង្កើតឯកសារ README_RECOVER.txt ចុងក្រោយ។<br>
+                            2. ពិនិត្យមើល Security Event Log ID 4624 (Logon Type 10 = RDP, Type 3 = Network SMB) លើ Domain Controller។
+                        </div>
+                    </div>
+
+                    <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:14px; border-radius:8px;">
+                        <h4 style="margin:0 0 6px 0; color:var(--success); font-size:14px;">🛡️ ដំណាក់កាលទី ៣: ស្រង់ទិន្នន័យពី Immutable Backup</h4>
+                        <div style="font-size:12.5px; line-height:1.6; color:var(--text-main);">
+                            1. ផ្ទៀងផ្ទាត់កាលបរិច្ឆេទនៃ Backup ចុងក្រោយដែលមិនទាន់ឆ្លងមេរោគ (Clean Restore Point)។<br>
+                            2. Format ម៉ាស៊ីនដែលឆ្លងចោលទាំងស្រុង (Clean Wipe) មុនពេល Restore ទិន្នន័យត្រឡប់មកវិញ។
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 7.17 DISASTER RECOVERY & 3-2-1 BACKUP VERIFICATION (docBackupDisaster) -->
+            <!-- =================================================================== -->
+            <div id="docBackupDisaster" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-success">Business Continuity</span>
+                    <span class="badge badge-primary">DR & RTO/RPO</span>
+                </div>
+                <h3>💾 Disaster Recovery, 3-2-1-1-0 Backup Rule & Restoration Protocol</h3>
+                <p class="tool-desc-text">ស្តង់ដារគ្រប់គ្រងប្រព័ន្ធចម្លងទិន្នន័យបម្រុង (Backup) ធានាការបន្តអាជីវកម្មដោយគ្មានការរំខាន គណនា RTO (Recovery Time Objective) និង RPO (Recovery Point Objective) ត្រឹមត្រូវ។</p>
+
+                <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); border-radius:10px; padding:14px; margin-bottom:12px; font-size:12.5px; line-height:1.6;">
+                    <strong style="color:var(--primary); font-size:13.5px;">🌟 The Modern 3-2-1-1-0 Enterprise Backup Rule:</strong>
+                    <ul style="margin:8px 0 0 0; padding-left:20px; color:var(--text-main);">
+                        <li><strong>3</strong> ច្បាប់ចម្លងទិន្នន័យផ្សេងគ្នា (1 Primary Production + 2 Backup Copies)</li>
+                        <li><strong>2</strong> ប្រភេទមេឌៀខុសគ្នា (Disk Storage + NAS / LTO Tape / Cloud)</li>
+                        <li><strong>1</strong> ច្បាប់ចម្លងត្រូវបានរក្សាទុកនៅទីតាំងផ្សេងពីក្រុមហ៊ុន (Offsite Location)</li>
+                        <li><strong>1</strong> ច្បាប់ចម្លងដាច់ខាតត្រូវតែជាប្រភេទ <strong>Immutable / Air-gapped</strong> (មិនអាចកែប្រែ ឬលុបបានទោះបីត្រូវ Hacker វាយប្រហារក៏ដោយ)</li>
+                        <li><strong>0</strong> កំហុសបន្ទាប់ពីការធ្វើតេស្ត Restore សាកល្បងជាប្រចាំខែ (Zero Recovery Errors)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 7.18 OFFICE MOVE IT INFRASTRUCTURE CHECKLIST (docOfficeRelocation) -->
+            <!-- =================================================================== -->
+            <div id="docOfficeRelocation" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-info">Project Management</span>
+                    <span class="badge badge-primary">Office Move</span>
+                </div>
+                <h3>🏢 Office Relocation & IT Infrastructure Migration Master Checklist</h3>
+                <p class="tool-desc-text">តារាងត្រួតពិនិត្យការងារ IT ពេលរើការិយាល័យ ឬសាខាថ្មី: ចាប់ពីការទាក់ទង ISP អូសខ្សែ Fiber, ការរៀបចំទូ Rack Patch Panel, ផ្ទេរ Server, រហូតដល់ថ្ងៃបើកដំណើរការដំបូង (Day 1 Go-Live)។</p>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; font-size:12px;">
+                    <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:12px; border-radius:8px;">
+                        <strong style="color:var(--primary);">📅 30 Days Before Moving:</strong>
+                        <ul style="margin:6px 0 0 0; padding-left:18px; color:var(--text-muted); line-height:1.5;">
+                            <li>ជូនដំណឹង ISP ដើម្បីរៀបចំទាញខ្សែ Fiber Optic ទៅអគារថ្មី (Lead time 2-4 សប្តាហ៍)</li>
+                            <li>តេស្តរន្ធដោតភ្លើង UPS និងប្រព័ន្ធត្រជាក់ Air-Con ក្នុងបន្ទប់ Server ថ្មី</li>
+                            <li>បិទស្លាក Labeling លើ Patch Panel រាល់គ្រប់ Wall Jack តាមលេខបន្ទប់</li>
+                        </ul>
+                    </div>
+                    <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:12px; border-radius:8px;">
+                        <strong style="color:var(--success);">🚀 Moving Weekend & Day 1:</strong>
+                        <ul style="margin:6px 0 0 0; padding-left:18px; color:var(--text-muted); line-height:1.5;">
+                            <li>Backup ពេញលេញលើ Server ទាំងអស់មុនពេលដកចេញពីទូ Rack</li>
+                            <li>តេស្តភ្លើង Server, Firewall Failover, Switch Trunking</li>
+                            <li>តេស្តប្រព័ន្ធព្រីនធ័រ Network Printers, Wi-Fi Coverage, CCTV</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 7.19 ONBOARDING & EMERGENCY OFFBOARDING SOP (docOnboarding) -->
+            <!-- =================================================================== -->
+            <div id="docOnboarding" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-warning">Identity & Access</span>
+                    <span class="badge badge-primary">HR & IT Security</span>
+                </div>
+                <h3>👥 Employee Onboarding & Emergency Offboarding 60-Second SOP</h3>
+                <p class="tool-desc-text">នីតិវិធីស្តង់ដារពេលទទួលបុគ្គលិកថ្មី (បង្កើត Account, Email, Laptop Imaging) និងនីតិវិធីកាត់ផ្តាច់សិទ្ធិបន្ទាន់ក្នុងរយៈពេល ៦០ វិនាទី (Instant Deprovisioning) ពេលបុគ្គលិកលាឈប់ដើម្បីការពារទិន្នន័យក្រុមហ៊ុន។</p>
+
+                <div style="background:rgba(239, 68, 68, 0.08); border-left:4px solid var(--danger); padding:14px; border-radius:8px; margin-bottom:12px;">
+                    <div style="font-weight:700; color:var(--danger); font-size:13.5px; margin-bottom:6px;">⚡ 60-Second Emergency Offboarding Command Line:</div>
+                    <div style="font-size:12px; line-height:1.6; color:var(--text-main);">
+                        1. <strong>Disable AD User Account:</strong> <code>Disable-ADAccount -Identity "username"</code><br>
+                        2. <strong>Revoke Microsoft 365 Refresh Tokens (Kick out immediately):</strong><br>
+                        <code>Revoke-AzureADUserAllRefreshToken -ObjectId "User_ObjectID"</code><br>
+                        3. <strong>Convert to Shared Mailbox & Remove License:</strong> <code>Set-Mailbox "user@company.com" -Type Shared</code><br>
+                        4. <strong>Wipe Mobile Device / Intune:</strong> ដកសិទ្ធិ Mailbox Activesync & Remote Wipe ទិន្នន័យក្រុមហ៊ុនលើទូរស័ព្ទ។
+                    </div>
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 7.20 VOIP JITTER & AUDIO TROUBLESHOOTING SOP (docVoipTroubleshoot) -->
+            <!-- =================================================================== -->
+            <div id="docVoipTroubleshoot" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-primary">Telephony & Voice</span>
+                    <span class="badge badge-info">SIP / RTP Diagnostics</span>
+                </div>
+                <h3>📞 VoIP Jitter, Packet Loss & One-Way Audio Troubleshooting SOP</h3>
+                <p class="tool-desc-text">ដោះស្រាយបញ្ហាទូរស័ព្ទលើតុ IP Phone: និយាយឮតែម្ខាង (One-Way Audio), សំឡេងកន្ត្រាក់/រអាក់រអួល (Jitter/Packet Loss), ហៅចេញមិនចូល, និងបិទ SIP ALG លើ Firewall គ្រប់ម៉ាក។</p>
+
+                <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); border-radius:10px; padding:14px; font-size:12.5px; line-height:1.6;">
+                    <strong style="color:var(--danger); font-size:13px;">🚨 មូលហេតុចម្បងនៃ One-Way Audio (ឮតែម្ខាង):</strong><br>
+                    90% បណ្តាលមកពី <strong>SIP ALG (Application Layer Gateway)</strong> លើ Firewall កែប្រែ packet SIP ខុស ឬបិទច្រក RTP Voice Stream (UDP Port 10000 - 20000)។<br><br>
+                    <strong style="color:var(--primary);">កូដបិទ SIP ALG លើ FortiGate:</strong><br>
+                    <code>config system settings ; set sip-helper disable ; set sip-nat-trace disable ; end</code><br><br>
+                    <strong style="color:var(--primary);">កូដបិទ SIP ALG លើ Cisco IOS:</strong><br>
+                    <code>no ip nat service sip udp port 5060</code><br><br>
+                    <strong style="color:var(--primary);">កូដបិទ SIP Helper លើ MikroTik:</strong><br>
+                    <code>/ip firewall service-port disable sip</code>
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 7.21 DATACENTER THERMAL & ASHRAE STANDARDS (docThermalDatacenter) -->
+            <!-- =================================================================== -->
+            <div id="docThermalDatacenter" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-warning">Facilities & Cooling</span>
+                    <span class="badge badge-primary">Server Room Environment</span>
+                </div>
+                <h3>🌡️ Datacenter Thermal, Humidity & ASHRAE TC 9.9 Standards SOP</h3>
+                <p class="tool-desc-text">ស្តង់ដារសីតុណ្ហភាព និងសំណើមក្នុងបន្ទប់ Server Room តាមបទដ្ឋានអន្តរជាតិ ASHRAE, វិធានការពេលម៉ាស៊ីនត្រជាក់ CRAC/Air-Con ខូច, និងការកំណត់កម្រិតកម្តៅ CPU Alert កុំឱ្យរលាយ Hardware។</p>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; font-size:12px;">
+                    <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:12px; border-radius:8px;">
+                        <strong style="color:var(--primary);">🌡️ សីតុណ្ហភាពស្តង់ដារ (ASHRAE A1-A4):</strong>
+                        <ul style="margin:6px 0 0 0; padding-left:18px; color:var(--text-main); line-height:1.6;">
+                            <li><strong>កម្រិតល្អបំផុត (Recommended):</strong> 18°C ដល់ 27°C (64°F ដល់ 81°F)</li>
+                            <li><strong>កម្រិតអតិបរមាដែលអាចទទួលយកបាន:</strong> 15°C ដល់ 32°C</li>
+                            <li><strong>សំណើម (Relative Humidity):</strong> 40% ដល់ 60% (ការពារការកើតចរន្ត Static ESD)</li>
+                        </ul>
+                    </div>
+                    <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:12px; border-radius:8px;">
+                        <strong style="color:var(--danger);">🔥 វិធានការសង្គ្រោះពេលម៉ាស៊ីនត្រជាក់ខូច:</strong>
+                        <ul style="margin:6px 0 0 0; padding-left:18px; color:var(--text-main); line-height:1.6;">
+                            <li>បើកទ្វារ Server Room បង្កើត Air Flow និងបើកកង្ហារបឺតខ្យល់</li>
+                            <li>Shutdown Non-Critical Virtual Machines និង Dev/Staging Server ភ្លាមៗ</li>
+                            <li>ប្រសិនបើសីតុណ្ហភាពបន្ទប់ឡើងហួស 38°C (100°F) ត្រូវ Shutdown Production Servers ជាបន្ទាន់!</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
             <div class="credit">
-                IT Support Ultimate Toolkit • Created & Developed by <span style="font-weight:700; color:var(--primary); cursor:pointer;" onclick="openAboutModal()" title="Click to view developer profile">MEUK THAREACH</span> • Version 3.5 Enterprise Pro (74 IT & CCTV Tools) • ⚡ 100% Offline Core
+                IT Support Ultimate Toolkit • Created & Developed by <span style="font-weight:700; color:var(--primary); cursor:pointer;" onclick="openAboutModal()" title="Click to view developer profile">MEUK THAREACH</span> • Version 3.6 Enterprise Pro (96 IT & CCTV Tools) • ⚡ 100% Offline Core
             </div>
         </div>
     </div>
@@ -4010,14 +4971,14 @@ Write-Host "SMB Sharing Configuration Repaired!" -ForegroundColor Green</textare
                 <span class="kbd-badge" style="cursor:pointer;" onclick="closeSpotlight()">ESC</span>
             </div>
             <div class="spotlight-filters">
-                <button type="button" class="spotlight-filter-pill active" onclick="setSpotlightCategory('all', this)" id="spPillAll">All (74)</button>
-                <button type="button" class="spotlight-filter-pill" onclick="setSpotlightCategory('network', this)" id="spPillNet"><img src="app-icon.png" alt="Network" style="width:13px; height:13px; object-fit:contain; border-radius:2px; vertical-align:middle; margin-right:4px;">Network (14)</button>
-                <button type="button" class="spotlight-filter-pill" onclick="setSpotlightCategory('windows', this)" id="spPillWin">🪟 Windows (5)</button>
-                <button type="button" class="spotlight-filter-pill" onclick="setSpotlightCategory('linux', this)" id="spPillLin">🐧 Linux (5)</button>
+                <button type="button" class="spotlight-filter-pill active" onclick="setSpotlightCategory('all', this)" id="spPillAll">All (96)</button>
+                <button type="button" class="spotlight-filter-pill" onclick="setSpotlightCategory('network', this)" id="spPillNet"><img src="app-icon.png" alt="Network" style="width:13px; height:13px; object-fit:contain; border-radius:2px; vertical-align:middle; margin-right:4px;">Network (17)</button>
+                <button type="button" class="spotlight-filter-pill" onclick="setSpotlightCategory('windows', this)" id="spPillWin">🪟 Windows (9)</button>
+                <button type="button" class="spotlight-filter-pill" onclick="setSpotlightCategory('linux', this)" id="spPillLin">🐧 Linux (8)</button>
                 <button type="button" class="spotlight-filter-pill" onclick="setSpotlightCategory('coding', this)" id="spPillCod">💻 Coding (11)</button>
-                <button type="button" class="spotlight-filter-pill" onclick="setSpotlightCategory('cctv', this)" id="spPillCctv">📹 CCTV (6)</button>
-                <button type="button" class="spotlight-filter-pill" onclick="setSpotlightCategory('devices', this)" id="spPillDev">🖧 Devices (13)</button>
-                <button type="button" class="spotlight-filter-pill" onclick="setSpotlightCategory('troubleshoot', this)" id="spPillTrouble">📚 Troubleshoot (15)</button>
+                <button type="button" class="spotlight-filter-pill" onclick="setSpotlightCategory('cctv', this)" id="spPillCctv">📹 CCTV (9)</button>
+                <button type="button" class="spotlight-filter-pill" onclick="setSpotlightCategory('devices', this)" id="spPillDev">🖧 Devices (16)</button>
+                <button type="button" class="spotlight-filter-pill" onclick="setSpotlightCategory('troubleshoot', this)" id="spPillTrouble">📚 Troubleshoot (21)</button>
             </div>
             <div class="spotlight-list" id="spotlightResults">
                 <!-- Rendered dynamically -->
@@ -4028,7 +4989,7 @@ Write-Host "SMB Sharing Configuration Repaired!" -ForegroundColor Green</textare
                     <span><span class="kbd-badge">↵ Enter</span> Open</span>
                     <span><span class="kbd-badge">Esc</span> Close</span>
                 </div>
-                <div id="spotlightMatchCount">74 tools & playbooks available</div>
+                <div id="spotlightMatchCount">96 tools & playbooks available</div>
             </div>
         </div>
     </div>
@@ -4111,7 +5072,7 @@ Write-Host "SMB Sharing Configuration Repaired!" -ForegroundColor Green</textare
                 </div>
                 <div style="background:var(--card-inner-bg); padding:10px; border-radius:8px; border:1px solid var(--card-border);">
                     <div style="color:var(--text-muted);">Tools Available:</div>
-                    <div style="font-weight:700; color:var(--success);">74 Pro Utilities (7 Categories)</div>
+                    <div style="font-weight:700; color:var(--success);">96 Pro Utilities (7 Categories)</div>
                 </div>
                 <div style="background:var(--card-inner-bg); padding:10px; border-radius:8px; border:1px solid var(--card-border);">
                     <div style="color:var(--text-muted);">Offline Engine:</div>
@@ -5802,7 +6763,22 @@ NAT Traversal = Keep-Alive`;
         }
 
         // --- Initialization ---
-        window.onload = function() { 
+        window.onload = function() {
+            if (typeof calcDhcpOptions === 'function') calcDhcpOptions();
+            if (typeof calcQosDscp === 'function') calcQosDscp();
+            if (typeof generateBgpOspf === 'function') generateBgpOspf();
+            if (typeof generateM365Cli === 'function') generateM365Cli();
+            if (typeof generateBitlockerCli === 'function') generateBitlockerCli();
+            if (typeof generateAdHealthCli === 'function') generateAdHealthCli();
+            if (typeof initNetReset === 'function') initNetReset();
+            if (typeof updateHypActions === 'function') { updateHypActions(); generateEsxiProxmoxCli(); }
+            if (typeof generateDockerCompose === 'function') generateDockerCompose();
+            if (typeof generateOpenSslCli === 'function') generateOpenSslCli();
+            if (typeof calcCctvLens === 'function') calcCctvLens();
+            if (typeof generateFortiVdom === 'function') generateFortiVdom();
+            if (typeof generateCiscoAcl === 'function') generateCiscoAcl();
+            if (typeof calcUpsRuntime === 'function') calcUpsRuntime();
+ 
             try {
                 if (window.screen && window.screen.availWidth && window.screen.availHeight) {
                     window.moveTo(0, 0);
@@ -8500,8 +9476,8 @@ add chain=forward action=accept connection-nat-state=dstnat in-interface=ether1-
                         </div>
                         <div style="font-size:12.5px; line-height:1.6; color:var(--text-main);">
                             ${currentLang === 'km' 
-                                ? 'លោកអ្នកកំពុងដំណើរការ <strong>Version ' + APP_CURRENT_VERSION + ' Enterprise Desktop</strong> ក្នុងរបៀប Offline។<br>ឧបករណ៍ចំនួន <strong>៧២ ក្នុងចំណោម ៧៤</strong> (រួមទាំង CLI Generators, Dual VPN Matcher, CCTV Suite, Subnet, Cisco, FortiGate, AD, Playbooks, RAID Calc) ដំណើរការបាន <strong>១០០% ពេញលេញដោយមិនបាច់មានអ៊ីនធឺណិតឡើយ</strong>។' 
-                                : 'You are running <strong>Version ' + APP_CURRENT_VERSION + ' Enterprise Desktop</strong> in offline mode.<br>Seventy-two (72) out of 74 tools (including CLI Generators, Dual VPN Matcher, CCTV Suite, Subnet, Cisco, FortiGate, AD, Playbooks, RAID Calc) operate <strong>100% locally with zero internet required</strong>.'}
+                                ? 'លោកអ្នកកំពុងដំណើរការ <strong>Version ' + APP_CURRENT_VERSION + ' Enterprise Desktop</strong> ក្នុងរបៀប Offline។<br>ឧបករណ៍ចំនួន <strong>៩៤ ក្នុងចំណោម ៩៦</strong> (រួមទាំង CLI Generators, Dual VPN Matcher, CCTV Suite, Subnet, Cisco, FortiGate, AD, Playbooks, RAID Calc) ដំណើរការបាន <strong>១០០% ពេញលេញដោយមិនបាច់មានអ៊ីនធឺណិតឡើយ</strong>។' 
+                                : 'You are running <strong>Version ' + APP_CURRENT_VERSION + ' Enterprise Desktop</strong> in offline mode.<br>Ninety-four (94) out of 96 tools (including CLI Generators, Dual VPN Matcher, CCTV Suite, Subnet, Cisco, FortiGate, AD, Playbooks, RAID Calc) operate <strong>100% locally with zero internet required</strong>.'}
                         </div>
                     </div>
 
@@ -8567,7 +9543,7 @@ add chain=forward action=accept connection-nat-state=dstnat in-interface=ether1-
                         <div style="font-size:12.5px; line-height:1.6; color:var(--text-main);">
                             Installed: <strong>v${APP_CURRENT_VERSION} Enterprise Desktop</strong><br>
                             Author: <strong>${(versionData && versionData.author) || 'MEUK THAREACH'}</strong><br>
-                            Total Tools: <strong>74 Pro Utilities & Playbooks</strong> (7 Categories Active)<br>
+                            Total Tools: <strong>96 Pro Utilities & Playbooks</strong> (7 Categories Active)<br>
                             Update Engine: <strong style="color:var(--primary);">${isNative ? '⚡ Native Desktop Disk Bridge (Active)' : (detectedBridge ? '🌐 Local Server Bridge (Port 3000)' : 'Standalone Browser Mode')}</strong>
                         </div>
                     </div>
@@ -8797,6 +9773,452 @@ add chain=forward action=accept connection-nat-state=dstnat in-interface=ether1-
             APP_CURRENT_VERSION = '3.0.0';
             checkAppUpdates(true);
         }
+    
+        // ==========================================
+        // 6. EXPANDED ENTERPRISE SUITE (96 TOOLS)
+        // ==========================================
+
+        // 1. DHCP Options Calculator
+        function calcDhcpOptions() {
+            let type = document.getElementById('dhcpVendorType').value;
+            let ipInput = document.getElementById('dhcpIpInput').value.trim();
+            let ips = ipInput.split(',').map(s => s.trim()).filter(Boolean);
+            if (ips.length === 0) ips = ['192.168.10.50'];
+
+            function ipToHex(ip) {
+                return ip.split('.').map(octet => {
+                    let h = parseInt(octet, 10).toString(16);
+                    return h.length === 1 ? '0' + h : h;
+                }).join('');
+            }
+
+            let hexData = '';
+            let ciscoConfig = '';
+            let mikroConfig = '';
+            let winConfig = '';
+
+            if (type === 'cisco_wlc') {
+                // Option 43 sub-option 0xF1 (241), length = 4 * count
+                let ipHex = ips.map(ipToHex).join('');
+                let lenHex = (ips.length * 4).toString(16);
+                if (lenHex.length === 1) lenHex = '0' + lenHex;
+                hexData = 'f1' + lenHex + ipHex;
+                ciscoConfig = 'ip dhcp pool AP_POOL\n option 43 hex ' + hexData;
+                mikroConfig = '/ip dhcp-server option add name=opt43_cisco code=43 value="0x' + hexData + '"';
+                winConfig = 'netsh dhcp server scope 192.168.10.0 set optionvalue 43 BINARY ' + hexData;
+            } else if (type === 'unifi') {
+                // UniFi uses sub-option 0x01
+                let ipHex = ips.map(ipToHex).join('');
+                let lenHex = (ips.length * 4).toString(16);
+                if (lenHex.length === 1) lenHex = '0' + lenHex;
+                hexData = '01' + lenHex + ipHex;
+                ciscoConfig = 'ip dhcp pool UNIFI_POOL\n option 43 hex ' + hexData;
+                mikroConfig = '/ip dhcp-server option add name=opt43_unifi code=43 value="0x' + hexData + '"';
+                winConfig = 'netsh dhcp server scope 192.168.10.0 set optionvalue 43 BINARY ' + hexData;
+            } else if (type === 'ruijie_ap' || type === 'fortiap') {
+                // Option 138 (CAPWAP AC IPv4 Address) or Option 43 ascii
+                hexData = ips.map(ipToHex).join('');
+                ciscoConfig = 'ip dhcp pool AP_POOL\n option 138 ip ' + ips.join(' ');
+                mikroConfig = '/ip dhcp-server option add name=opt138 code=138 value="0x' + hexData + '"';
+                winConfig = 'netsh dhcp server scope 192.168.10.0 set optionvalue 138 IPADDRESS ' + ips.join(' ');
+            } else if (type === 'voip_tftp') {
+                hexData = ips.map(ipToHex).join('');
+                ciscoConfig = 'ip dhcp pool VOIP_POOL\n option 150 ip ' + ips.join(' ') + '\n option 66 ascii "' + ips[0] + '"';
+                mikroConfig = '/ip dhcp-server option add name=opt150 code=150 value="0x' + hexData + '"';
+                winConfig = 'netsh dhcp server scope 192.168.10.0 set optionvalue 150 IPADDRESS ' + ips.join(' ');
+            } else {
+                hexData = ips.map(ipToHex).join('');
+                ciscoConfig = 'ip dhcp pool POOL\n option 43 hex ' + hexData;
+                mikroConfig = '/ip dhcp-server option add name=opt43 code=43 value="0x' + hexData + '"';
+                winConfig = 'netsh dhcp server scope 192.168.10.0 set optionvalue 43 BINARY ' + hexData;
+            }
+
+            document.getElementById('dhcpHexResult').value = hexData.toUpperCase();
+            document.getElementById('dhcpHexLen').innerText = 'Length: ' + (hexData.length / 2) + ' Bytes (' + hexData.length + ' Hex Chars)';
+            document.getElementById('dhcpCiscoCli').value = ciscoConfig;
+            document.getElementById('dhcpMikrotikCli').value = mikroConfig;
+            document.getElementById('dhcpWinCli').value = winConfig;
+        }
+
+        // 2. QoS DSCP Calculator
+        const qosData = {
+            'EF': { dec: 46, name: 'EF (Expedited Forwarding)', bin: '101110', tos: '0xB8', cos: '5 (Voice)', class: 'VOICE_AUDIO' },
+            'CS3': { dec: 24, name: 'CS3 (Class Selector 3)', bin: '011000', tos: '0x60', cos: '3 (Call Signaling)', class: 'VOICE_SIGNALING' },
+            'AF41': { dec: 34, name: 'AF41 (Assured Forwarding 41)', bin: '100010', tos: '0x88', cos: '4 (Interactive Video)', class: 'VIDEO_INTERACTIVE' },
+            'AF31': { dec: 26, name: 'AF31 (Assured Forwarding 31)', bin: '011010', tos: '0x68', cos: '4 (Streaming Video)', class: 'VIDEO_STREAMING' },
+            'AF21': { dec: 18, name: 'AF21 (Assured Forwarding 21)', bin: '010010', tos: '0x48', cos: '2 (High Priority Data)', class: 'CRITICAL_DATA' },
+            'CS0': { dec: 0, name: 'CS0 (Best Effort)', bin: '000000', tos: '0x00', cos: '0 (Best Effort)', class: 'DEFAULT_TRAFFIC' },
+            'CS1': { dec: 8, name: 'CS1 (Scavenger / Bulk)', bin: '001000', tos: '0x20', cos: '1 (Background)', class: 'SCAVENGER' }
+        };
+
+        function calcQosDscp() {
+            let sel = document.getElementById('qosClassSelect').value;
+            let intName = document.getElementById('qosIntName').value.trim() || 'GigabitEthernet1/0/1';
+            let q = qosData[sel] || qosData['EF'];
+
+            document.getElementById('qosValDecimal').innerText = q.dec;
+            document.getElementById('qosValName').innerText = q.name.split(' ')[0];
+            document.getElementById('qosValBinary').innerText = q.bin;
+            document.getElementById('qosValTos').innerText = q.tos;
+            document.getElementById('qosValCos').innerText = q.cos;
+
+            let ciscoCli = 'class-map match-any ' + q.class + '\n match ip dscp ' + q.name.split(' ')[0].toLowerCase() + '\n!\npolicy-map QOS_POLICY\n class ' + q.class + '\n  priority percent 35\n!\ninterface ' + intName + '\n service-policy output QOS_POLICY';
+            document.getElementById('qosCiscoCli').value = ciscoCli;
+
+            let mikroCli = '/ip firewall mangle add chain=prerouting dscp=' + q.dec + ' action=mark-packet new-packet-mark=' + q.class.toLowerCase() + '_pkt passthrough=no\n/queue tree add name="QoS_' + q.class + '" parent=global packet-mark=' + q.class.toLowerCase() + '_pkt priority=' + (8 - parseInt(q.cos[0], 10)) + ' queue=default';
+            document.getElementById('qosMikroCli').value = mikroCli;
+        }
+
+        // 3. Routing CLI (OSPF & BGP)
+        let currentRtVendor = 'cisco';
+        function setRtVendor(v, btn) {
+            currentRtVendor = v;
+            btn.parentElement.querySelectorAll('button').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            generateBgpOspf();
+        }
+
+        function generateBgpOspf() {
+            let proto = document.getElementById('rtProto').value;
+            let rId = document.getElementById('rtRouterId').value.trim() || '10.255.255.1';
+            let networks = document.getElementById('rtNetworks').value.trim().split('\n').map(s => s.trim()).filter(Boolean);
+
+            let grpOspfArea = document.getElementById('grpOspfArea');
+            let grpBgpAs = document.getElementById('grpBgpAs');
+            let grpBgpNeigh = document.getElementById('grpBgpNeighbor');
+            let grpOspfPass = document.getElementById('grpOspfPassive');
+
+            if (proto === 'ospf') {
+                if (grpOspfArea) grpOspfArea.style.display = 'block';
+                if (grpBgpAs) grpBgpAs.style.display = 'none';
+                if (grpBgpNeigh) grpBgpNeigh.style.display = 'none';
+                if (grpOspfPass) grpOspfPass.style.display = 'block';
+
+                let area = document.getElementById('rtOspfArea').value.trim() || '0';
+                let passive = document.getElementById('rtPassiveInt').value.trim() || 'GigabitEthernet0/1';
+
+                if (currentRtVendor === 'cisco') {
+                    let netLines = networks.map(n => {
+                        let parts = n.split('/');
+                        let ip = parts[0];
+                        let pfx = parseInt(parts[1] || '24', 10);
+                        let wildcard = (pfx === 24) ? '0.0.0.255' : (pfx === 30) ? '0.0.0.3' : '0.0.255.255';
+                        return ' network ' + ip + ' ' + wildcard + ' area ' + area;
+                    }).join('\n');
+                    document.getElementById('rtResultCli').value = 'router ospf 1\n router-id ' + rId + '\n passive-interface ' + passive + '\n' + netLines + '\n exit';
+                } else if (currentRtVendor === 'mikrotik') {
+                    let netLines = networks.map(n => '/routing ospf interface-template add area=backbone networks=' + n).join('\n');
+                    document.getElementById('rtResultCli').value = '/routing ospf instance add name=ospf-main router-id=' + rId + '\n/routing ospf area add name=backbone instance=ospf-main area-id=' + area + '\n' + netLines;
+                } else {
+                    let netLines = networks.map(n => '    edit 0\n        set prefix ' + n + '\n    next').join('\n');
+                    document.getElementById('rtResultCli').value = 'config router ospf\n    set router-id ' + rId + '\n    config area\n        edit ' + area + '\n        next\n    end\n    config network\n' + netLines + '\n    end\nend';
+                }
+            } else {
+                if (grpOspfArea) grpOspfArea.style.display = 'none';
+                if (grpBgpAs) grpBgpAs.style.display = 'block';
+                if (grpBgpNeigh) grpBgpNeigh.style.display = 'block';
+                if (grpOspfPass) grpOspfPass.style.display = 'none';
+
+                let localAs = document.getElementById('rtBgpAs').value.trim() || '65001';
+                let nIp = document.getElementById('rtNeighborIp').value.trim() || '10.10.10.2';
+                let rAs = document.getElementById('rtRemoteAs').value.trim() || '65002';
+
+                if (currentRtVendor === 'cisco') {
+                    let netLines = networks.map(n => ' network ' + n.split('/')[0] + ' mask 255.255.255.0').join('\n');
+                    document.getElementById('rtResultCli').value = 'router bgp ' + localAs + '\n bgp router-id ' + rId + '\n neighbor ' + nIp + ' remote-as ' + rAs + '\n neighbor ' + nIp + ' soft-reconfiguration inbound\n' + netLines + '\n exit';
+                } else if (currentRtVendor === 'mikrotik') {
+                    document.getElementById('rtResultCli').value = '/routing bgp template add name=bgp-tpl as=' + localAs + ' router-id=' + rId + '\n/routing bgp connection add name=peer-1 remote.address=' + nIp + ' remote.as=' + rAs + ' templates=bgp-tpl';
+                } else {
+                    document.getElementById('rtResultCli').value = 'config router bgp\n    set as ' + localAs + '\n    set router-id ' + rId + '\n    config neighbor\n        edit ' + nIp + '\n            set remote-as ' + rAs + '\n        next\n    end\nend';
+                }
+            }
+        }
+
+        // 4. M365 PowerShell Generator
+        function generateM365Cli() {
+            let task = document.getElementById('m365TaskSelect').value;
+            let u = document.getElementById('m365UserUpn').value.trim() || 'user@company.com';
+            let cli = '';
+
+            if (task === 'connect') {
+                cli = '# Install and Connect to Microsoft 365 Management Modules\nInstall-Module -Name ExchangeOnlineManagement, Microsoft.Graph -Scope CurrentUser -Force\n\nConnect-ExchangeOnline -UserPrincipalName admin@company.com -ShowBanner:$false\nConnect-MgGraph -Scopes "User.ReadWrite.All", "Directory.ReadWrite.All"';
+            } else if (task === 'shared_mbx') {
+                cli = '# 1. Convert User Mailbox to Shared Mailbox (Freeing up license)\nSet-Mailbox -Identity "' + u + '" -Type Shared\n\n# 2. Verify conversion\nGet-Mailbox -Identity "' + u + '" | Select-Object DisplayName, RecipientTypeDetails';
+            } else if (task === 'delegate_perm') {
+                cli = '# Grant FullAccess and SendAs permissions to colleague\n$Delegate = "manager@company.com"\n\nAdd-MailboxPermission -Identity "' + u + '" -User $Delegate -AccessRights FullAccess -InheritanceType All -AutoMapping $true\nAdd-RecipientPermission -Identity "' + u + '" -Trustee $Delegate -AccessRights SendAs -Confirm:$false';
+            } else if (task === 'oof_auto') {
+                cli = 'Set-MailboxAutoReplyConfiguration -Identity "' + u + '" -AutoReplyState Enabled \`\n  -InternalMessage "Dear Team, I am currently out of office and will respond upon my return." \`\n  -ExternalMessage "Thank you for contacting me. I am currently out of the office."';
+            } else if (task === 'reset_mfa') {
+                cli = '# Emergency Revoke Active Sessions & Force MFA Re-registration\n$UserId = (Get-MgUser -Filter "userPrincipalName eq \'' + u + '\'").Id\nRevoke-MgUserSignInSession -UserId $UserId\nReset-MgUserStrongAuthenticationMethodByMethodType -UserId $UserId';
+            } else if (task === 'forwarding') {
+                cli = '# Configure email forwarding with option to deliver to both\nSet-Mailbox -Identity "' + u + '" -ForwardingSmtpAddress "backup@company.com" -DeliverToMailboxAndForward $true';
+            } else {
+                cli = '# Export all user mailboxes with storage sizes to CSV\nGet-Mailbox -ResultSize Unlimited | Get-MailboxStatistics | Select-Object DisplayName, TotalItemSize, ItemCount | Export-Csv -Path "$HOME\\Desktop\\MailboxSizes.csv" -NoTypeInformation';
+            }
+
+            document.getElementById('m365CliResult').value = cli;
+        }
+
+        // 5. BitLocker & TPM
+        function generateBitlockerCli() {
+            let act = document.getElementById('blActionSelect').value;
+            let d = document.getElementById('blDriveLetter').value.trim() || 'C:';
+            let extra = document.getElementById('blExtraBox');
+            if (extra) extra.style.display = (act === 'unlock_key') ? 'block' : 'none';
+
+            let cli = '';
+            if (act === 'status') {
+                cli = 'manage-bde -status ' + d + '\nGet-BitLockerVolume -MountPoint ' + d;
+            } else if (act === 'suspend') {
+                cli = 'manage-bde -protectors -disable ' + d + ' -RebootCount 1\n# Or via PowerShell: Suspend-BitLocker -MountPoint "' + d + '" -RebootCount 1';
+            } else if (act === 'resume') {
+                cli = 'manage-bde -protectors -enable ' + d + '\nResume-BitLocker -MountPoint "' + d + '"';
+            } else if (act === 'backup_ad') {
+                cli = '$KeyId = (Get-BitLockerVolume -MountPoint "' + d + '").KeyProtector | Where-Object { $_.KeyProtectorType -eq "RecoveryPassword" } | Select-Object -ExpandProperty KeyProtectorId\nmanage-bde -protectors -adbackup ' + d + ' -id $KeyId';
+            } else if (act === 'unlock_key') {
+                let p = document.getElementById('blRecoveryPass').value.trim() || '48-DIGIT-RECOVERY-KEY';
+                cli = 'manage-bde -unlock ' + d + ' -RecoveryPassword "' + p + '"';
+            } else if (act === 'tpm_check') {
+                cli = 'Get-Tpm\ntpmtool getdeviceinformation\n# Clear TPM (Run in Admin PowerShell): Clear-Tpm';
+            } else {
+                cli = 'Enable-BitLocker -MountPoint "' + d + '" -EncryptionMethod XtsAes256 -UsedSpaceOnly -TpmProtector';
+            }
+            document.getElementById('blCliResult').value = cli;
+        }
+
+        // 6. AD Disaster Health
+        function generateAdHealthCli() {
+            let act = document.getElementById('adTaskSelect').value;
+            let targetDc = document.getElementById('adTargetDc').value.trim() || 'DC02.corp.local';
+            let cli = '';
+
+            if (act === 'query_fsmo') {
+                cli = 'netdom query fsmo\nGet-ADDomain | Select-Object InfrastructureMaster, PDCEmulator, RIDMaster\nGet-ADForest | Select-Object DomainNamingMaster, SchemaMaster';
+            } else if (act === 'transfer_fsmo') {
+                cli = '# Graceful FSMO Role Transfer to ' + targetDc + '\nMove-ADDirectoryServerOperationMasterRole -Identity "' + targetDc + '" -OperationMasterRole 0,1,2,3,4 -Confirm:$false';
+            } else if (act === 'seize_fsmo') {
+                cli = '# Emergency FSMO Role Seize (Use when primary DC permanently dead)\nntdsutil\nroles\nconnections\nconnect to server ' + targetDc + '\nquit\nseize pdc\nseize rid master\nseize infrastructure master\nseize schema master\nseize naming master\nquit\nquit';
+            } else if (act === 'repl_health') {
+                cli = 'repadmin /replsummary\nrepadmin /showrepl * /csv > "$HOME\\Desktop\\ReplicationReport.csv"\ndcdiag /v /c /e /f:"$HOME\\Desktop\\DCDiagReport.txt"';
+            } else if (act === 'repair_trust') {
+                cli = '# Run this on the troubled client workstation as Administrator:\nTest-ComputerSecureChannel -Repair -Credential (Get-Credential)\n# Or reset via Netdom:\nnetdom resetpwd /server:' + targetDc + ' /userd:corp\\admin /passwordd:*';
+            } else if (act === 'recycle_bin') {
+                cli = '# Recover deleted user or computer from Active Directory Recycle Bin\nGet-ADObject -Filter \'isDeleted -eq $true -and name -like "*John*"\' -IncludeDeletedObjects | Restore-ADObject';
+            } else {
+                cli = '# Metadata cleanup for dead DC\nntdsutil "metadata cleanup" "remove selected server ' + targetDc + '" q q';
+            }
+            document.getElementById('adCliResult').value = cli;
+        }
+
+        // 7. Network Stack Reset Script
+        function initNetReset() {
+            let script = '@echo off\ntitle Windows Network Stack & Winsock Emergency Repair\necho Resetting network components...\nipconfig /flushdns\nipconfig /registerdns\nnetsh winsock reset\nnetsh int ip reset\nnetsh advfirewall reset\narp -d *\nipconfig /release\nipconfig /renew\necho Disabling Energy Efficient Ethernet on NICs...\npowershell -Command "Get-NetAdapterAdvancedProperty -DisplayName \'*Energy*\', \'*Green*\' | Set-NetAdapterAdvancedProperty -DisplayValue \'Disabled\' -ErrorAction SilentlyContinue"\necho Network Reset Completed Successfully!\npause';
+            let el = document.getElementById('winNetResetScript');
+            if (el) el.value = script;
+        }
+
+        function downloadNetResetBat() {
+            let content = document.getElementById('winNetResetScript').value;
+            let blob = new Blob([content], { type: 'application/bat' });
+            let url = URL.createObjectURL(blob);
+            let a = document.createElement('a');
+            a.href = url;
+            a.download = 'Fix-Network-Stack.bat';
+            a.click();
+            URL.revokeObjectURL(url);
+            showToast('✓ Fix-Network-Stack.bat Downloaded!');
+        }
+
+        // 8. ESXi / Proxmox CLI
+        const hypActions = {
+            'esxi': [
+                { val: 'kill_vm', text: '1. Force Kill Hung / Frozen VM (esxcli vm process kill)' },
+                { val: 'restart_mgmt', text: '2. Restart Management Agents (services.sh restart)' },
+                { val: 'list_vms', text: '3. List Running VMs with World IDs' },
+                { val: 'rescan_storage', text: '4. Rescan Storage Adapters & Datastores' }
+            ],
+            'proxmox': [
+                { val: 'unlock_vm', text: '1. Unlock Locked / Stuck VM (qm unlock)' },
+                { val: 'force_stop', text: '2. Force Stop Frozen VM (qm stop --skiplock)' },
+                { val: 'quorum_fix', text: '3. Fix Cluster Quorum when Nodes Offline' },
+                { val: 'nag_removal', text: '4. Remove No-Subscription Nag Dialog' }
+            ]
+        };
+
+        function updateHypActions() {
+            let plat = document.getElementById('hypPlatform').value;
+            let sel = document.getElementById('hypAction');
+            sel.innerHTML = hypActions[plat].map(a => '<option value="' + a.val + '">' + a.text + '</option>').join('');
+        }
+
+        function generateEsxiProxmoxCli() {
+            let plat = document.getElementById('hypPlatform').value;
+            let act = document.getElementById('hypAction').value;
+            let vmid = document.getElementById('hypVmId').value.trim() || '100';
+            let ds = document.getElementById('hypDsName').value.trim() || 'datastore1';
+            let cli = '';
+
+            if (plat === 'esxi') {
+                if (act === 'kill_vm') {
+                    cli = '# Force terminate stuck virtual machine\nesxcli vm process kill --type=force --world-id=' + vmid;
+                } else if (act === 'restart_mgmt') {
+                    cli = '# Restart ESXi host management daemons (hostd & vpxa)\n/etc/init.d/hostd restart\n/etc/init.d/vpxa restart\n# Or complete one-liner:\nservices.sh restart';
+                } else if (act === 'list_vms') {
+                    cli = 'esxcli vm process list\nvim-cmd vmsvc/getallvms';
+                } else {
+                    cli = 'esxcli storage core adapter rescan --all\nesxcli storage vmfs extent list';
+                }
+            } else {
+                if (act === 'unlock_vm') {
+                    cli = '# Unlock locked Proxmox VM (e.g. after failed backup or snapshot)\nqm unlock ' + vmid;
+                } else if (act === 'force_stop') {
+                    cli = 'qm stop ' + vmid + ' --skiplock 1\n# For LXC Container: pct stop ' + vmid + ' --force 1';
+                } else if (act === 'quorum_fix') {
+                    cli = '# Regain quorum when cluster nodes are down (Emergency Single-Node mode)\npvecm expected 1';
+                } else {
+                    cli = '# Remove subscription nag dialog in Proxmox Web GUI\nsed -Ezi.bak "s/(Ext.Msg.show\\(\\{\\s+title: gettext\\(\'No valid sub)/void\\(\\{ \\/\\/ \\1/g" /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js\nsystemctl restart pveproxy.service';
+                }
+            }
+            document.getElementById('hypCliResult').value = cli;
+        }
+
+        // 9. Docker Compose Generator
+        const dkTemplates = {
+            'nginx_proxy': 'version: "3.8"\nservices:\n  npm:\n    image: jc21/nginx-proxy-manager:latest\n    container_name: nginx-proxy-manager\n    restart: unless-stopped\n    ports:\n      - "80:80"\n      - "443:443"\n      - "PORT:81"\n    volumes:\n      - ./data:/data\n      - ./letsencrypt:/etc/letsencrypt',
+            'portainer': 'version: "3.8"\nservices:\n  portainer:\n    image: portainer/portainer-ce:latest\n    container_name: portainer\n    restart: always\n    ports:\n      - "9000:9000"\n      - "PORT:9443"\n    volumes:\n      - /var/run/docker.sock:/var/run/docker.sock\n      - ./portainer_data:/data',
+            'pihole': 'version: "3.8"\nservices:\n  pihole:\n    container_name: pihole\n    image: pihole/pihole:latest\n    ports:\n      - "53:53/tcp"\n      - "53:53/udp"\n      - "PORT:80"\n    environment:\n      TZ: "Asia/Phnom_Penh"\n      WEBPASSWORD: "AdminSecretPassword"\n    volumes:\n      - ./etc-pihole:/etc/pihole\n      - ./etc-dnsmasq.d:/etc/dnsmasq.d',
+            'uptime_kuma': 'version: "3.8"\nservices:\n  uptime-kuma:\n    image: louislam/uptime-kuma:latest\n    container_name: uptime-kuma\n    restart: always\n    ports:\n      - "PORT:3001"\n    volumes:\n      - ./uptime-kuma-data:/app/data',
+            'nextcloud': 'version: "3.8"\nservices:\n  nextcloud:\n    image: nextcloud:latest\n    container_name: nextcloud\n    restart: always\n    ports:\n      - "PORT:80"\n    volumes:\n      - ./nextcloud_data:/var/www/html'
+        };
+
+        function generateDockerCompose() {
+            let svc = document.getElementById('dkService').value;
+            let port = document.getElementById('dkPort').value.trim() || '8080';
+            let tpl = (dkTemplates[svc] || dkTemplates['nginx_proxy']).replace(/PORT/g, port);
+            document.getElementById('dkComposeResult').value = tpl;
+            document.getElementById('dkMgmtCli').value = '# Start services in background:\ndocker compose up -d\n\n# View logs:\ndocker compose logs -f\n\n# Clean unused Docker cache:\ndocker system prune -a --volumes';
+        }
+
+        // 10. OpenSSL CLI Generator
+        function generateOpenSslCli() {
+            let task = document.getElementById('sslTask').value;
+            let d = document.getElementById('sslDomain').value.trim() || 'server.company.local';
+            let cli = '';
+
+            if (task === 'csr') {
+                cli = '# Generate 2048-bit Private Key and Certificate Signing Request (CSR)\nopenssl req -new -newkey rsa:2048 -nodes -keyout ' + d + '.key -out ' + d + '.csr -subj "/C=KH/ST=PhnomPenh/L=PhnomPenh/O=Company/CN=' + d + '"';
+            } else if (task === 'self_signed') {
+                cli = '# Generate Self-Signed Wildcard SSL Certificate (valid for 10 years / 3650 days)\nopenssl req -x509 -nodes -days 3650 -newkey rsa:2048 -keyout ' + d + '.key -out ' + d + '.crt -subj "/CN=*.' + d + '"';
+            } else if (task === 'crt_to_pfx') {
+                cli = '# Convert CRT and Private Key to PFX (PKCS#12 for Windows IIS)\nopenssl pkcs12 -export -out ' + d + '.pfx -inkey ' + d + '.key -in ' + d + '.crt';
+            } else if (task === 'pfx_to_crt') {
+                cli = '# Extract Private Key & Certificate from PFX\nopenssl pkcs12 -in ' + d + '.pfx -nocerts -out ' + d + '.key -nodes\nopenssl pkcs12 -in ' + d + '.pfx -clcerts -nokeys -out ' + d + '.crt';
+            } else {
+                cli = '# Check SSL Expiration and Certificate Chain on remote server\nopenssl s_client -connect ' + d + ':443 -servername ' + d + ' </dev/null 2>/dev/null | openssl x509 -noout -dates -subject';
+            }
+            document.getElementById('sslCliResult').value = cli;
+        }
+
+        // 11. CCTV Lens & DORI Calculator
+        function calcCctvLens() {
+            let sensorW = 5.6; // mm for 1/2.8"
+            let sensorSel = document.getElementById('lensSensor').value;
+            if (sensorSel === '1/3') sensorW = 4.8;
+            else if (sensorSel === '1/2.7') sensorW = 5.37;
+            else if (sensorSel === '1/1.8') sensorW = 7.18;
+
+            let focal = parseFloat(document.getElementById('lensFocal').value) || 4.0;
+            let dist = parseFloat(document.getElementById('lensDist').value) || 15.0;
+
+            // Horizontal Angle = 2 * atan(sensorW / (2 * focal))
+            let hAngleRad = 2 * Math.atan(sensorW / (2 * focal));
+            let hAngleDeg = hAngleRad * (180 / Math.PI);
+
+            // Field of view width at distance
+            let sceneWidth = 2 * dist * Math.tan(hAngleRad / 2);
+
+            // DORI Distances: Detect (25px/m), Observe (62px/m), Recognize (125px/m), Identify (250px/m)
+            // Assuming standard 4MP resolution (2560 horizontal pixels)
+            let pxPerMeterAt1m = 2560 / (2 * Math.tan(hAngleRad / 2));
+            let dDetect = Math.round(pxPerMeterAt1m / 25);
+            let dRecog = Math.round(pxPerMeterAt1m / 125);
+            let dIdent = Math.round(pxPerMeterAt1m / 250);
+
+            document.getElementById('lensResAngle').innerText = hAngleDeg.toFixed(1) + '°';
+            document.getElementById('lensResWidth').innerText = sceneWidth.toFixed(1) + ' m';
+            document.getElementById('doriDetect').innerText = dDetect + ' m';
+            document.getElementById('doriRecog').innerText = dRecog + ' m';
+            document.getElementById('doriIdent').innerText = dIdent + ' m';
+        }
+
+        // 12. FortiGate VDOM Generator
+        function generateFortiVdom() {
+            let name = document.getElementById('vdomName').value.trim() || 'CustomerA';
+            let intf = document.getElementById('vdomInterface').value.trim() || 'port4';
+            let link = document.getElementById('vdomLinkName').value.trim() || 'vlink_custA';
+            let sub = document.getElementById('vdomLinkSubnet').value.trim() || '10.254.1.0/30';
+
+            let cli = 'config system global\n    set vdom-mode multi-vdom\nend\n\nconfig vdom\n    edit ' + name + '\n    next\nend\n\nconfig system vdom-link\n    edit ' + link + '\n        set type ethernet\n    next\nend\n\nconfig system interface\n    edit ' + intf + '\n        set vdom ' + name + '\n        set mode dhcp\n    next\nend';
+            document.getElementById('vdomCliResult').value = cli;
+        }
+
+        // 13. Cisco ACL Builder
+        function generateCiscoAcl() {
+            let type = document.getElementById('aclType').value;
+            let name = document.getElementById('aclName').value.trim() || 'SECURE_IN';
+            let act = document.getElementById('aclAction').value;
+            let proto = document.getElementById('aclProto').value;
+            let src = document.getElementById('aclSource').value.trim() || 'any';
+            let dst = document.getElementById('aclDest').value.trim() || 'any';
+            let intf = document.getElementById('aclInterface').value.trim() || 'GigabitEthernet0/0 in';
+
+            function formatIp(ip) {
+                if (ip.toLowerCase() === 'any') return 'any';
+                if (ip.includes('/')) {
+                    let parts = ip.split('/');
+                    let mask = (parts[1] === '24') ? '0.0.0.255' : (parts[1] === '16') ? '0.0.255.255' : '0.0.0.3';
+                    return parts[0] + ' ' + mask;
+                }
+                return 'host ' + ip;
+            }
+
+            let srcStr = formatIp(src);
+            let dstStr = formatIp(dst);
+            let portStr = '';
+
+            if (proto === 'tcp_web') portStr = 'eq 80 443';
+            else if (proto === 'tcp_ssh') portStr = 'eq 22';
+            else if (proto === 'tcp_rdp') portStr = 'eq 3389';
+            else if (proto === 'udp_dns') portStr = 'eq 53';
+
+            let rule = act + ' ' + (proto.startsWith('tcp') ? 'tcp' : proto.startsWith('udp') ? 'udp' : proto) + ' ' + srcStr + ' ' + dstStr + (portStr ? ' ' + portStr : '');
+
+            let cli = 'ip access-list extended ' + name + '\n ' + rule + '\n exit\n\ninterface ' + intf.split(' ')[0] + '\n ip access-group ' + name + ' ' + (intf.split(' ')[1] || 'in');
+            document.getElementById('aclCliResult').value = cli;
+        }
+
+        // 14. UPS Runtime Calculator
+        function calcUpsRuntime() {
+            let loadWatts = parseFloat(document.getElementById('upsLoadWatts').value) || 650;
+            let pf = parseFloat(document.getElementById('upsPowerFactor').value) || 0.9;
+            let dcVolts = parseFloat(document.getElementById('upsDcVoltage').value) || 48;
+            let ah = parseFloat(document.getElementById('upsBatteryAh').value) || 9;
+
+            let totalVa = Math.round(loadWatts / pf);
+            let totalEnergyWh = dcVolts * ah;
+            let efficiency = 0.88;
+
+            let runtimeHours = (totalEnergyWh * efficiency) / loadWatts;
+            let runtimeMins = Math.round(runtimeHours * 60);
+
+            let currentDraw = Math.round((loadWatts / (dcVolts * efficiency)) * 10) / 10;
+
+            document.getElementById('upsResRuntime').innerText = runtimeMins + ' Minutes';
+            document.getElementById('upsResCurrent').innerText = currentDraw + ' Amps';
+            document.getElementById('upsResVa').innerText = (totalVa * 1.25).toFixed(0) + ' VA';
+            document.getElementById('upsResEnergy').innerText = totalEnergyWh + ' Wh';
+        }
+
     </script>
 
     <!-- IT EMERGENCY QUICK REFERENCE SLIDE-OVER DRAWER -->
