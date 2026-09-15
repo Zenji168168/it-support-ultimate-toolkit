@@ -21,14 +21,14 @@ if exist "%~dp0IT-Support-Toolkit.exe" (
 :: Try launching in Edge App Mode (Standalone window, no browser tabs/URL bar)
 where msedge >nul 2>nul
 if %errorlevel% equ 0 (
-    start msedge --app="%~dp0index.html" --window-size=1240,860
+    start "" /max msedge --app="%~dp0index.html" --start-maximized
     exit
 )
 
 :: Try launching in Chrome App Mode
 where chrome >nul 2>nul
 if %errorlevel% equ 0 (
-    start chrome --app="%~dp0index.html" --window-size=1240,860
+    start "" /max chrome --app="%~dp0index.html" --start-maximized
     exit
 )
 

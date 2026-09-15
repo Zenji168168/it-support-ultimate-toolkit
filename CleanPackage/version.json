@@ -1,0 +1,26 @@
+﻿{
+  "latestVersion": "3.6.0",
+  "version": "3.6.0",
+  "name": "IT Support Ultimate Toolkit Enterprise Desktop",
+  "author": "MEUK THAREACH",
+  "releaseDate": "2026-09-15",
+  "status": "latest",
+  "toolsCount": 74,
+  "downloadUrl": "https://raw.githubusercontent.com/Zenji168168/it-support-ultimate-toolkit/main/index.html",
+  "setupUrl": "https://github.com/Zenji168168/it-support-ultimate-toolkit/releases/latest/download/IT-Support-Toolkit-Setup.exe",
+  "portableUrl": "https://github.com/Zenji168168/it-support-ultimate-toolkit/releases/latest/download/IT-Support-Toolkit-Portable.zip",
+  "changelog": [
+    "Standard & Soft Professional Enterprise UI (Azure/Cloudflare style slate tokens)",
+    "Frontline IT Quick Access Strip (1-click launch for 12 frontline tools)",
+    "IT Emergency Quick Reference Drawer (Common ports, IPv4 CIDR subnet matrix, RJ-45 T-568B pinout, rescue CLI)",
+    "Floating Soft Toast Notifications & Breadcrumb Category Switcher",
+    "Smart VLAN & Trunking CLI Generator (Cisco, MikroTik, Ruijie, FortiGate)",
+    "IPsec Site-to-Site Dual-CLI VPN Matcher (FortiGate ↔ MikroTik Phase 1/2 parity)",
+    "Destination NAT & Port Forwarding Script Generator (MikroTik & FortiGate with Hairpin NAT)",
+    "Master Default Credentials & IP Database (50+ Enterprise Hardware Brands)",
+    "Interactive Troubleshooting Decision Tree Wizard (Network, CCTV, SMB Share)",
+    "Universal Syslog & Error Code Decoder (BSOD, FortiGate, HTTP, Windows Update)"
+  ],
+  "autoUpdateSupported": true,
+  "cloudUpdateSupported": true
+}

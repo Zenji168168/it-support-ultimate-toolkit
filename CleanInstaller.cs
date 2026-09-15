@@ -235,7 +235,7 @@ namespace ITSupportToolkitInstaller
             {
                 if (chkLaunchNow.Checked && File.Exists(finalInstalledHtml))
                 {
-                    try { Process.Start(new ProcessStartInfo { FileName = "msedge.exe", Arguments = "--app=\"file:///" + finalInstalledHtml.Replace('\\', '/') + "\" --start-maximized", UseShellExecute = true }); } catch { }
+                    try { Process.Start(new ProcessStartInfo { FileName = "msedge.exe", Arguments = "--app=\"file:///" + finalInstalledHtml.Replace('\\', '/') + "\" --start-maximized", WindowStyle = ProcessWindowStyle.Maximized, UseShellExecute = true }); } catch { }
                 }
                 this.Close();
             }
@@ -274,7 +274,7 @@ namespace ITSupportToolkitInstaller
 
                     // Create clean Launch-Toolkit.bat in target folder
                     string batPath = Path.Combine(targetDir, "Launch-Toolkit.bat");
-                    File.WriteAllText(batPath, "@echo off\r\nstart msedge --app=\"file:///%~dp0index.html\" --start-maximized\r\nexit\r\n");
+                    File.WriteAllText(batPath, "@echo off\r\nstart \"\" /max msedge --app=\"file:///%~dp0index.html\" --start-maximized\r\nexit\r\n");
 
                     string mainHtml = Path.Combine(targetDir, "index.html");
                     string appIco = Path.Combine(targetDir, "app.ico");
@@ -353,6 +353,7 @@ namespace ITSupportToolkitInstaller
                 shortcut.TargetPath = targetPath;
                 shortcut.Arguments = arguments;
                 shortcut.WorkingDirectory = workingDir;
+                shortcut.WindowStyle = 3; // Maximized window mode
                 shortcut.IconLocation = iconLocation + ", 0";
                 shortcut.Description = "IT Support Ultimate Toolkit Desktop Edition by MEUK THAREACH";
                 shortcut.Save();
