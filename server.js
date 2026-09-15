@@ -30,37 +30,26 @@ const server = http.createServer((req, res) => {
 
     // API Route: Version & Update Status
     if (reqPath === '/api/version') {
-        const clientVer = req.url.includes('current=') ? req.url.split('current=')[1].split('&')[0] : '3.5.0';
-        const hasUpdate = (clientVer !== '3.6.0');
+        const clientVer = req.url.includes('current=') ? req.url.split('current=')[1].split('&')[0] : '3.6.0';
+        let versionInfo = {};
+        try {
+            const vRaw = fs.readFileSync(path.join(PUBLIC_DIR, 'version.json'), 'utf8');
+            versionInfo = JSON.parse(vRaw);
+        } catch(e) {
+            versionInfo = { latestVersion: '3.7.0', version: '3.7.0', toolsCount: 96, author: 'MEUK THAREACH' };
+        }
+        
         const targetHtml = path.join(PUBLIC_DIR, 'index.html');
         let fileSize = 0;
         try { fileSize = fs.statSync(targetHtml).size; } catch(e) {}
 
-        const versionInfo = {
-            currentVersion: clientVer,
-            latestVersion: '3.6.0',
-            version: '3.6.0',
-            name: 'IT Support Ultimate Toolkit Enterprise Desktop',
-            author: 'MEUK THAREACH',
-            releaseDate: '2026-09-15',
-            status: hasUpdate ? 'update_available' : 'latest',
-            toolsCount: 74,
-            fileSize: fileSize,
-            changelog: [
-                'Standard & Soft Professional Enterprise UI (Azure/Cloudflare style slate tokens)',
-                'Frontline IT Quick Access Strip (1-click launch for 12 frontline tools)',
-                'IT Emergency Quick Reference Drawer (Common ports, IPv4 CIDR subnet matrix, RJ-45 T-568B pinout, rescue CLI)',
-                'Floating Soft Toast Notifications & Breadcrumb Category Switcher',
-                'Smart VLAN & Trunking CLI Generator (Cisco, MikroTik, Ruijie, FortiGate)',
-                'IPsec Site-to-Site Dual-CLI VPN Matcher (FortiGate ↔ MikroTik Phase 1/2 parity)',
-                'Destination NAT & Port Forwarding Script Generator (MikroTik & FortiGate with Hairpin NAT)',
-                'Master Default Credentials & IP Database (50+ Enterprise Hardware Brands)',
-                'Interactive Troubleshooting Decision Tree Wizard (Network, CCTV, SMB Share)',
-                'Universal Syslog & Error Code Decoder (BSOD, FortiGate, HTTP, Windows Update)'
-            ],
-            autoUpdateSupported: true,
-            nativeBridgeSupported: true
-        };
+        versionInfo.currentVersion = clientVer;
+        versionInfo.fileSize = fileSize;
+        const targetVer = versionInfo.latestVersion || versionInfo.version || '3.7.0';
+        versionInfo.status = (clientVer !== targetVer) ? 'update_available' : 'latest';
+        versionInfo.autoUpdateSupported = true;
+        versionInfo.nativeBridgeSupported = true;
+
         res.writeHead(200, {
             'Content-Type': 'application/json; charset=utf-8',
             'Access-Control-Allow-Origin': '*',
@@ -90,6 +79,12 @@ const server = http.createServer((req, res) => {
             }
         } catch(e) {}
 
+        let targetVer = '3.7.0';
+        try {
+            const vRaw = fs.readFileSync(path.join(PUBLIC_DIR, 'version.json'), 'utf8');
+            targetVer = JSON.parse(vRaw).latestVersion || '3.7.0';
+        } catch(e) {}
+
         res.writeHead(200, {
             'Content-Type': 'application/json; charset=utf-8',
             'Access-Control-Allow-Origin': '*',
@@ -99,7 +94,7 @@ const server = http.createServer((req, res) => {
         res.end(JSON.stringify({
             success: true,
             status: 'completed',
-            targetVersion: '3.6.0',
+            targetVersion: targetVer,
             fileSize: fileSize,
             diskPath: installedDiskPath || sourceHtml,
             message: 'Update verified and synchronized on disk successfully. Ready to restart.'
