@@ -8516,39 +8516,46 @@ add chain=forward action=accept connection-nat-state=dstnat in-interface=ether1-
             let targetVer = (versionData && (versionData.latestVersion || versionData.version)) || '3.6.0';
             let hasUpdate = (APP_CURRENT_VERSION !== targetVer);
             let isNative = detectedBridge && detectedBridge.type === 'native';
+            let setupUrl = (versionData && versionData.setupUrl) || 'https://github.com/Zenji168168/it-support-ultimate-toolkit/releases/latest/download/IT-Support-Toolkit-Setup.exe';
 
             if (hasUpdate) {
+                let changelogHtml = (versionData && Array.isArray(versionData.changelog) && versionData.changelog.length > 0)
+                    ? versionData.changelog.map(item => `<li>${item}</li>`).join('')
+                    : `<li>Smart CLI Generators (VLAN/Trunk, Dual IPsec VPN, Hairpin NAT)</li>
+                       <li>Enterprise Device Configurations & 50+ Vendor Default Passwords DB</li>
+                       <li>12 In-depth IT Troubleshooting Decision Tree SOPs</li>
+                       <li>Universal Syslog & BSOD Error Decoder</li>
+                       <li>Full-Screen Auto-Maximized Desktop Mode</li>`;
+
                 content.innerHTML = `
                     <div style="background:rgba(79, 70, 229, 0.1); border-left:4px solid var(--primary); padding:14px; border-radius:8px; margin-bottom:14px;">
                         <div style="font-weight:700; color:var(--primary); font-size:15px; margin-bottom:6px; display:flex; align-items:center; gap:8px;">
                             <span>🚀</span> 
-                            <span>${currentLang === 'km' ? 'មានកំណែថ្មី v' + targetVer + ' អាចធ្វើការ Auto-Update បាន!' : 'New Update v' + targetVer + ' Available for In-App Update!'}</span>
+                            <span>${currentLang === 'km' ? 'មានកំណែថ្មី v' + targetVer + ' អាចធ្វើការ Update បាន!' : 'New Version v' + targetVer + ' Available!'}</span>
                         </div>
                         <div style="font-size:12.5px; color:var(--text-main); line-height:1.6;">
                             Installed Version: <strong>v${APP_CURRENT_VERSION} Desktop Edition</strong><br>
-                            Available Version: <strong style="color:var(--primary);">v${targetVer} Enterprise</strong><br>
+                            Latest Version Available: <strong style="color:var(--primary);">v${targetVer} Enterprise</strong><br>
                             Author & Maintainer: <strong>${(versionData && versionData.author) || 'MEUK THAREACH'}</strong><br>
-                            Update Engine: <strong style="color:var(--success);">${isNative ? '⚡ Native Desktop Disk Synchronizer (Active)' : '🌐 Server File Pipeline'}</strong>
+                            Source: <strong style="color:var(--success);">${(detectedBridge && detectedBridge.cloudProvider) || 'GitHub Cloud'}</strong>
                         </div>
                     </div>
 
-                    <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); border-radius:8px; padding:12px; margin-bottom:14px; font-size:12px;">
+                    <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); border-radius:8px; padding:12px; margin-bottom:14px; font-size:12px; max-height:190px; overflow-y:auto;">
                         <strong style="color:var(--text-main);">✨ Version ${targetVer} Highlights & Improvements:</strong>
                         <ul style="margin:6px 0 0 0; padding-left:20px; color:var(--text-muted); line-height:1.5;">
-                            <li>Smart CLI Generators (VLAN/Trunking, Dual IPsec VPN Matcher, Hairpin NAT)</li>
-                            <li>Enterprise Device Configurations (Cisco, MikroTik, FortiGate, UniFi, pfSense, NAS, VoIP)</li>
-                            <li>Master Default Credentials & IP Database (50+ Enterprise Hardware Brands)</li>
-                            <li>12 In-depth IT Troubleshooting SOP Playbooks & Decision Tree Wizard</li>
-                            <li>Universal Syslog & Error Code Decoder (BSOD, FortiGate, HTTP)</li>
-                            <li>Emergency CLI Cheat Sheets (ROMMON, Safe Mode, WinPE Admin)</li>
-                            <li>Real On-Disk File Updater: Silently updates application without running Setup.exe</li>
-                            <li>Full-Screen Desktop Mode & Golden Gear Application Icon</li>
+                            ${changelogHtml}
                         </ul>
                     </div>
 
-                    <button type="button" class="btn-action btn-primary" onclick="startInAppAutoUpdate('${targetVer}')" style="width:100%; padding:12px; font-size:14px; font-weight:700; border-radius:10px; box-shadow:0 4px 14px var(--primary-glow); background:linear-gradient(135deg, #4f46e5, #0891b2); cursor:pointer;">
-                        ⚡ ${currentLang === 'km' ? 'Auto-Update ផ្ទាល់ក្នុងកម្មវិធីឥឡូវនេះ (Update Now)' : 'Auto-Update Directly Inside App Now'}
-                    </button>
+                    <div style="display:flex; flex-direction:column; gap:8px;">
+                        <button type="button" class="btn-action btn-primary" onclick="window.open('${setupUrl}', '_blank')" style="width:100%; padding:12px; font-size:13.5px; font-weight:700; border-radius:10px; box-shadow:0 4px 14px var(--primary-glow); background:linear-gradient(135deg, #4f46e5, #0891b2); cursor:pointer;">
+                            🚀 ${currentLang === 'km' ? 'ទាញយក Setup ថ្មី (ដំឡើងលើ PC ណាក៏បានក្នុង 5 វិនាទី)' : 'Download Latest Setup.exe (Fast 5s Update for Any PC)'}
+                        </button>
+                        <button type="button" class="btn-action btn-secondary" onclick="startInAppAutoUpdate('${targetVer}')" style="width:100%; padding:9px 12px; font-size:12px; font-weight:600; opacity:0.95;">
+                            ⚡ ${currentLang === 'km' ? 'សាកល្បង Auto-Update ផ្ទាល់ក្នុង Tool (In-App Sync)' : 'In-App Automated Disk Sync'}
+                        </button>
+                    </div>
                 `;
             } else {
                 content.innerHTML = `
