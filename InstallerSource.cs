@@ -445,7 +445,7 @@ namespace ITSupportToolkitInstaller
                     if (!Directory.Exists(targetDir)) Directory.CreateDirectory(targetDir);
 
                     var asm = Assembly.GetExecutingAssembly();
-                    string[] resources = { "index.html", "app-icon.png", "app.ico", "version.json", "README.md" };
+                    string[] resources = { "index.html", "app-icon.png", "app.ico", "version.json", "README.md", "Update-Toolkit.bat" };
 
                     int step = 0;
                     foreach (var res in resources)
@@ -471,6 +471,7 @@ namespace ITSupportToolkitInstaller
 
                     string mainHtml = Path.Combine(targetDir, "index.html");
                     string appIco = Path.Combine(targetDir, "app.ico");
+                    string updateBat = Path.Combine(targetDir, "Update-Toolkit.bat");
                     finalInstalledHtml = mainHtml;
 
                     // Desktop Shortcut
@@ -489,6 +490,12 @@ namespace ITSupportToolkitInstaller
                         if (!Directory.Exists(smDir)) Directory.CreateDirectory(smDir);
                         string smLnk = Path.Combine(smDir, "IT Support Ultimate Toolkit.lnk");
                         CreateShortcut(smLnk, "msedge.exe", "--app=\"file:///" + mainHtml.Replace('\\', '/') + "\" --start-maximized", targetDir, appIco);
+
+                        string smUpdateLnk = Path.Combine(smDir, "Update Toolkit (1-Click Sync).lnk");
+                        if (File.Exists(updateBat))
+                        {
+                            CreateShortcut(smUpdateLnk, updateBat, "", targetDir, appIco);
+                        }
                     }
 
                     // Create Uninstall.bat
