@@ -19,8 +19,8 @@ using Microsoft.Win32;
 [assembly: AssemblyCulture("")]
 [assembly: ComVisible(false)]
 [assembly: Guid("7b51e042-4f32-4467-872e-336c84c17290")]
-[assembly: AssemblyVersion("3.6.0.0")]
-[assembly: AssemblyFileVersion("3.6.0.0")]
+[assembly: AssemblyVersion("3.8.0.0")]
+[assembly: AssemblyFileVersion("3.8.0.0")]
 
 namespace ITSupportToolkitInstaller
 {
@@ -74,7 +74,7 @@ namespace ITSupportToolkitInstaller
 
         private void InitializeComponent()
         {
-            this.Text = "IT Support Ultimate Toolkit v3.6.0 Setup";
+            this.Text = "IT Support Ultimate Toolkit v3.8.0 Setup";
             this.ClientSize = new Size(620, 420);
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
@@ -106,7 +106,7 @@ namespace ITSupportToolkitInstaller
 
             lblHeaderTitle = new Label
             {
-                Text = "IT Support Ultimate Toolkit 3.6 Enterprise",
+                Text = "IT Support Ultimate Toolkit 3.8 Enterprise",
                 Font = new Font("Segoe UI", 12.5F, FontStyle.Bold),
                 ForeColor = Color.White,
                 BackColor = Color.Transparent,
@@ -210,12 +210,12 @@ namespace ITSupportToolkitInstaller
             };
             var lblW2 = new Label
             {
-                Text = "This wizard will install the official IT Support Ultimate Toolkit v3.6.0 on your computer.\r\n\r\n" +
+                Text = "This wizard will install the official IT Support Ultimate Toolkit v3.8.0 on your computer.\r\n\r\n" +
                        "Key Capabilities Included:\r\n" +
-                       "  \u2022  74 Enterprise IT, Network, Sysadmin & CCTV Utilities\r\n" +
+                       "  \u2022  110 Enterprise IT, Network, Sysadmin & CCTV Utilities\r\n" +
                        "  \u2022  Smart Multi-Vendor CLI Generators (Cisco, MikroTik, FortiGate, Ruijie)\r\n" +
                        "  \u2022  50+ Hardware Brands Master Default Credentials & IP Database\r\n" +
-                       "  \u2022  12 In-depth IT Troubleshooting SOP Playbooks & Decision Trees\r\n" +
+                       "  \u2022  23 In-depth IT Troubleshooting SOP Playbooks & Decision Trees\r\n" +
                        "  \u2022  100% Offline Operation & Cloud Auto-Updater\r\n" +
                        "  \u2022  Created & Developed by MEUK THAREACH\r\n\r\n" +
                        "Click Next to continue with the installation.",
@@ -263,7 +263,7 @@ namespace ITSupportToolkitInstaller
             };
             txtLic.Text = "IT SUPPORT ULTIMATE TOOLKIT - END USER LICENSE AGREEMENT\r\n" +
                           "Creator, Architect & Lead Developer: MEUK THAREACH\r\n" +
-                          "Release Version: 3.6.0 Enterprise Desktop Edition\r\n\r\n" +
+                          "Release Version: 3.8.0 Enterprise Desktop Edition\r\n\r\n" +
                           "1. GRANT OF LICENSE\r\n" +
                           "This software is licensed free of charge for professional and commercial use by IT Support Technicians, System Administrators, Network Engineers, and CCTV Specialists.\r\n\r\n" +
                           "2. OFFLINE OPERATION & DATA PRIVACY\r\n" +
@@ -506,7 +506,7 @@ namespace ITSupportToolkitInstaller
                             if (key != null)
                             {
                                 key.SetValue("DisplayName", "IT Support Ultimate Toolkit");
-                                key.SetValue("DisplayVersion", "3.6.0");
+                                key.SetValue("DisplayVersion", "3.8.0");
                                 key.SetValue("Publisher", "MEUK THAREACH");
                                 key.SetValue("DisplayIcon", appIco);
                                 key.SetValue("InstallLocation", targetDir);

@@ -1220,7 +1220,7 @@
                 <div class="sys-badge" style="display:inline-flex; align-items:center; gap:8px;">
                     <img src="app-icon.png" alt="App Icon" style="width:18px; height:18px; object-fit:contain; border-radius:4px; vertical-align:middle;">
                     <span class="status-dot"></span>
-                    <span id="txtDeskStatus">96 Pro IT & CCTV Tools Ready</span>
+                    <span id="txtDeskStatus">110 Pro IT & CCTV Tools Ready</span>
                 </div>
             </div>
 
@@ -1314,7 +1314,7 @@
             <div class="quick-access-bar" id="quickAccessStrip">
                 <div class="quick-access-header">
                     <span style="display:inline-flex; align-items:center; gap:6px;">⚡ <span id="txtQuickAccessTitle">Frontline IT Quick Access (1-Click Launch)</span></span>
-                    <span style="font-size:11.5px; opacity:0.8;">96 Pro Utilities Ready</span>
+                    <span style="font-size:11.5px; opacity:0.8;">110 Pro Utilities Ready</span>
                 </div>
                 <div class="quick-access-pills">
                     <button type="button" class="quick-pill" onclick="jumpToTool('network', 'subnet')">🧮 Subnet Calculator</button>
@@ -1432,6 +1432,9 @@
                     <button class="tab-btn" onclick="showTool('dhcpOptions', this)" style="color:var(--primary); font-weight:700;">⚡ DHCP Options (43/66/150)</button>
                     <button class="tab-btn" onclick="showTool('qosDscp', this)">QoS DSCP & CoS Matrix</button>
                     <button class="tab-btn" onclick="showTool('bgpOspfGen', this)">OSPF & BGP Routing CLI</button>
+                    <button class="tab-btn" onclick="showTool('ipv6SubnetCalc', this)">🌐 IPv6 Subnet & Prefix Calc</button>
+                    <button class="tab-btn" onclick="showTool('fiberBudget', this)">💡 Fiber Optical Loss Budget</button>
+                    <button class="tab-btn" onclick="showTool('mtuMssCalc', this)">📦 MTU / MSS Packet Calc</button>
                 </div>
 
                 <!-- Windows Tabs -->
@@ -1448,6 +1451,9 @@
                     <button class="tab-btn" onclick="showTool('bitlockerTpm', this)">🔐 BitLocker & TPM Rescue</button>
                     <button class="tab-btn" onclick="showTool('adDisaster', this)">🛡️ AD FSMO & DC Health</button>
                     <button class="tab-btn" onclick="showTool('winNetReset', this)">🔄 Network Stack Reset</button>
+                    <button class="tab-btn" onclick="showTool('gpoPlaybook', this)">🛡️ GPO Security Hardening</button>
+                    <button class="tab-btn" onclick="showTool('sysmonHunt', this)">🕵️ Sysmon Threat Hunting</button>
+                    <button class="tab-btn" onclick="showTool('driverBackup', this)">💾 Driver Backup & Clean Repair</button>
                 </div>
 
                 <!-- Linux Tabs -->
@@ -1460,6 +1466,8 @@
                     <button class="tab-btn" onclick="showTool('esxiProxmox', this)" style="color:var(--primary); font-weight:700;">🖥️ ESXi & Proxmox Toolkit</button>
                     <button class="tab-btn" onclick="showTool('dockerCompose', this)">🐳 Docker Compose Gen</button>
                     <button class="tab-btn" onclick="showTool('sslOpenSsl', this)">🔒 OpenSSL Cert & CSR</button>
+                    <button class="tab-btn" onclick="showTool('nginxApacheGen', this)">🌐 Nginx & Apache Reverse Proxy</button>
+                    <button class="tab-btn" onclick="showTool('systemdBuilder', this)">⚙️ Systemd Service Daemon Gen</button>
                 </div>
 
                 <!-- Coding Tabs -->
@@ -1488,6 +1496,8 @@
                     <button class="tab-btn" onclick="showTool('cctvLensCalc', this)" style="color:var(--primary); font-weight:700;">📐 Lens Focal & DORI Calc</button>
                     <button class="tab-btn" onclick="showTool('cctvDualNic', this)">🔀 NVR Dual-NIC Topology</button>
                     <button class="tab-btn" onclick="showTool('cctvAccessControl', this)">🚪 Access Control & Wiegand</button>
+                    <button class="tab-btn" onclick="showTool('cctvBandwidth', this)">📶 NVR Bandwidth & Throughput</button>
+                    <button class="tab-btn" onclick="showTool('ptzTourCalc', this)">🔄 PTZ Camera Tours & RS-485</button>
                 </div>
 
                 <!-- 6. Enterprise Device Configuration Tabs -->
@@ -1508,6 +1518,8 @@
                     <button class="tab-btn" onclick="showTool('fortiVdom', this)">🛡️ FortiGate VDOM CLI</button>
                     <button class="tab-btn" onclick="showTool('ciscoAcl', this)">🧱 Cisco ACL Builder</button>
                     <button class="tab-btn" onclick="showTool('upsRuntime', this)">🔋 UPS Battery & Load Calc</button>
+                    <button class="tab-btn" onclick="showTool('spanningTree', this)">🌲 Spanning Tree (STP) Root Calc</button>
+                    <button class="tab-btn" onclick="showTool('radius8021x', this)">🔑 802.1X Port Security & RADIUS</button>
                 </div>
 
                 <!-- 7. IT Troubleshooting & Knowledge Base Tabs -->
@@ -1533,6 +1545,8 @@
                     <button class="tab-btn" onclick="showTool('docOnboarding', this)">👥 Onboard & Offboarding SOP</button>
                     <button class="tab-btn" onclick="showTool('docVoipTroubleshoot', this)">📞 VoIP & SIP Audio SOP</button>
                     <button class="tab-btn" onclick="showTool('docThermalDatacenter', this)">🌡️ Datacenter Thermal SOP</button>
+                    <button class="tab-btn" onclick="showTool('docEmailDeliverability', this)" style="color:var(--primary); font-weight:700;">📧 SPF, DKIM & DMARC Anti-Spam</button>
+                    <button class="tab-btn" onclick="showTool('docServerMigration', this)">🔄 P2V & Server Migration Runbook</button>
                 </div>
             </div>
 
@@ -4956,8 +4970,565 @@ Write-Host "SMB Sharing Configuration Repaired!" -ForegroundColor Green</textare
                 </div>
             </div>
 
-            <div class="credit">
-                IT Support Ultimate Toolkit • Created & Developed by <span style="font-weight:700; color:var(--primary); cursor:pointer;" onclick="openAboutModal()" title="Click to view developer profile">MEUK THAREACH</span> • Version 3.6 Enterprise Pro (96 IT & CCTV Tools) • ⚡ 100% Offline Core
+
+            <!-- =================================================================== -->
+            <!-- 1.20 IPV6 SUBNET & PREFIX CALCULATOR (ipv6SubnetCalc) -->
+            <!-- =================================================================== -->
+            <div id="ipv6SubnetCalc" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-primary">Next-Gen IP</span>
+                    <span class="badge badge-info">IPv6 CIDR</span>
+                </div>
+                <h3>🌐 IPv6 Subnet, Prefix & Address Range Calculator</h3>
+                <p class="tool-desc-text">គណនាបែងចែក Subnet IPv6 តាមស្តង់ដារអន្តរជាតិ (/48 Site Prefix, /56 Customer Allocation, /64 LAN Subnet) ពន្លាតទម្រង់ពេញ (Expanded) និងបង្រួម (Compressed)។</p>
+
+                <div style="display:grid; grid-template-columns:2fr 1fr; gap:12px; margin-bottom:12px;">
+                    <div>
+                        <label>IPv6 Address / Prefix:</label>
+                        <input type="text" id="ipv6Input" value="2001:db8:85a3::" oninput="calcIpv6Subnet()">
+                    </div>
+                    <div>
+                        <label>Prefix Length (CIDR):</label>
+                        <select id="ipv6Cidr" onchange="calcIpv6Subnet()">
+                            <option value="48">/48 (Enterprise Site - 65,536 x /64 Subnets)</option>
+                            <option value="56">/56 (Branch / ISP Customer - 256 x /64 Subnets)</option>
+                            <option value="64" selected>/64 (Standard Single LAN Subnet - SLAAC)</option>
+                            <option value="126">/126 (Point-to-Point Router Link - 2 Hosts)</option>
+                            <option value="128">/128 (Single Host / Loopback)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:12px;">
+                    <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:10px; border-radius:8px;">
+                        <div style="font-size:11px; color:var(--text-muted);">Expanded Full IPv6 Format</div>
+                        <div id="ipv6Expanded" style="font-size:12.5px; font-weight:700; color:var(--primary); font-family:monospace; word-break:break-all;">2001:0db8:85a3:0000:0000:0000:0000:0000</div>
+                    </div>
+                    <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:10px; border-radius:8px;">
+                        <div style="font-size:11px; color:var(--text-muted);">Available /64 Subnets Count</div>
+                        <div id="ipv6SubnetCount" style="font-size:12.5px; font-weight:700; color:var(--success); font-family:monospace;">1 Single Subnet (18,446,744,073,709,551,616 IPs)</div>
+                    </div>
+                </div>
+
+                <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:10px; border-radius:8px;">
+                    <div style="font-size:11px; color:var(--text-muted);">First & Last Assignable IP Range:</div>
+                    <div id="ipv6Range" style="font-size:12px; font-family:monospace; color:var(--text-main); margin-top:4px;">First: 2001:db8:85a3::1<br>Last: 2001:db8:85a3::ffff:ffff:ffff:ffff</div>
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 1.21 OPTICAL FIBER LINK LOSS & POWER BUDGET (fiberBudget) -->
+            <!-- =================================================================== -->
+            <div id="fiberBudget" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-warning">Telecom & Fiber</span>
+                    <span class="badge badge-primary">Optical Power</span>
+                </div>
+                <h3>💡 Optical Fiber Link Loss & SFP Transceiver Power Budget Calculator</h3>
+                <p class="tool-desc-text">គណនាការស្រកចុះនៃកម្លាំងពន្លឺ (Optical Attenuation dB) លើខ្សែ Fiber Optic ផ្អែកលើចម្ងាយ (Km), ចំនួនតំណផ្សារ (Splices), និងក្បាល Connector ធានាថា SFP/SFP+ មិនដាច់ Link Flapping។</p>
+
+                <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(160px, 1fr)); gap:10px; margin-bottom:12px;">
+                    <div>
+                        <label>Fiber Type & Wavelength:</label>
+                        <select id="fbFiberType" onchange="calcFiberBudget()">
+                            <option value="sm1310" selected>Singlemode (SM) 1310nm (~0.35 dB/km)</option>
+                            <option value="sm1550">Singlemode (SM) 1550nm (~0.22 dB/km)</option>
+                            <option value="mm850">Multimode (MM OM3/OM4) 850nm (~3.0 dB/km)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>ចម្ងាយខ្សែ Fiber សរុប (Km):</label>
+                        <input type="number" id="fbDistKm" value="5.5" step="0.1" min="0.1" max="100" oninput="calcFiberBudget()">
+                    </div>
+                    <div>
+                        <label>ចំនួនតំណផ្សារ (Fusion Splices @ 0.1 dB):</label>
+                        <input type="number" id="fbSplices" value="4" min="0" max="50" oninput="calcFiberBudget()">
+                    </div>
+                    <div>
+                        <label>ចំនួនក្បាល Connector Pairs (@ 0.5 dB):</label>
+                        <input type="number" id="fbConnectors" value="2" min="1" max="20" oninput="calcFiberBudget()">
+                    </div>
+                </div>
+
+                <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(150px, 1fr)); gap:10px; margin-bottom:14px;">
+                    <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:10px; border-radius:8px; text-align:center;">
+                        <div style="font-size:11px; color:var(--text-muted);">Total Link Loss (dB)</div>
+                        <div id="fbTotalLoss" style="font-size:18px; font-weight:700; color:var(--danger);">3.32 dB</div>
+                    </div>
+                    <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:10px; border-radius:8px; text-align:center;">
+                        <div style="font-size:11px; color:var(--text-muted);">Fiber Cable Loss</div>
+                        <div id="fbCableLoss" style="font-size:18px; font-weight:700; color:var(--primary);">1.92 dB</div>
+                    </div>
+                    <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:10px; border-radius:8px; text-align:center;">
+                        <div style="font-size:11px; color:var(--text-muted);">Safety Margin Added</div>
+                        <div style="font-size:18px; font-weight:700; color:var(--warning);">3.00 dB</div>
+                    </div>
+                    <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:10px; border-radius:8px; text-align:center;">
+                        <div style="font-size:11px; color:var(--text-muted);">Status Assessment</div>
+                        <div id="fbStatus" style="font-size:15px; font-weight:700; color:var(--success);">✅ Excellent Link</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 1.22 MTU & MSS PACKET OVERHEAD CALCULATOR (mtuMssCalc) -->
+            <!-- =================================================================== -->
+            <div id="mtuMssCalc" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-primary">TCP/IP Tuning</span>
+                    <span class="badge badge-success">No Fragmentation</span>
+                </div>
+                <h3>📦 MTU, MSS & VPN Tunnel Packet Fragmentation Calculator</h3>
+                <p class="tool-desc-text">គណនាទំហំ MTU (Maximum Transmission Unit) និង TCP MSS ឱ្យបានត្រឹមត្រូវពេលឆ្លងកាត់ VPN Tunnels (IPsec, WireGuard, PPPoE, GRE) ដើម្បីបំបាត់បញ្ហា Web Browser វិល Loading មិនឈប់ និង Packet Drops។</p>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px;">
+                    <div>
+                        <label>ជ្រើសរើសប្រភេទបណ្តាញ / VPN Tunnel:</label>
+                        <select id="mtuProto" onchange="calcMtuMss()">
+                            <option value="ethernet">Standard Ethernet LAN (MTU 1500)</option>
+                            <option value="pppoe">PPPoE Fiber Internet (8 bytes overhead - MTU 1492)</option>
+                            <option value="wireguard">WireGuard VPN (60 bytes overhead - MTU 1420)</option>
+                            <option value="ipsec_esp" selected>IPsec ESP Tunnel Mode (approx 72 bytes overhead - MTU 1420)</option>
+                            <option value="gre_ipsec">GRE over IPsec (approx 96 bytes overhead - MTU 1400)</option>
+                            <option value="vxlan">VXLAN Datacenter Overlay (50 bytes overhead)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Parent Physical Interface MTU:</label>
+                        <input type="number" id="mtuPhysical" value="1500" min="1280" max="9216" oninput="calcMtuMss()">
+                    </div>
+                </div>
+
+                <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(160px, 1fr)); gap:10px; margin-bottom:14px;">
+                    <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:10px; border-radius:8px; text-align:center;">
+                        <div style="font-size:11px; color:var(--text-muted);">Recommended MTU</div>
+                        <div id="mtuResVal" style="font-size:18px; font-weight:700; color:var(--primary);">1420 Bytes</div>
+                    </div>
+                    <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:10px; border-radius:8px; text-align:center;">
+                        <div style="font-size:11px; color:var(--text-muted);">Optimal TCP MSS (IPv4)</div>
+                        <div id="mssResVal" style="font-size:18px; font-weight:700; color:var(--success);">1380 Bytes</div>
+                    </div>
+                    <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:10px; border-radius:8px; text-align:center;">
+                        <div style="font-size:11px; color:var(--text-muted);">Tunnel Header Overhead</div>
+                        <div id="overheadResVal" style="font-size:18px; font-weight:700; color:var(--warning);">80 Bytes</div>
+                    </div>
+                </div>
+
+                <label>Router Clamp MSS Configuration Command (Cisco & MikroTik):</label>
+                <div class="input-with-copy">
+                    <textarea id="mtuRouterCli" readonly rows="4" style="font-family:monospace; font-size:12px;"></textarea>
+                    <button class="copy-btn" onclick="copyField('mtuRouterCli')">Copy CLI</button>
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 2.13 GPO SECURITY HARDENING PLAYBOOK (gpoPlaybook) -->
+            <!-- =================================================================== -->
+            <div id="gpoPlaybook" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-danger">Security Baseline</span>
+                    <span class="badge badge-primary">Active Directory GPO</span>
+                </div>
+                <h3>🛡️ Enterprise Group Policy (GPO) Security Hardening Playbook</h3>
+                <p class="tool-desc-text">បណ្តុំកូដកំណត់គោលការណ៍សន្តិសុខ GPO ស្តង់ដារ: បិទការដោត Flash Drive (USB Storage Lockdown), បិទ LLMNR/NetBIOS (ទប់ស្កាត់ Responder Attack), បិទ SMBv1, និងកំណត់ Screen Lock ស្វ័យប្រវត្តិ។</p>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px;">
+                    <div>
+                        <label>ជ្រើសរើស GPO Security Policy:</label>
+                        <select id="gpoPolicySelect" onchange="generateGpoCli()">
+                            <option value="block_usb">1. Block Removable USB Flash Drive (USB Lockdown)</option>
+                            <option value="disable_llmnr">2. Disable LLMNR & NetBIOS (Stop Credential Theft)</option>
+                            <option value="disable_smbv1">3. Disable Insecure SMBv1 & Enforce SMB Signing</option>
+                            <option value="screen_timeout">4. Enforce Screen Lock Timeout (10 Minutes)</option>
+                            <option value="restrict_ps">5. Constrained Language Mode for Standard Users</option>
+                            <option value="disable_wpad">6. Disable WPAD Proxy Auto-Discovery Attack</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Deployment Method:</label>
+                        <select id="gpoMethod" onchange="generateGpoCli()">
+                            <option value="powershell">PowerShell Script (Direct Host Hardening)</option>
+                            <option value="registry">Registry Key (.reg format)</option>
+                            <option value="gpedit">Group Policy Management Path (gpedit.msc)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <label>Generated Policy Implementation Code:</label>
+                <div class="input-with-copy">
+                    <textarea id="gpoCliResult" readonly rows="6" style="font-family:monospace; font-size:12px;"></textarea>
+                    <button class="copy-btn" onclick="copyField('gpoCliResult')">Copy Code</button>
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 2.14 SYSMON THREAT HUNTING AUDIT (sysmonHunt) -->
+            <!-- =================================================================== -->
+            <div id="sysmonHunt" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-danger">SOC & Forensics</span>
+                    <span class="badge badge-primary">Sysmon Threat Hunting</span>
+                </div>
+                <h3>🕵️ Sysmon Event ID Threat Hunting & Windows Security Audit</h3>
+                <p class="tool-desc-text">មគ្គុទ្ទេសក៍ស្វែងរកមេរោគ និងការលួចចូលប្រព័ន្ធតាមរយៈ Microsoft Sysmon: Event 1 (Process Create), Event 3 (Network Connection), Event 8 (CreateRemoteThread / Process Injection), និង PowerShell Audit Scripts។</p>
+
+                <div style="margin-bottom:12px;">
+                    <label>ជ្រើសរើសប្រភេទការវាយប្រហារ (Attack Technique / Event ID):</label>
+                    <select id="sysmonEventSelect" onchange="generateSysmonHunt()">
+                        <option value="ev1">Event ID 1: Malicious Process Creation (cmd.exe, powershell.exe hidden flags)</option>
+                        <option value="ev3">Event ID 3: Suspicious Network Connection (C2 Beaconing / Reverse Shell)</option>
+                        <option value="ev7">Event ID 7: Image / DLL Hijacking & Side-loading</option>
+                        <option value="ev8">Event ID 8: CreateRemoteThread (Process Injection into explorer/svchost)</option>
+                        <option value="ev11">Event ID 11: Ransomware File Creation (Encrypted extensions)</option>
+                        <option value="ev22">Event ID 22: DNS Query (Detect DGA & Data Exfiltration)</option>
+                    </select>
+                </div>
+
+                <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:12px; border-radius:8px; margin-bottom:12px;">
+                    <div id="sysmonDescText" style="font-size:12.5px; line-height:1.6; color:var(--text-main);">
+                        Event 1 កត់ត្រារាល់ពេលមានកម្មវិធីថ្មីបើកដំណើរការ។ ពិនិត្យរក ParentProcessName មិនប្រក្រតីដូចជា WINWORD.EXE បើក powershell.exe ឬ CommandLine មាន <code>-enc</code> (Base64 Hidden Script)។
+                    </div>
+                </div>
+
+                <label>PowerShell Threat Hunting Query (Run in Admin PowerShell):</label>
+                <div class="input-with-copy">
+                    <textarea id="sysmonCliResult" readonly rows="5" style="font-family:monospace; font-size:12px;"></textarea>
+                    <button class="copy-btn" onclick="copyField('sysmonCliResult')">Copy Query</button>
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 2.15 DRIVER BACKUP & PNP CLEAN REPAIR (driverBackup) -->
+            <!-- =================================================================== -->
+            <div id="driverBackup" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-success">Hardware Repair</span>
+                    <span class="badge badge-primary">Windows Drivers</span>
+                </div>
+                <h3>💾 Windows Driver Export, PnP Cleanup & DISM Repair Suite</h3>
+                <p class="tool-desc-text">ទាញយក Driver ទាំងអស់ក្នុងម៉ាស៊ីនរក្សាទុក (Export Drivers) មុនពេល Format Windows, សម្អាត Driver ចាស់ៗដែលខូចបណ្តាលឱ្យ Blue Screen, និងជួសជុលតាមរយៈ DISM & PnPUtil។</p>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px;">
+                    <div>
+                        <label>ជ្រើសរើសប្រតិបត្តិការ (Driver Task):</label>
+                        <select id="drvTaskSelect" onchange="generateDriverCli()">
+                            <option value="export_all">1. Export រាល់ Driver ទាំងអស់ទៅកាន់ Folder (DISM Export)</option>
+                            <option value="import_all">2. ដំឡើង Driver ទាំងអស់ពី Folder ឡើងវិញ (DISM Add-Driver)</option>
+                            <option value="list_third">3. បង្ហាញតែ Third-Party OEM Drivers (pnputil /enum-drivers)</option>
+                            <option value="delete_bad">4. បង្ខំលុប Driver ដែលខូចបង្ក BSOD (pnputil /delete-driver)</option>
+                            <option value="pnp_problems">5. ស្វែងរក Hardware ដែលមានសញ្ញាឧទានលឿងក្នុង Device Manager</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Backup Destination Folder:</label>
+                        <input type="text" id="drvPathInput" value="D:\DriversBackup" oninput="generateDriverCli()">
+                    </div>
+                </div>
+
+                <label>Command Prompt / PowerShell Command:</label>
+                <div class="input-with-copy">
+                    <textarea id="drvCliResult" readonly rows="4" style="font-family:monospace; font-size:12px;"></textarea>
+                    <button class="copy-btn" onclick="copyField('drvCliResult')">Copy Command</button>
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 3.8 NGINX & APACHE REVERSE PROXY GENERATOR (nginxApacheGen) -->
+            <!-- =================================================================== -->
+            <div id="nginxApacheGen" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-primary">Web Servers</span>
+                    <span class="badge badge-success">Reverse Proxy</span>
+                </div>
+                <h3>🌐 Nginx & Apache Reverse Proxy VirtualHost Generator</h3>
+                <p class="tool-desc-text">បង្កើតឯកសារ Reverse Proxy សម្រាប់ Nginx និង Apache ជាមួយការគាំទ្រ WebSocket (Upgrade headers), SSL Let's Encrypt, Client Real-IP forwarding, និង Security Headers (HSTS)។</p>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px;">
+                    <div>
+                        <label>Domain Name / Subdomain:</label>
+                        <input type="text" id="proxyDomain" value="api.company.com" oninput="generateProxyConf()">
+                    </div>
+                    <div>
+                        <label>Backend Backend Target URL / IP:Port:</label>
+                        <input type="text" id="proxyBackend" value="http://127.0.0.1:8080" oninput="generateProxyConf()">
+                    </div>
+                </div>
+
+                <div style="display:flex; gap:8px; margin-bottom:8px;">
+                    <button class="tab-btn active" onclick="setProxyType('nginx', this)">Nginx Configuration</button>
+                    <button class="tab-btn" onclick="setProxyType('apache', this)">Apache VirtualHost</button>
+                </div>
+
+                <div class="input-with-copy">
+                    <textarea id="proxyConfResult" readonly rows="8" style="font-family:monospace; font-size:12px;"></textarea>
+                    <button class="copy-btn" onclick="copyField('proxyConfResult')">Copy Config</button>
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 3.9 SYSTEMD SERVICE UNIT FILE GENERATOR (systemdBuilder) -->
+            <!-- =================================================================== -->
+            <div id="systemdBuilder" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-primary">Linux Daemon</span>
+                    <span class="badge badge-info">Systemd Service</span>
+                </div>
+                <h3>⚙️ Systemd Service Unit File Generator (.service)</h3>
+                <p class="tool-desc-text">បង្កើតឯកសារ <code>.service</code> សម្រាប់ដំណើរការកម្មវិធី Node.js, Python, ឬ Go ឱ្យដើរជា Background Service ដោយស្វ័យប្រវត្តពេលបើកម៉ាស៊ីន (Auto-restart on crash)។</p>
+
+                <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(160px, 1fr)); gap:10px; margin-bottom:12px;">
+                    <div>
+                        <label>Service Name:</label>
+                        <input type="text" id="sysdName" value="myapp" oninput="generateSystemdUnit()">
+                    </div>
+                    <div>
+                        <label>Working Directory:</label>
+                        <input type="text" id="sysdWorkDir" value="/var/www/myapp" oninput="generateSystemdUnit()">
+                    </div>
+                    <div>
+                        <label>ExecStart Command:</label>
+                        <input type="text" id="sysdExec" value="/usr/bin/node server.js" oninput="generateSystemdUnit()">
+                    </div>
+                    <div>
+                        <label>Run as User:</label>
+                        <input type="text" id="sysdUser" value="www-data" oninput="generateSystemdUnit()">
+                    </div>
+                </div>
+
+                <label>File Path: <code>/etc/systemd/system/myapp.service</code></label>
+                <div class="input-with-copy" style="margin-bottom:10px;">
+                    <textarea id="sysdResult" readonly rows="8" style="font-family:monospace; font-size:12px;"></textarea>
+                    <button class="copy-btn" onclick="copyField('sysdResult')">Copy Service File</button>
+                </div>
+
+                <label>Activation Commands:</label>
+                <div class="input-with-copy">
+                    <textarea id="sysdCommands" readonly rows="3" style="font-family:monospace; font-size:12px;"></textarea>
+                    <button class="copy-btn" onclick="copyField('sysdCommands')">Copy Commands</button>
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 5.10 NVR MULTI-CAMERA BANDWIDTH PLANNER (cctvBandwidth) -->
+            <!-- =================================================================== -->
+            <div id="cctvBandwidth" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-primary">CCTV Bandwidth</span>
+                    <span class="badge badge-warning">NVR Ingoing Limits</span>
+                </div>
+                <h3>📶 Multi-Camera Aggregate Bandwidth & NVR Throughput Planner</h3>
+                <p class="tool-desc-text">គណនា Bandwidth សរុបដែលកាមេរ៉ាទាំងអស់បាញ់ចូល NVR (Incoming Throughput Mbps) ដើម្បីកុំឱ្យលើសកំណត់របស់ NVR (80/160/256 Mbps) ដែលបណ្តាលឱ្យទាក់ ឬបាត់បង់ការថត។</p>
+
+                <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(150px, 1fr)); gap:10px; margin-bottom:12px;">
+                    <div>
+                        <label>ចំនួនកាមេរ៉ាសរុប (Cameras):</label>
+                        <input type="number" id="camCount" value="16" min="1" max="256" oninput="calcCamBandwidth()">
+                    </div>
+                    <div>
+                        <label>Resolution កាមេរ៉ា:</label>
+                        <select id="camRes" onchange="calcCamBandwidth()">
+                            <option value="2">1080p (2 MP Full HD)</option>
+                            <option value="4" selected>2K QHD (4 MP)</option>
+                            <option value="8">4K Ultra HD (8 MP)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Compression Codec:</label>
+                        <select id="camCodec" onchange="calcCamBandwidth()">
+                            <option value="h264">H.264 (Standard Legacy)</option>
+                            <option value="h265">H.265 (High Efficiency)</option>
+                            <option value="h265p" selected>H.265+ (Smart Codec / Zipstream)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Frame Rate (FPS):</label>
+                        <select id="camFps" onchange="calcCamBandwidth()">
+                            <option value="15">15 FPS (Standard Surveillance)</option>
+                            <option value="20">20 FPS (Fluid Motion)</option>
+                            <option value="25" selected>25/30 FPS (Full Real-Time)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(160px, 1fr)); gap:10px; margin-bottom:14px;">
+                    <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:10px; border-radius:8px; text-align:center;">
+                        <div style="font-size:11px; color:var(--text-muted);">Per-Camera Bitrate</div>
+                        <div id="camSingleBitrate" style="font-size:18px; font-weight:700; color:var(--primary);">2.5 Mbps</div>
+                    </div>
+                    <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:10px; border-radius:8px; text-align:center;">
+                        <div style="font-size:11px; color:var(--text-muted);">Total Inbound Bandwidth</div>
+                        <div id="camTotalBandwidth" style="font-size:18px; font-weight:700; color:var(--success);">40.0 Mbps</div>
+                    </div>
+                    <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:10px; border-radius:8px; text-align:center;">
+                        <div style="font-size:11px; color:var(--text-muted);">Min NVR Model Class</div>
+                        <div id="camNvrClass" style="font-size:16px; font-weight:700; color:var(--warning);">80 Mbps NVR OK</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 5.11 PTZ PRESETS, TOURS & RS-485 PINOUT (ptzTourCalc) -->
+            <!-- =================================================================== -->
+            <div id="ptzTourCalc" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-warning">PTZ Control</span>
+                    <span class="badge badge-primary">RS-485 & ONVIF</span>
+                </div>
+                <h3>🔄 PTZ Camera Preset Tours, Pelco Protocols & RS-485 Pinout</h3>
+                <p class="tool-desc-text">ការកំណត់ខ្សែបញ្ជាកាមេរ៉ាបង្វិល PTZ: ពិនិត្យ Baud Rate របស់ Pelco-D / Pelco-P, គំនូសខ្សែ RS-485 (TX+, TX-), និងការកំណត់ Preset Patrol Scan លើ IP PTZ កាមេរ៉ា។</p>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; font-size:12px;">
+                    <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:12px; border-radius:8px;">
+                        <strong style="color:var(--primary);">🔌 Analog PTZ RS-485 Standard Wiring:</strong>
+                        <ul style="margin:6px 0 0 0; padding-left:18px; color:var(--text-main); line-height:1.6;">
+                            <li><strong>RS-485 A (D+ / TX+):</strong> ខ្សែទិន្នន័យបញ្ជាវិជ្ជមាន</li>
+                            <li><strong>RS-485 B (D- / TX-):</strong> ខ្សែទិន្នន័យបញ្ជាអវិជ្ជមាន</li>
+                            <li><strong>Pelco-D Default:</strong> Baud Rate 2400 bps, 8 Data bits, 1 Stop bit, None Parity</li>
+                            <li><strong>Pelco-P Default:</strong> Baud Rate 4800 / 9600 bps, Address 1-32</li>
+                        </ul>
+                    </div>
+                    <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:12px; border-radius:8px;">
+                        <strong style="color:var(--success);">🌐 Modern IP PTZ Special Preset Commands:</strong>
+                        <ul style="margin:6px 0 0 0; padding-left:18px; color:var(--text-main); line-height:1.6;">
+                            <li><strong>Preset 95 (Call 95):</strong> បើកម៉ឺនុយ OSD Menu របស់កាមេរ៉ា</li>
+                            <li><strong>Preset 99:</strong> ចាប់ផ្តើមស្កេនល្បាតស្វ័យប្រវត្ត (Auto Patrol/Tour)</li>
+                            <li><strong>Preset 98:</strong> ស្តារកាមេរ៉ាទៅទីតាំងដើម (Return to Home Position)</li>
+                            <li><strong>Preset 96:</strong> ដំណើរការលាងសម្អាតកញ្ចក់ (Wiper Action)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 6.17 SPANNING TREE (STP) ROOT BRIDGE SIZING (spanningTree) -->
+            <!-- =================================================================== -->
+            <div id="spanningTree" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-primary">Layer 2 Resilience</span>
+                    <span class="badge badge-info">STP / RSTP / MSTP</span>
+                </div>
+                <h3>🌲 Spanning Tree Protocol (STP) Root Bridge Sizing & Loop Guard</h3>
+                <p class="tool-desc-text">កំណត់ Root Bridge លើ Core Switch ឱ្យបានត្រឹមត្រូវដោយកំណត់ Priority (0 ឬ 4096) និងបើក BPDU Guard / Root Guard លើ Access Switch ដើម្បីការពារការដោតខ្សែច្រឡំកើត Loop ដួលប្រព័ន្ធ។</p>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px;">
+                    <div>
+                        <label>Switch Role ក្នុងប្រព័ន្ធបណ្តាញ:</label>
+                        <select id="stpRole" onchange="generateStpCli()">
+                            <option value="root_primary">Primary Root Bridge (Core Switch - Priority 0 / 4096)</option>
+                            <option value="root_secondary">Secondary Root Bridge (Backup Core - Priority 8192 / 16384)</option>
+                            <option value="access_switch" selected>Access Switch (Edge Switch - BPDU Guard + PortFast)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Switch Vendor:</label>
+                        <select id="stpVendor" onchange="generateStpCli()">
+                            <option value="cisco">Cisco Catalyst / Nexus</option>
+                            <option value="mikrotik">MikroTik RouterOS (Bridge RSTP)</option>
+                            <option value="ruijie">Ruijie / Reyee Switch OS</option>
+                        </select>
+                    </div>
+                </div>
+
+                <label>Spanning Tree Configuration Commands:</label>
+                <div class="input-with-copy">
+                    <textarea id="stpCliResult" readonly rows="6" style="font-family:monospace; font-size:12px;"></textarea>
+                    <button class="copy-btn" onclick="copyField('stpCliResult')">Copy CLI</button>
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 6.18 802.1X PORT SECURITY & DYNAMIC VLAN (radius8021x) -->
+            <!-- =================================================================== -->
+            <div id="radius8021x" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-danger">Port Security</span>
+                    <span class="badge badge-primary">802.1X & RADIUS</span>
+                </div>
+                <h3>🔑 802.1X Port Authentication, RADIUS & Dynamic VLAN Generator</h3>
+                <p class="tool-desc-text">បង្កើតកូដ 802.1X សម្រាប់ Switch: ផ្ទៀងផ្ទាត់កុំព្យូទ័រតាម RADIUS / Windows NPS Server បញ្ជូន User ទៅតាម VLAN រៀងខ្លួនដោយស្វ័យប្រវត្តិ (Dynamic VLAN) និងដាក់ទោស Guest VLAN ពេល Fail។</p>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px;">
+                    <div>
+                        <label>RADIUS Server IP:</label>
+                        <input type="text" id="radServerIp" value="192.168.10.15" oninput="generateRadiusCli()">
+                    </div>
+                    <div>
+                        <label>RADIUS Shared Secret Key:</label>
+                        <input type="text" id="radSecret" value="RadiusSecret2026" oninput="generateRadiusCli()">
+                    </div>
+                </div>
+
+                <label>Cisco IOS 802.1X EAP & RADIUS Commands:</label>
+                <div class="input-with-copy">
+                    <textarea id="radCliResult" readonly rows="7" style="font-family:monospace; font-size:12px;"></textarea>
+                    <button class="copy-btn" onclick="copyField('radCliResult')">Copy CLI</button>
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 7.22 SPF, DKIM & DMARC DELIVERABILITY SOP (docEmailDeliverability) -->
+            <!-- =================================================================== -->
+            <div id="docEmailDeliverability" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-success">Email Security</span>
+                    <span class="badge badge-primary">Anti-Spam Standards</span>
+                </div>
+                <h3>📧 SPF, DKIM & DMARC Anti-Spam Deliverability Validator SOP</h3>
+                <p class="tool-desc-text">ការពារកុំឱ្យ Email ក្រុមហ៊ុនធ្លាក់ចូល Spam / Junk របស់ដៃគូ (Gmail, Yahoo, Outlook 2024 Guidelines) តាមរយៈការកំណត់កំណត់ត្រា DNS: SPF, DKIM 2048-bit, និង DMARC Policy ត្រឹមត្រូវ។</p>
+
+                <div style="display:grid; grid-template-columns:1fr; gap:10px; font-size:12px;">
+                    <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:12px; border-radius:8px;">
+                        <strong style="color:var(--primary); font-size:13px;">1. SPF Record (DNS TXT លើ Root Domain):</strong><br>
+                        <code>v=spf1 include:_spf.google.com include:spf.protection.outlook.com ip4:203.144.10.5 ~all</code><br>
+                        <span style="color:var(--text-muted); font-size:11.5px;">(កំណត់ server ណាខ្លះដែលមានសិទ្ធិផ្ញើ email ក្នុងនាម domain របស់អ្នក)</span>
+                    </div>
+
+                    <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:12px; border-radius:8px;">
+                        <strong style="color:var(--success); font-size:13px;">2. DKIM Record (DNS CNAME / TXT ជាមួយ Selector):</strong><br>
+                        <code>selector1._domainkey.company.com CNAME selector1-company-com._domainkey.protection.outlook.com</code><br>
+                        <span style="color:var(--text-muted); font-size:11.5px;">(បោះត្រាហត្ថលេខាឌីជីថលលើសារ email បញ្ជាក់ថាខ្លឹមសារមិនត្រូវបានកែប្រែ)</span>
+                    </div>
+
+                    <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:12px; border-radius:8px;">
+                        <strong style="color:var(--warning); font-size:13px;">3. DMARC Policy Record (DNS TXT លើ _dmarc.company.com):</strong><br>
+                        <code>v=DMARC1; p=quarantine; pct=100; rua=mailto:dmarc-reports@company.com; aspf=r; adkim=r</code><br>
+                        <span style="color:var(--text-muted); font-size:11.5px;">(បញ្ជាឱ្យ server អ្នកទទួលទម្លាក់ចូល Junk ឬ Reject ប្រសិនបើរកឃើញ email ក្លែងបន្លំឈ្មោះក្រុមហ៊ុន)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 7.23 P2V & SERVER MIGRATION RUNBOOK (docServerMigration) -->
+            <!-- =================================================================== -->
+            <div id="docServerMigration" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-info">Sysadmin Runbook</span>
+                    <span class="badge badge-primary">P2V Migration</span>
+                </div>
+                <h3>🔄 Physical-to-Virtual (P2V) & Windows Server Migration Runbook</h3>
+                <p class="tool-desc-text">នីតិវិធីបម្លែង Server ចាស់ពី Physical Machine ទៅជា Virtual Machine (P2V លើ VMware, Proxmox, Hyper-V) និងការ Upgrade Windows Server 2012 R2 ឡើង 2019/2022 ដោយសុវត្ថិភាព។</p>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; font-size:12px;">
+                    <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:12px; border-radius:8px;">
+                        <strong style="color:var(--primary);">🛠️ P2V Conversion Tools & Steps:</strong>
+                        <ul style="margin:6px 0 0 0; padding-left:18px; color:var(--text-main); line-height:1.6;">
+                            <li><strong>Tool ពេញនិយម:</strong> StarWind V2V Converter (ឥតគិតថ្លៃ & Support Proxmox/ESXi) ឬ Microsoft Disk2vhd</li>
+                            <li>បិទ Antivirus និងកាត់បន្ថយ Database write មុនពេលចាប់ផ្តើម Capture</li>
+                            <li>ក្រោយពេល Convert: ដំឡើង VMware Tools ឬ QEMU Guest Agent ភ្លាមៗដើម្បីបាន VirtIO Performance</li>
+                        </ul>
+                    </div>
+                    <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:12px; border-radius:8px;">
+                        <strong style="color:var(--warning);">⚠️ Active Directory Domain Controller Rule:</strong>
+                        <div style="margin-top:6px; color:var(--text-main); line-height:1.6;">
+                            <strong>ដាច់ខាតកុំ P2V លើ Domain Controller!</strong><br>
+                            វិធីស្តង់ដារត្រឹមត្រូវ: ដំឡើង Windows Server ថ្មីជា VM ស្អាត រួច Promote ជា Additional Domain Controller (ADC) ទុកឱ្យវា Replicate ចប់សព្វគ្រប់ ទើបផ្ទេរ FSMO Roles និង Demote Server ចាស់ចោល។
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                        <div class="credit">
+                IT Support Ultimate Toolkit • Created & Developed by <span style="font-weight:700; color:var(--primary); cursor:pointer;" onclick="openAboutModal()" title="Click to view developer profile">MEUK THAREACH</span> • Version 3.8 Enterprise Pro (110 IT & CCTV Tools) • ⚡ 100% Offline Core
             </div>
         </div>
     </div>
@@ -4971,14 +5542,14 @@ Write-Host "SMB Sharing Configuration Repaired!" -ForegroundColor Green</textare
                 <span class="kbd-badge" style="cursor:pointer;" onclick="closeSpotlight()">ESC</span>
             </div>
             <div class="spotlight-filters">
-                <button type="button" class="spotlight-filter-pill active" onclick="setSpotlightCategory('all', this)" id="spPillAll">All (96)</button>
-                <button type="button" class="spotlight-filter-pill" onclick="setSpotlightCategory('network', this)" id="spPillNet"><img src="app-icon.png" alt="Network" style="width:13px; height:13px; object-fit:contain; border-radius:2px; vertical-align:middle; margin-right:4px;">Network (17)</button>
-                <button type="button" class="spotlight-filter-pill" onclick="setSpotlightCategory('windows', this)" id="spPillWin">🪟 Windows (9)</button>
-                <button type="button" class="spotlight-filter-pill" onclick="setSpotlightCategory('linux', this)" id="spPillLin">🐧 Linux (8)</button>
+                <button type="button" class="spotlight-filter-pill active" onclick="setSpotlightCategory('all', this)" id="spPillAll">All (110)</button>
+                <button type="button" class="spotlight-filter-pill" onclick="setSpotlightCategory('network', this)" id="spPillNet"><img src="app-icon.png" alt="Network" style="width:13px; height:13px; object-fit:contain; border-radius:2px; vertical-align:middle; margin-right:4px;">Network (20)</button>
+                <button type="button" class="spotlight-filter-pill" onclick="setSpotlightCategory('windows', this)" id="spPillWin">🪟 Windows (12)</button>
+                <button type="button" class="spotlight-filter-pill" onclick="setSpotlightCategory('linux', this)" id="spPillLin">🐧 Linux (10)</button>
                 <button type="button" class="spotlight-filter-pill" onclick="setSpotlightCategory('coding', this)" id="spPillCod">💻 Coding (11)</button>
-                <button type="button" class="spotlight-filter-pill" onclick="setSpotlightCategory('cctv', this)" id="spPillCctv">📹 CCTV (9)</button>
-                <button type="button" class="spotlight-filter-pill" onclick="setSpotlightCategory('devices', this)" id="spPillDev">🖧 Devices (16)</button>
-                <button type="button" class="spotlight-filter-pill" onclick="setSpotlightCategory('troubleshoot', this)" id="spPillTrouble">📚 Troubleshoot (21)</button>
+                <button type="button" class="spotlight-filter-pill" onclick="setSpotlightCategory('cctv', this)" id="spPillCctv">📹 CCTV (11)</button>
+                <button type="button" class="spotlight-filter-pill" onclick="setSpotlightCategory('devices', this)" id="spPillDev">🖧 Devices (18)</button>
+                <button type="button" class="spotlight-filter-pill" onclick="setSpotlightCategory('troubleshoot', this)" id="spPillTrouble">📚 Troubleshoot (23)</button>
             </div>
             <div class="spotlight-list" id="spotlightResults">
                 <!-- Rendered dynamically -->
@@ -4989,7 +5560,7 @@ Write-Host "SMB Sharing Configuration Repaired!" -ForegroundColor Green</textare
                     <span><span class="kbd-badge">↵ Enter</span> Open</span>
                     <span><span class="kbd-badge">Esc</span> Close</span>
                 </div>
-                <div id="spotlightMatchCount">96 tools & playbooks available</div>
+                <div id="spotlightMatchCount">110 tools & playbooks available</div>
             </div>
         </div>
     </div>
@@ -5072,7 +5643,7 @@ Write-Host "SMB Sharing Configuration Repaired!" -ForegroundColor Green</textare
                 </div>
                 <div style="background:var(--card-inner-bg); padding:10px; border-radius:8px; border:1px solid var(--card-border);">
                     <div style="color:var(--text-muted);">Tools Available:</div>
-                    <div style="font-weight:700; color:var(--success);">96 Pro Utilities (7 Categories)</div>
+                    <div style="font-weight:700; color:var(--success);">110 Pro Utilities (7 Categories)</div>
                 </div>
                 <div style="background:var(--card-inner-bg); padding:10px; border-radius:8px; border:1px solid var(--card-border);">
                     <div style="color:var(--text-muted);">Offline Engine:</div>
@@ -6778,6 +7349,18 @@ NAT Traversal = Keep-Alive`;
             if (typeof generateFortiVdom === 'function') generateFortiVdom();
             if (typeof generateCiscoAcl === 'function') generateCiscoAcl();
             if (typeof calcUpsRuntime === 'function') calcUpsRuntime();
+            if (typeof calcIpv6Subnet === 'function') calcIpv6Subnet();
+            if (typeof calcFiberBudget === 'function') calcFiberBudget();
+            if (typeof calcMtuMss === 'function') calcMtuMss();
+            if (typeof generateGpoCli === 'function') generateGpoCli();
+            if (typeof generateSysmonHunt === 'function') generateSysmonHunt();
+            if (typeof generateDriverCli === 'function') generateDriverCli();
+            if (typeof generateProxyConf === 'function') generateProxyConf();
+            if (typeof generateSystemdUnit === 'function') generateSystemdUnit();
+            if (typeof calcCamBandwidth === 'function') calcCamBandwidth();
+            if (typeof generateStpCli === 'function') generateStpCli();
+            if (typeof generateRadiusCli === 'function') generateRadiusCli();
+
  
             try {
                 if (window.screen && window.screen.availWidth && window.screen.availHeight) {
@@ -7164,7 +7747,23 @@ NAT Traversal = Keep-Alive`;
             { id: 'cctvBrands', cat: 'cctv', icon: '📖', nameEn: 'Camera Default IP & Password Directory', nameKm: 'បញ្ជី IP Address, User & Password ដើមរបស់កាមេរ៉ា', desc: '20+ top CCTV brands defaults and ports' },
             { id: 'cctvTroubleshoot', cat: 'cctv', icon: '🛠️', nameEn: 'CCTV Problem Solver & Troubleshooting', nameKm: 'ដោះស្រាយបញ្ហាកាមេរ៉ាសុវត្ថិភាព (Troubleshoot)', desc: 'Offline, Night Vision IR, Reset, IP Conflict, No HDD' },
             { id: 'cctvPoe', cat: 'cctv', icon: '⚡', nameEn: 'PoE Power Budget & Distance Calculator', nameKm: 'គណនាថាមពល PoE & ប្រវែងខ្សែបណ្តាញ', desc: '802.3af/at/bt, Pure Copper vs CCA, 100m limits' },
-            { id: 'cctvRemote', cat: 'cctv', icon: '☁️', nameEn: 'Remote Viewing & Port Forwarding Guide', nameKm: 'ការកំណត់មើលពីចម្ងាយ (P2P Cloud & Port Forward)', desc: 'Hik-Connect, DMSS, EZView, MikroTik NAT scripts' }
+            { id: 'cctvRemote', cat: 'cctv', icon: '☁️', nameEn: 'Remote Viewing & Port Forwarding Guide', nameKm: 'ការកំណត់មើលពីចម្ងាយ (P2P Cloud & Port Forward)', desc: 'Hik-Connect, DMSS, EZView, MikroTik NAT scripts' },
+            // --- 14 NEW TOOLS IN 110 TOOLS EXPANSION ---
+            { id: 'ipv6SubnetCalc', cat: 'network', icon: '🌐', nameEn: 'IPv6 Subnet & Prefix Range Calculator', nameKm: 'គណនា Subnet & Prefix IPv6 (/48, /56, /64)', desc: 'IPv6 subnet calculator and address range' },
+            { id: 'fiberBudget', cat: 'network', icon: '💡', nameEn: 'Optical Fiber Link Loss & Power Budget', nameKm: 'គណនាការស្រកកម្លាំងពន្លឺ Fiber Optic dBm', desc: 'Fiber attenuation, splices, connectors budget' },
+            { id: 'mtuMssCalc', cat: 'network', icon: '📦', nameEn: 'MTU, MSS & VPN Tunnel Packet Overhead', nameKm: 'គណនា MTU & TCP MSS កុំឱ្យទាក់ VPN', desc: 'MTU MSS fragmentation calculator' },
+            { id: 'gpoPlaybook', cat: 'windows', icon: '🛡️', nameEn: 'Enterprise GPO Security Hardening Playbook', nameKm: 'កូដ GPO Hardening (Block USB, Disable LLMNR)', desc: 'GPO hardening scripts and registry baselines' },
+            { id: 'sysmonHunt', cat: 'windows', icon: '🕵️', nameEn: 'Sysmon Event ID Threat Hunting & Audit', nameKm: 'ស្វែងរកមេរោគ & Hack តាម Sysmon Event IDs', desc: 'Sysmon threat hunting queries and attack detection' },
+            { id: 'driverBackup', cat: 'windows', icon: '💾', nameEn: 'Windows Driver Export, PnP Cleanup & DISM', nameKm: 'Backup Driver ទាំងអស់ & សម្អាត Driver ខូច', desc: 'Export drivers, PnPUtil cleanup, DISM' },
+            { id: 'nginxApacheGen', cat: 'linux', icon: '🌐', nameEn: 'Nginx & Apache Reverse Proxy Generator', nameKm: 'បង្កើត Nginx & Apache Reverse Proxy VirtualHost', desc: 'Reverse proxy config with WebSocket and SSL' },
+            { id: 'systemdBuilder', cat: 'linux', icon: '⚙️', nameEn: 'Systemd Service Daemon Unit File Builder', nameKm: 'បង្កើត Daemon Service (.service) លើ Linux', desc: 'Systemd service unit generator' },
+            { id: 'cctvBandwidth', cat: 'cctv', icon: '📶', nameEn: 'Multi-Camera Bandwidth & NVR Throughput', nameKm: 'គណនា Bandwidth កាមេរ៉ាទាំងអស់បាញ់ចូល NVR', desc: 'CCTV incoming Mbps bandwidth planner' },
+            { id: 'ptzTourCalc', cat: 'cctv', icon: '🔄', nameEn: 'PTZ Camera Preset Tours, Pelco & RS-485', nameKm: 'ប្លង់តខ្សែ RS-485 & Protocol Pelco-D/P PTZ', desc: 'PTZ presets, tours, Pelco protocols, RS-485' },
+            { id: 'spanningTree', cat: 'devices', icon: '🌲', nameEn: 'Spanning Tree (STP) Root Bridge Sizing', nameKm: 'កំណត់ Root Bridge Spanning Tree (STP/RSTP)', desc: 'STP root bridge priority and BPDU guard' },
+            { id: 'radius8021x', cat: 'devices', icon: '🔑', nameEn: '802.1X Port Security & Dynamic VLAN Setup', nameKm: 'កូដ 802.1X Port Authentication ជាមួយ RADIUS', desc: '802.1X EAP and dynamic VLAN assignment' },
+            { id: 'docEmailDeliverability', cat: 'troubleshoot', icon: '📧', nameEn: 'SPF, DKIM & DMARC Anti-Spam Deliverability', nameKm: 'ការពារកុំឱ្យ Email ធ្លាក់ចូល Spam (SPF/DKIM/DMARC)', desc: 'Email deliverability, SPF, DKIM, DMARC' },
+            { id: 'docServerMigration', cat: 'troubleshoot', icon: '🔄', nameEn: 'Physical-to-Virtual (P2V) & Server Migration', nameKm: 'នីតិវិធី P2V Server & Upgrade Windows Server', desc: 'P2V migration runbook and active directory rules' },
+
         ];
 
         let spotlightCategory = 'all';
@@ -9476,8 +10075,8 @@ add chain=forward action=accept connection-nat-state=dstnat in-interface=ether1-
                         </div>
                         <div style="font-size:12.5px; line-height:1.6; color:var(--text-main);">
                             ${currentLang === 'km' 
-                                ? 'លោកអ្នកកំពុងដំណើរការ <strong>Version ' + APP_CURRENT_VERSION + ' Enterprise Desktop</strong> ក្នុងរបៀប Offline។<br>ឧបករណ៍ចំនួន <strong>៩៤ ក្នុងចំណោម ៩៦</strong> (រួមទាំង CLI Generators, Dual VPN Matcher, CCTV Suite, Subnet, Cisco, FortiGate, AD, Playbooks, RAID Calc) ដំណើរការបាន <strong>១០០% ពេញលេញដោយមិនបាច់មានអ៊ីនធឺណិតឡើយ</strong>។' 
-                                : 'You are running <strong>Version ' + APP_CURRENT_VERSION + ' Enterprise Desktop</strong> in offline mode.<br>Ninety-four (94) out of 96 tools (including CLI Generators, Dual VPN Matcher, CCTV Suite, Subnet, Cisco, FortiGate, AD, Playbooks, RAID Calc) operate <strong>100% locally with zero internet required</strong>.'}
+                                ? 'លោកអ្នកកំពុងដំណើរការ <strong>Version ' + APP_CURRENT_VERSION + ' Enterprise Desktop</strong> ក្នុងរបៀប Offline។<br>ឧបករណ៍ចំនួន <strong>១០៨ ក្នុងចំណោម ១១០</strong> (រួមទាំង CLI Generators, Dual VPN Matcher, CCTV Suite, Subnet, Cisco, FortiGate, AD, Playbooks, RAID Calc) ដំណើរការបាន <strong>១០០% ពេញលេញដោយមិនបាច់មានអ៊ីនធឺណិតឡើយ</strong>។' 
+                                : 'You are running <strong>Version ' + APP_CURRENT_VERSION + ' Enterprise Desktop</strong> in offline mode.<br>One hundred eight (108) out of 110 tools (including CLI Generators, Dual VPN Matcher, CCTV Suite, Subnet, Cisco, FortiGate, AD, Playbooks, RAID Calc) operate <strong>100% locally with zero internet required</strong>.'}
                         </div>
                     </div>
 
@@ -9543,7 +10142,7 @@ add chain=forward action=accept connection-nat-state=dstnat in-interface=ether1-
                         <div style="font-size:12.5px; line-height:1.6; color:var(--text-main);">
                             Installed: <strong>v${APP_CURRENT_VERSION} Enterprise Desktop</strong><br>
                             Author: <strong>${(versionData && versionData.author) || 'MEUK THAREACH'}</strong><br>
-                            Total Tools: <strong>96 Pro Utilities & Playbooks</strong> (7 Categories Active)<br>
+                            Total Tools: <strong>110 Pro Utilities & Playbooks</strong> (7 Categories Active)<br>
                             Update Engine: <strong style="color:var(--primary);">${isNative ? '⚡ Native Desktop Disk Bridge (Active)' : (detectedBridge ? '🌐 Local Server Bridge (Port 3000)' : 'Standalone Browser Mode')}</strong>
                         </div>
                     </div>
@@ -10219,7 +10818,278 @@ add chain=forward action=accept connection-nat-state=dstnat in-interface=ether1-
             document.getElementById('upsResEnergy').innerText = totalEnergyWh + ' Wh';
         }
 
-    </script>
+
+        // --- 14 NEW TOOLS LOGIC (110 TOOLS EDITION) ---
+
+        // 1. IPv6 Subnet Calculator
+        function calcIpv6Subnet() {
+            let input = document.getElementById('ipv6Input').value.trim() || '2001:db8:85a3::';
+            let cidr = parseInt(document.getElementById('ipv6Cidr').value, 10) || 64;
+
+            // Expand IPv6
+            let full = input.toLowerCase();
+            let expanded = '';
+            try {
+                if (full.includes('::')) {
+                    let parts = full.split('::');
+                    let left = parts[0] ? parts[0].split(':') : [];
+                    let right = parts[1] ? parts[1].split(':') : [];
+                    let missing = 8 - (left.length + right.length);
+                    let mid = [];
+                    for (let i = 0; i < missing; i++) mid.push('0000');
+                    let all = left.concat(mid).concat(right);
+                    expanded = all.map(h => ('0000' + h).slice(-4)).join(':');
+                } else {
+                    expanded = full.split(':').map(h => ('0000' + h).slice(-4)).join(':');
+                }
+            } catch(e) { expanded = '2001:0db8:85a3:0000:0000:0000:0000:0000'; }
+
+            document.getElementById('ipv6Expanded').innerText = expanded;
+
+            let countText = '';
+            if (cidr <= 48) countText = (Math.pow(2, 64 - cidr)).toLocaleString() + ' x /64 Subnets (Massive Enterprise Allocation)';
+            else if (cidr <= 56) countText = (Math.pow(2, 64 - cidr)).toLocaleString() + ' x /64 Subnets (Customer Site Allocation)';
+            else if (cidr === 64) countText = '1 Single Standard LAN Subnet (18,446,744,073,709,551,616 Hosts)';
+            else if (cidr === 126) countText = 'Point-to-Point Router Link (2 Usable Addresses)';
+            else countText = 'Single Host / Loopback Interface (/128)';
+
+            document.getElementById('ipv6SubnetCount').innerText = countText;
+            document.getElementById('ipv6Range').innerHTML = 'Network: ' + input + '/' + cidr + '<br>First Host: ' + input.replace(/::$/, '::1') + '<br>Last Host: ' + input.replace(/::$/, '::ffff:ffff:ffff:ffff');
+        }
+
+        // 2. Optical Fiber Budget
+        function calcFiberBudget() {
+            let type = document.getElementById('fbFiberType').value;
+            let dist = parseFloat(document.getElementById('fbDistKm').value) || 5.0;
+            let splices = parseInt(document.getElementById('fbSplices').value, 10) || 0;
+            let conns = parseInt(document.getElementById('fbConnectors').value, 10) || 2;
+
+            let ratePerKm = (type === 'sm1550') ? 0.22 : (type === 'mm850') ? 3.0 : 0.35;
+            let cableLoss = dist * ratePerKm;
+            let spliceLoss = splices * 0.1;
+            let connLoss = conns * 0.5;
+            let margin = 3.0;
+
+            let totalLoss = cableLoss + spliceLoss + connLoss + margin;
+
+            document.getElementById('fbTotalLoss').innerText = totalLoss.toFixed(2) + ' dB';
+            document.getElementById('fbCableLoss').innerText = cableLoss.toFixed(2) + ' dB';
+
+            let statusEl = document.getElementById('fbStatus');
+            if (totalLoss <= 10) {
+                statusEl.innerHTML = '<span style="color:var(--success);">✅ Excellent Link (Very Low Loss)</span>';
+            } else if (totalLoss <= 18) {
+                statusEl.innerHTML = '<span style="color:var(--primary);">👍 Good Link (Standard 10G SFP+ OK)</span>';
+            } else if (totalLoss <= 25) {
+                statusEl.innerHTML = '<span style="color:var(--warning);">⚠️ Marginal (Requires ER/ZR Transceivers)</span>';
+            } else {
+                statusEl.innerHTML = '<span style="color:var(--danger);">❌ Critical (Exceeds Standard Optics Budget)</span>';
+            }
+        }
+
+        // 3. MTU / MSS Calculator
+        function calcMtuMss() {
+            let proto = document.getElementById('mtuProto').value;
+            let baseMtu = parseInt(document.getElementById('mtuPhysical').value, 10) || 1500;
+            let overhead = 0;
+
+            if (proto === 'pppoe') overhead = 8;
+            else if (proto === 'wireguard') overhead = 80;
+            else if (proto === 'ipsec_esp') overhead = 80;
+            else if (proto === 'gre_ipsec') overhead = 100;
+            else if (proto === 'vxlan') overhead = 50;
+
+            let mtu = baseMtu - overhead;
+            let mss = mtu - 40; // 20 bytes IP + 20 bytes TCP headers
+
+            document.getElementById('mtuResVal').innerText = mtu + ' Bytes';
+            document.getElementById('mssResVal').innerText = mss + ' Bytes';
+            document.getElementById('overheadResVal').innerText = overhead + ' Bytes Overhead';
+
+            let ciscoCli = 'interface Tunnel1\n ip mtu ' + mtu + '\n ip tcp adjust-mss ' + mss + '\n exit';
+            let mikroCli = '/ip firewall mangle add chain=forward protocol=tcp tcp-flags=syn action=change-mss new-mss=' + mss + ' passthrough=no';
+            document.getElementById('mtuRouterCli').value = '# Cisco:\n' + ciscoCli + '\n\n# MikroTik:\n' + mikroCli;
+        }
+
+        // 4. GPO Hardening Playbook
+        function generateGpoCli() {
+            let pol = document.getElementById('gpoPolicySelect').value;
+            let method = document.getElementById('gpoMethod').value;
+            let cli = '';
+
+            if (pol === 'block_usb') {
+                if (method === 'powershell') cli = '# Block USB Removable Storage Devices\nSet-ItemProperty -Path "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\USBSTOR" -Name "Start" -Value 4 -Type DWord';
+                else if (method === 'registry') cli = 'Windows Registry Editor Version 5.00\n\n[HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\USBSTOR]\n"Start"=dword:00000004';
+                else cli = 'Path: Computer Configuration > Policies > Admin Templates > System > Removable Storage Access\nPolicy: All Removable Storage classes: Deny all access -> Enabled';
+            } else if (pol === 'disable_llmnr') {
+                if (method === 'powershell') cli = '# Disable LLMNR & NetBIOS (Mitigates NTLM relay & Responder)\nNew-Item -Path "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\DNSClient" -Force\nSet-ItemProperty -Path "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\DNSClient" -Name "EnableMulticast" -Value 0 -Type DWord';
+                else if (method === 'registry') cli = '[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\DNSClient]\n"EnableMulticast"=dword:00000000';
+                else cli = 'Path: Computer Configuration > Admin Templates > Network > DNS Client\nPolicy: Turn off multicast name resolution -> Enabled';
+            } else if (pol === 'disable_smbv1') {
+                if (method === 'powershell') cli = '# Disable SMBv1 Protocol (Anti-Ransomware)\nDisable-WindowsOptionalFeature -Online -FeatureName smb1protocol -NoRestart\nSet-SmbServerConfiguration -EnableSMB1Protocol $false -Force';
+                else if (method === 'registry') cli = '[HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\LanmanServer\\Parameters]\n"SMB1"=dword:00000000';
+                else cli = 'Path: Computer Configuration > Windows Settings > Security Settings > Local Policies > Security Options\nPolicy: Microsoft network server: Digitally sign communications (always) -> Enabled';
+            } else if (pol === 'screen_timeout') {
+                if (method === 'powershell') cli = '# Enforce 10-Minute Lock Screen Timeout\nSet-ItemProperty -Path "HKCU:\\Control Panel\\Desktop" -Name "ScreenSaveActive" -Value "1"\nSet-ItemProperty -Path "HKCU:\\Control Panel\\Desktop" -Name "ScreenSaverIsSecure" -Value "1"\nSet-ItemProperty -Path "HKCU:\\Control Panel\\Desktop" -Name "ScreenSaveTimeOut" -Value "600"';
+                else if (method === 'registry') cli = '[HKEY_CURRENT_USER\\Control Panel\\Desktop]\n"ScreenSaveActive"="1"\n"ScreenSaverIsSecure"="1"\n"ScreenSaveTimeOut"="600"';
+                else cli = 'Path: User Configuration > Admin Templates > Control Panel > Personalization\nPolicy: Screen saver timeout -> 600 seconds & Password protect screen saver';
+            } else {
+                cli = '# Apply security baseline\nSet-ExecutionPolicy -ExecutionPolicy Restricted -Scope LocalMachine -Force';
+            }
+            document.getElementById('gpoCliResult').value = cli;
+        }
+
+        // 5. Sysmon Threat Hunting
+        const sysmonData = {
+            'ev1': {
+                desc: 'Event ID 1: កត់ត្រារាល់ Process ថ្មីដែលដំណើរការ។ ស្វែងរក Process គួរឱ្យសង្ស័យដូចជា powershell.exe -enc (Base64) ឬ certutil.exe -urlcache (ទាញយកមេរោគ)។',
+                cli: 'Get-WinEvent -FilterHashtable @{LogName="Microsoft-Windows-Sysmon/Operational"; ID=1} -MaxEvents 50 | Where-Object { $_.Message -match "powershell|-enc|cmd.exe /c|certutil" } | Select-Object TimeCreated, Message | Format-List'
+            },
+            'ev3': {
+                desc: 'Event ID 3: Network Connection។ ស្វែងរកកុំព្យូទ័រ Client ណាដែលភ្ជាប់ទៅកាន់ IP ក្រៅប្រទេសលើ Port ចម្លែក (C2 Beaconing / Reverse Shell)។',
+                cli: 'Get-WinEvent -FilterHashtable @{LogName="Microsoft-Windows-Sysmon/Operational"; ID=3} -MaxEvents 50 | Where-Object { $_.Message -match "DestinationPort: (4444|1337|8888|9001)" } | Select-Object TimeCreated, Message | Format-List'
+            },
+            'ev7': {
+                desc: 'Event ID 7: DLL Image Load។ ស្វែងរកការវាយប្រហារ DLL Hijacking លើ System32។',
+                cli: 'Get-WinEvent -FilterHashtable @{LogName="Microsoft-Windows-Sysmon/Operational"; ID=7} -MaxEvents 30 | Select-Object TimeCreated, Message | Out-GridView'
+            },
+            'ev8': {
+                desc: 'Event ID 8: CreateRemoteThread។ ពិនិត្យរកការលួចចាក់បញ្ចូលកូដមេរោគចូលក្នុង Process ស្របច្បាប់ដូចជា explorer.exe ឬ svchost.exe (Process Injection)។',
+                cli: 'Get-WinEvent -FilterHashtable @{LogName="Microsoft-Windows-Sysmon/Operational"; ID=8} -MaxEvents 20 | Select-Object TimeCreated, Message | Format-List'
+            },
+            'ev11': {
+                desc: 'Event ID 11: File Created។ រកមើលការបង្កើតឯកសារ README_RECOVER.txt ឬ extension មេរោគជម្រិតទារប្រាក់ (Ransomware Artifacts)។',
+                cli: 'Get-WinEvent -FilterHashtable @{LogName="Microsoft-Windows-Sysmon/Operational"; ID=11} -MaxEvents 50 | Where-Object { $_.Message -match "\\.locked|README|DECRYPT" } | Format-List'
+            },
+            'ev22': {
+                desc: 'Event ID 22: DNS Query។ ស្វែងរកការបញ្ជូនទិន្នន័យសម្ងាត់ចេញតាមរយៈ DNS Exfiltration ឬ DGA Malware Domains។',
+                cli: 'Get-WinEvent -FilterHashtable @{LogName="Microsoft-Windows-Sysmon/Operational"; ID=22} -MaxEvents 50 | Select-Object TimeCreated, Message | Format-List'
+            }
+        };
+
+        function generateSysmonHunt() {
+            let ev = document.getElementById('sysmonEventSelect').value;
+            let item = sysmonData[ev] || sysmonData['ev1'];
+            document.getElementById('sysmonDescText').innerText = item.desc;
+            document.getElementById('sysmonCliResult').value = item.cli;
+        }
+
+        // 6. Driver Backup & Clean
+        function generateDriverCli() {
+            let t = document.getElementById('drvTaskSelect').value;
+            let p = document.getElementById('drvPathInput').value.trim() || 'D:\\DriversBackup';
+            let cli = '';
+
+            if (t === 'export_all') {
+                cli = '# Create folder and export all active third-party drivers\nNew-Item -ItemType Directory -Path "' + p + '" -Force\ndism /online /export-driver /destination:"' + p + '"';
+            } else if (t === 'import_all') {
+                cli = '# Install all drivers from backup directory\npnputil /add-driver "' + p + '\\*.inf" /subdirs /install';
+            } else if (t === 'list_third') {
+                cli = '# List OEM published drivers\npnputil /enum-drivers\n# Export list to text file:\npnputil /enum-drivers > "$HOME\\Desktop\\DriversList.txt"';
+            } else if (t === 'delete_bad') {
+                cli = '# Force delete driver package causing BSOD crashes\npnputil /delete-driver oemXX.inf /uninstall /force';
+            } else {
+                cli = '# Find devices with errors or missing drivers\nGet-PnpDevice | Where-Object { $_.Status -eq "Error" -or $_.Problem -ne "CM_PROB_NONE" } | Select-Object FriendlyName, InstanceId, Status, Problem | Format-Table -AutoSize';
+            }
+            document.getElementById('drvCliResult').value = cli;
+        }
+
+        // 7. Nginx & Apache Reverse Proxy
+        let currentProxyType = 'nginx';
+        function setProxyType(t, btn) {
+            currentProxyType = t;
+            btn.parentElement.querySelectorAll('button').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            generateProxyConf();
+        }
+
+        function generateProxyConf() {
+            let d = document.getElementById('proxyDomain').value.trim() || 'api.company.com';
+            let b = document.getElementById('proxyBackend').value.trim() || 'http://127.0.0.1:8080';
+
+            if (currentProxyType === 'nginx') {
+                let conf = 'server {\n    listen 80;\n    server_name ' + d + ';\n\n    location / {\n        proxy_pass ' + b + ';\n        proxy_http_version 1.1;\n        proxy_set_header Upgrade $http_upgrade;\n        proxy_set_header Connection "upgrade";\n        proxy_set_header Host $host;\n        proxy_set_header X-Real-IP $remote_addr;\n        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n        proxy_set_header X-Forwarded-Proto $scheme;\n    }\n}';
+                document.getElementById('proxyConfResult').value = conf;
+            } else {
+                let conf = '<VirtualHost *:80>\n    ServerName ' + d + '\n\n    ProxyPreserveHost On\n    ProxyPass / ' + b + '/\n    ProxyPassReverse / ' + b + '/\n\n    ErrorLog ${APACHE_LOG_DIR}/' + d + '_error.log\n    CustomLog ${APACHE_LOG_DIR}/' + d + '_access.log combined\n</VirtualHost>';
+                document.getElementById('proxyConfResult').value = conf;
+            }
+        }
+
+        // 8. Systemd Builder
+        function generateSystemdUnit() {
+            let name = document.getElementById('sysdName').value.trim() || 'myapp';
+            let dir = document.getElementById('sysdWorkDir').value.trim() || '/var/www/myapp';
+            let exec = document.getElementById('sysdExec').value.trim() || '/usr/bin/node server.js';
+            let user = document.getElementById('sysdUser').value.trim() || 'www-data';
+
+            let unit = '[Unit]\nDescription=' + name + ' Daemon Service\nAfter=network.target\n\n[Service]\nType=simple\nUser=' + user + '\nWorkingDirectory=' + dir + '\nExecStart=' + exec + '\nRestart=always\nRestartSec=5\nEnvironment=NODE_ENV=production\n\n[Install]\nWantedBy=multi-user.target';
+            document.getElementById('sysdResult').value = unit;
+
+            let cmds = 'sudo nano /etc/systemd/system/' + name + '.service\nsudo systemctl daemon-reload\nsudo systemctl enable --now ' + name + '.service\nsudo systemctl status ' + name + '.service';
+            document.getElementById('sysdCommands').value = cmds;
+        }
+
+        // 9. CCTV Multi-Camera Bandwidth
+        function calcCamBandwidth() {
+            let count = parseInt(document.getElementById('camCount').value, 10) || 16;
+            let res = parseInt(document.getElementById('camRes').value, 10) || 4;
+            let codec = document.getElementById('camCodec').value;
+            let fps = parseInt(document.getElementById('camFps').value, 10) || 25;
+
+            // Base bitrate in Mbps for 1080p @ 25fps H.264 is approx 4 Mbps
+            let base = (res === 2) ? 4.0 : (res === 4) ? 6.0 : 12.0;
+
+            if (codec === 'h265') base = base * 0.55;
+            else if (codec === 'h265p') base = base * 0.35;
+
+            if (fps === 15) base = base * 0.75;
+            else if (fps === 20) base = base * 0.88;
+
+            let single = Math.round(base * 10) / 10;
+            let total = Math.round((single * count) * 10) / 10;
+
+            document.getElementById('camSingleBitrate').innerText = single + ' Mbps';
+            document.getElementById('camTotalBandwidth').innerText = total + ' Mbps';
+
+            let nvrClassEl = document.getElementById('camNvrClass');
+            if (total <= 70) nvrClassEl.innerText = '80 Mbps NVR Model (OK)';
+            else if (total <= 145) nvrClassEl.innerText = '160 Mbps NVR Model Required';
+            else if (total <= 230) nvrClassEl.innerText = '256 Mbps NVR Model Required';
+            else nvrClassEl.innerText = '384+ Mbps Enterprise NVR Required';
+        }
+
+        // 10. Spanning Tree Root Bridge
+        function generateStpCli() {
+            let role = document.getElementById('stpRole').value;
+            let vendor = document.getElementById('stpVendor').value;
+            let cli = '';
+
+            if (vendor === 'cisco') {
+                if (role === 'root_primary') cli = 'spanning-tree mode rapid-pvst\nspanning-tree vlan 1-4094 root primary\n# Or explicit priority:\nspanning-tree vlan 1-4094 priority 4096';
+                else if (role === 'root_secondary') cli = 'spanning-tree mode rapid-pvst\nspanning-tree vlan 1-4094 root secondary\n# Or explicit priority:\nspanning-tree vlan 1-4094 priority 8192';
+                else cli = 'spanning-tree portfast default\nspanning-tree portfast bpduguard default\ninterface range GigabitEthernet1/0/1 - 24\n spanning-tree portfast\n spanning-tree bpduguard enable';
+            } else if (vendor === 'mikrotik') {
+                if (role === 'root_primary') cli = '/interface bridge set [find] protocol-mode=rstp priority=0x1000';
+                else if (role === 'root_secondary') cli = '/interface bridge set [find] protocol-mode=rstp priority=0x2000';
+                else cli = '/interface bridge port set [find] bpdu-guard=yes edge=yes';
+            } else {
+                if (role === 'root_primary') cli = 'spanning-tree mode rstp\nspanning-tree priority 4096';
+                else cli = 'interface range gigabitEthernet 0/1-24\n spanning-tree portfast\n spanning-tree bpduguard enable';
+            }
+            document.getElementById('stpCliResult').value = cli;
+        }
+
+        // 11. 802.1X & RADIUS
+        function generateRadiusCli() {
+            let ip = document.getElementById('radServerIp').value.trim() || '192.168.10.15';
+            let key = document.getElementById('radSecret').value.trim() || 'RadiusSecret2026';
+
+            let cli = 'aaa new-model\nradius server NPS_SERVER\n address ipv4 ' + ip + ' auth-port 1812 acct-port 1813\n key ' + key + '\nexit\n\naaa group server radius RADIUS_GROUP\n server name NPS_SERVER\nexit\n\naaa authentication dot1x default group RADIUS_GROUP\naaa authorization network default group RADIUS_GROUP\ndot1x system-auth-control\n\ninterface GigabitEthernet1/0/1\n switchport mode access\n authentication port-control auto\n dot1x pae authenticator\nexit';
+            document.getElementById('radCliResult').value = cli;
+        }
+
+        </script>
 
     <!-- IT EMERGENCY QUICK REFERENCE SLIDE-OVER DRAWER -->
     <div class="quick-ref-backdrop" id="quickRefBackdrop" onclick="toggleQuickRef()"></div>

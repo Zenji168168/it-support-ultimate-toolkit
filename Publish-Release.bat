@@ -82,7 +82,7 @@ if %ERRORLEVEL% equ 0 (
     gh release upload v%NEW_VER% "%~dp0IT-Support-Toolkit-Setup.exe" "%~dp0IT-Support-Toolkit-Portable.zip" "%~dp0IT-Support-Toolkit-v%NEW_VER%.zip" --clobber
 ) else (
     echo Creating brand-new Release v%NEW_VER%...
-    gh release create v%NEW_VER% "%~dp0IT-Support-Toolkit-Setup.exe" "%~dp0IT-Support-Toolkit-Portable.zip" "%~dp0IT-Support-Toolkit-v%NEW_VER%.zip" --title "IT Support Ultimate Toolkit v%NEW_VER% Enterprise" --notes "Official Enterprise Release with 74 IT, Network, Sysadmin & CCTV Utilities by MEUK THAREACH"
+    gh release create v%NEW_VER% "%~dp0IT-Support-Toolkit-Setup.exe" "%~dp0IT-Support-Toolkit-Portable.zip" "%~dp0IT-Support-Toolkit-v%NEW_VER%.zip" --title "IT Support Ultimate Toolkit v%NEW_VER% Enterprise" --notes "Official Enterprise Release with 110 IT, Network, Sysadmin & CCTV Utilities by MEUK THAREACH"
 )
 
 echo.
