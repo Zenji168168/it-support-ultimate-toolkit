@@ -1220,7 +1220,7 @@
                 <div class="sys-badge" style="display:inline-flex; align-items:center; gap:8px;">
                     <img src="app-icon.png" alt="App Icon" style="width:18px; height:18px; object-fit:contain; border-radius:4px; vertical-align:middle;">
                     <span class="status-dot"></span>
-                    <span id="txtDeskStatus">110 Pro IT & CCTV Tools Ready</span>
+                    <span id="txtDeskStatus">130 Pro IT & CCTV Tools Ready</span>
                 </div>
             </div>
 
@@ -1314,7 +1314,7 @@
             <div class="quick-access-bar" id="quickAccessStrip">
                 <div class="quick-access-header">
                     <span style="display:inline-flex; align-items:center; gap:6px;">⚡ <span id="txtQuickAccessTitle">Frontline IT Quick Access (1-Click Launch)</span></span>
-                    <span style="font-size:11.5px; opacity:0.8;">110 Pro Utilities Ready</span>
+                    <span style="font-size:11.5px; opacity:0.8;">130 Pro Utilities Ready</span>
                 </div>
                 <div class="quick-access-pills">
                     <button type="button" class="quick-pill" onclick="jumpToTool('network', 'subnet')">🧮 Subnet Calculator</button>
@@ -1435,6 +1435,10 @@
                     <button class="tab-btn" onclick="showTool('ipv6SubnetCalc', this)">🌐 IPv6 Subnet & Prefix Calc</button>
                     <button class="tab-btn" onclick="showTool('fiberBudget', this)">💡 Fiber Optical Loss Budget</button>
                     <button class="tab-btn" onclick="showTool('mtuMssCalc', this)">📦 MTU / MSS Packet Calc</button>
+                    <button class="tab-btn" onclick="showTool('lacpEtherchannel', this)">🔗 LACP & EtherChannel LAG</button>
+                    <button class="tab-btn" onclick="showTool('bgpPrefixList', this)">📑 BGP Prefix-List & Route-Map</button>
+                    <button class="tab-btn" onclick="showTool('dnsZoneBuilder', this)">🌐 DNS Zone File Generator</button>
+                    <button class="tab-btn" onclick="showTool('vrfMultiTenant', this)">🔀 VRF-Lite Multi-Tenant</button>
                 </div>
 
                 <!-- Windows Tabs -->
@@ -1454,6 +1458,9 @@
                     <button class="tab-btn" onclick="showTool('gpoPlaybook', this)">🛡️ GPO Security Hardening</button>
                     <button class="tab-btn" onclick="showTool('sysmonHunt', this)">🕵️ Sysmon Threat Hunting</button>
                     <button class="tab-btn" onclick="showTool('driverBackup', this)">💾 Driver Backup & Clean Repair</button>
+                    <button class="tab-btn" onclick="showTool('adReplicationFix', this)">🔄 AD Replication & Lingering Objects</button>
+                    <button class="tab-btn" onclick="showTool('wsusTroubleshoot', this)">🛠️ WSUS & Windows Update Doctor</button>
+                    <button class="tab-btn" onclick="showTool('certStoreAudit', this)">📜 Certificate Store & Expired SSL</button>
                 </div>
 
                 <!-- Linux Tabs -->
@@ -1468,6 +1475,9 @@
                     <button class="tab-btn" onclick="showTool('sslOpenSsl', this)">🔒 OpenSSL Cert & CSR</button>
                     <button class="tab-btn" onclick="showTool('nginxApacheGen', this)">🌐 Nginx & Apache Reverse Proxy</button>
                     <button class="tab-btn" onclick="showTool('systemdBuilder', this)">⚙️ Systemd Service Daemon Gen</button>
+                    <button class="tab-btn" onclick="showTool('iptablesUfwGen', this)">🧱 UFW & Iptables Firewall Gen</button>
+                    <button class="tab-btn" onclick="showTool('crontabVisualizer', this)">⏰ Crontab Schedule Visualizer</button>
+                    <button class="tab-btn" onclick="showTool('zfsBtrfsPool', this)">💾 ZFS & Btrfs Pool Sizing</button>
                 </div>
 
                 <!-- Coding Tabs -->
@@ -1483,6 +1493,9 @@
                     <button class="tab-btn" onclick="showTool('password', this)">Password Gen</button>
                     <button class="tab-btn" onclick="showTool('jsonFormat', this)">JSON Formatter</button>
                     <button class="tab-btn" onclick="showTool('color', this)">Color Convert</button>
+                    <button class="tab-btn" onclick="showTool('regexTester', this)">🧩 Regex Tester & Common Patterns</button>
+                    <button class="tab-btn" onclick="showTool('sqlQueryOptimizer', this)">⚡ SQL Index & Query Optimizer</button>
+                    <button class="tab-btn" onclick="showTool('markdownCheatsheet', this)">📝 Markdown SOP & Table Builder</button>
                 </div>
 
                 <!-- CCTV & Surveillance Tabs -->
@@ -1498,6 +1511,8 @@
                     <button class="tab-btn" onclick="showTool('cctvAccessControl', this)">🚪 Access Control & Wiegand</button>
                     <button class="tab-btn" onclick="showTool('cctvBandwidth', this)">📶 NVR Bandwidth & Throughput</button>
                     <button class="tab-btn" onclick="showTool('ptzTourCalc', this)">🔄 PTZ Camera Tours & RS-485</button>
+                    <button class="tab-btn" onclick="showTool('cctvAudioWiring', this)">🎙️ CCTV Audio & Mic Wiring</button>
+                    <button class="tab-btn" onclick="showTool('anprLprCalc', this)">🚗 ANPR / LPR Camera Distance</button>
                 </div>
 
                 <!-- 6. Enterprise Device Configuration Tabs -->
@@ -1520,6 +1535,9 @@
                     <button class="tab-btn" onclick="showTool('upsRuntime', this)">🔋 UPS Battery & Load Calc</button>
                     <button class="tab-btn" onclick="showTool('spanningTree', this)">🌲 Spanning Tree (STP) Root Calc</button>
                     <button class="tab-btn" onclick="showTool('radius8021x', this)">🔑 802.1X Port Security & RADIUS</button>
+                    <button class="tab-btn" onclick="showTool('hsrpVrrpGen', this)">🔄 HSRP / VRRP Gateway Redundancy</button>
+                    <button class="tab-btn" onclick="showTool('lldpCdpNeighbor', this)">🔍 LLDP & CDP Neighbor Discovery</button>
+                    <button class="tab-btn" onclick="showTool('patchPanelLabel', this)">🏷️ TIA-606-C Patch Panel Labels</button>
                 </div>
 
                 <!-- 7. IT Troubleshooting & Knowledge Base Tabs -->
@@ -1547,6 +1565,8 @@
                     <button class="tab-btn" onclick="showTool('docThermalDatacenter', this)">🌡️ Datacenter Thermal SOP</button>
                     <button class="tab-btn" onclick="showTool('docEmailDeliverability', this)" style="color:var(--primary); font-weight:700;">📧 SPF, DKIM & DMARC Anti-Spam</button>
                     <button class="tab-btn" onclick="showTool('docServerMigration', this)">🔄 P2V & Server Migration Runbook</button>
+                    <button class="tab-btn" onclick="showTool('docWifiInterference', this)">📶 Wi-Fi Co-Channel & DFS Radar SOP</button>
+                    <button class="tab-btn" onclick="showTool('docDnsExfiltration', this)">🚨 DNS Tunneling & C2 Hunting SOP</button>
                 </div>
             </div>
 
@@ -5527,8 +5547,817 @@ Write-Host "SMB Sharing Configuration Repaired!" -ForegroundColor Green</textare
                 </div>
             </div>
 
+            
+            <!-- =================================================================== -->
+            <!-- 1.23 LACP & STATIC ETHERCHANNEL / LAG GENERATOR (lacpEtherchannel) -->
+            <!-- =================================================================== -->
+            <div id="lacpEtherchannel" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-primary">Network Aggregation</span>
+                    <span class="badge badge-success">802.3ad LACP</span>
+                </div>
+                <h3>🔗 LACP & Static Link Aggregation Group (LAG) CLI Builder</h3>
+                <p class="tool-desc-text">បង្កើតកូដភ្ជាប់ខ្សែបណ្តាញច្រើនរួមបញ្ចូលគ្នា (EtherChannel / Bonding / LAG) ដើម្បីបង្កើន Bandwidth (e.g. 2x 1Gbps = 2Gbps) និងធានា Redundancy លើ Cisco, MikroTik, និង FortiGate។</p>
+
+                <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(170px, 1fr)); gap:10px; margin-bottom:12px;">
+                    <div>
+                        <label>Vendor Platform:</label>
+                        <select id="lagVendor" onchange="generateLagCli()">
+                            <option value="cisco">Cisco IOS / Catalyst</option>
+                            <option value="mikrotik">MikroTik RouterOS v7</option>
+                            <option value="fortigate">Fortinet FortiGate (LAG Interface)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Channel Group ID / Bond Name:</label>
+                        <input type="text" id="lagGroupId" value="1" oninput="generateLagCli()">
+                    </div>
+                    <div>
+                        <label>Physical Interfaces (Ports):</label>
+                        <input type="text" id="lagPorts" value="Gi1/0/1, Gi1/0/2" oninput="generateLagCli()">
+                    </div>
+                    <div>
+                        <label>Bonding Mode:</label>
+                        <select id="lagMode" onchange="generateLagCli()">
+                            <option value="active" selected>802.3ad LACP Active (Recommended)</option>
+                            <option value="passive">802.3ad LACP Passive</option>
+                            <option value="on">Static Link Aggregation (Mode ON)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <label>Generated CLI Commands:</label>
+                <div class="input-with-copy">
+                    <textarea id="lagCliResult" readonly rows="8" style="font-family:monospace; font-size:12px;"></textarea>
+                    <button class="copy-btn" onclick="copyField('lagCliResult')">Copy CLI</button>
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 1.24 BGP PREFIX-LIST & ROUTE-MAP BUILDER (bgpPrefixList) -->
+            <!-- =================================================================== -->
+            <div id="bgpPrefixList" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-primary">Enterprise BGP</span>
+                    <span class="badge badge-warning">Route Filtering</span>
+                </div>
+                <h3>📑 BGP Prefix-List, Route-Map & AS-Path Filter Builder</h3>
+                <p class="tool-desc-text">បង្កើតក្បួនតម្រង Prefix-List និង Route-Map ដើម្បីគ្រប់គ្រងផ្លូវ Routing ចូល/ចេញជាមួយ ISP (BGP Inbound/Outbound Policies, Local Preference, AS-Path Prepending)។</p>
+
+                <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(170px, 1fr)); gap:10px; margin-bottom:12px;">
+                    <div>
+                        <label>Prefix-List Name:</label>
+                        <input type="text" id="pfxListName" value="ISP_OUT_PREFIXES" oninput="generatePrefixListCli()">
+                    </div>
+                    <div>
+                        <label>IP Subnet to Advertise/Filter:</label>
+                        <input type="text" id="pfxSubnet" value="203.0.113.0/24" oninput="generatePrefixListCli()">
+                    </div>
+                    <div>
+                        <label>Route-Map Action:</label>
+                        <select id="pfxAction" onchange="generatePrefixListCli()">
+                            <option value="permit_prepend">Permit with AS-Path Prepend 2x (Backup ISP)</option>
+                            <option value="permit_locpref">Permit with Local-Preference 200 (Primary ISP)</option>
+                            <option value="deny">Deny Bogon / Private RFC1918 Subnets</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Your Public ASN:</label>
+                        <input type="number" id="pfxAsn" value="64512" min="1" max="4294967295" oninput="generatePrefixListCli()">
+                    </div>
+                </div>
+
+                <label>Cisco IOS / Catalyst BGP Filtering Configuration:</label>
+                <div class="input-with-copy">
+                    <textarea id="pfxCliResult" readonly rows="8" style="font-family:monospace; font-size:12px;"></textarea>
+                    <button class="copy-btn" onclick="copyField('pfxCliResult')">Copy BGP Policy</button>
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 1.25 DNS ZONE FILE GENERATOR (dnsZoneBuilder) -->
+            <!-- =================================================================== -->
+            <div id="dnsZoneBuilder" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-primary">DNS Architecture</span>
+                    <span class="badge badge-info">RFC 1035 Standards</span>
+                </div>
+                <h3>🌐 DNS Forward & Reverse Zone File Generator (BIND9 & Windows)</h3>
+                <p class="tool-desc-text">បង្កើតឯកសារ DNS Zone ស្តង់ដារ (SOA, NS, A, AAAA, MX, CNAME, PTR) សម្រាប់ Linux BIND9 ឬ Windows Server DNS Management។</p>
+
+                <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(160px, 1fr)); gap:10px; margin-bottom:12px;">
+                    <div>
+                        <label>Domain Zone Name:</label>
+                        <input type="text" id="dnsZoneDomain" value="company.internal" oninput="generateDnsZone()">
+                    </div>
+                    <div>
+                        <label>Primary Nameserver (NS):</label>
+                        <input type="text" id="dnsZoneNs" value="ns1.company.internal." oninput="generateDnsZone()">
+                    </div>
+                    <div>
+                        <label>Admin Email (rname with dot):</label>
+                        <input type="text" id="dnsZoneEmail" value="admin.company.internal." oninput="generateDnsZone()">
+                    </div>
+                    <div>
+                        <label>Web / Host IP (A Record):</label>
+                        <input type="text" id="dnsZoneHostIp" value="192.168.10.50" oninput="generateDnsZone()">
+                    </div>
+                </div>
+
+                <label>Standard RFC 1035 Zone File (Save as /etc/bind/db.domain or Windows DNS):</label>
+                <div class="input-with-copy">
+                    <textarea id="dnsZoneResult" readonly rows="8" style="font-family:monospace; font-size:12px;"></textarea>
+                    <button class="copy-btn" onclick="copyField('dnsZoneResult')">Copy Zone File</button>
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 1.26 VRF-LITE MULTI-TENANT ISOLATOR (vrfMultiTenant) -->
+            <!-- =================================================================== -->
+            <div id="vrfMultiTenant" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-primary">Network Virtualization</span>
+                    <span class="badge badge-success">Multi-Tenant VRF</span>
+                </div>
+                <h3>🔀 VRF-Lite Multi-Tenant Network Isolation CLI Builder</h3>
+                <p class="tool-desc-text">បង្កើត Virtual Routing and Forwarding (VRF) ដើម្បីបំបែក Routing Table ដាច់ដោយឡែកពីគ្នាលើ Router តែមួយ ធានាការសម្ងាត់រវាង Guest Network, Corporate LAN, និង CCTV Infrastructure។</p>
+
+                <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(160px, 1fr)); gap:10px; margin-bottom:12px;">
+                    <div>
+                        <label>VRF Instance Name:</label>
+                        <input type="text" id="vrfName" value="GUEST_NETWORK" oninput="generateVrfCli()">
+                    </div>
+                    <div>
+                        <label>Route Distinguisher (RD):</label>
+                        <input type="text" id="vrfRd" value="65000:10" oninput="generateVrfCli()">
+                    </div>
+                    <div>
+                        <label>Interface / Sub-interface:</label>
+                        <input type="text" id="vrfIntf" value="GigabitEthernet0/0/1.100" oninput="generateVrfCli()">
+                    </div>
+                    <div>
+                        <label>Gateway IP & Subnet:</label>
+                        <input type="text" id="vrfIp" value="10.100.1.1 255.255.255.0" oninput="generateVrfCli()">
+                    </div>
+                </div>
+
+                <label>Cisco & MikroTik VRF Configuration:</label>
+                <div class="input-with-copy">
+                    <textarea id="vrfCliResult" readonly rows="8" style="font-family:monospace; font-size:12px;"></textarea>
+                    <button class="copy-btn" onclick="copyField('vrfCliResult')">Copy VRF CLI</button>
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 2.16 ACTIVE DIRECTORY REPLICATION & LINGERING OBJECTS (adReplicationFix) -->
+            <!-- =================================================================== -->
+            <div id="adReplicationFix" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-danger">Active Directory Disaster</span>
+                    <span class="badge badge-primary">Replication Repair</span>
+                </div>
+                <h3>🔄 AD Replication Diagnostics, Lingering Objects & Tombstone Cleanup</h3>
+                <p class="tool-desc-text">ដោះស្រាយបញ្ហា AD Replication រវាង Domain Controllers មិនដំណើរការ (Event ID 1388, 1988, 8606), សម្អាត Lingering Objects, និងពិនិត្យស្ថានភាព KCC Topology។</p>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px;">
+                    <div>
+                        <label>ជ្រើសរើសប្រភេទវិនិច្ឆ័យ (Replication Action):</label>
+                        <select id="adReplAction" onchange="generateAdReplCli()">
+                            <option value="summary">1. repadmin /replsummary (ពិនិត្យអត្រា Error & Delta)</option>
+                            <option value="syncall">2. repadmin /syncall /AdeP (បង្ខំ Replicate គ្រប់ DCs ភ្លាមៗ)</option>
+                            <option value="lingering">3. repadmin /removelingeringobjects (លុប Objects ចាស់ៗហួស Tombstone)</option>
+                            <option value="kcc">4. repadmin /kcc (បង្កើត Topology តភ្ជាប់ DCs ឡើងវិញ)</option>
+                            <option value="strict">5. Enable Strict Replication Consistency (ការពារ Corrupted Objects)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Reference Domain Controller (FQDN):</label>
+                        <input type="text" id="adReplDc" value="DC01.company.local" oninput="generateAdReplCli()">
+                    </div>
+                </div>
+
+                <label>PowerShell / Command Prompt Commands (Run on Domain Controller):</label>
+                <div class="input-with-copy">
+                    <textarea id="adReplResult" readonly rows="6" style="font-family:monospace; font-size:12px;"></textarea>
+                    <button class="copy-btn" onclick="copyField('adReplResult')">Copy Commands</button>
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 2.17 WSUS & WINDOWS UPDATE REPAIR DOCTOR (wsusTroubleshoot) -->
+            <!-- =================================================================== -->
+            <div id="wsusTroubleshoot" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-success">Windows Repair</span>
+                    <span class="badge badge-warning">Windows Update Fix</span>
+                </div>
+                <h3>🛠️ WSUS Client Reset, Cache Purge & Windows Update Doctor</h3>
+                <p class="tool-desc-text">ជួសជុលបញ្ហា Windows Update ជាប់គាំង (0x80070002, 0x8024401c), សម្អាត Folder SoftwareDistribution និង Catroot2, និង Reset WSUS Client ID ឱ្យរាយការណ៍ទៅ Server ឡើងវិញ។</p>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px;">
+                    <div>
+                        <label>ប្រតិបត្តិការជួសជុល (Repair Mode):</label>
+                        <select id="wsusMode" onchange="generateWsusCli()">
+                            <option value="full_reset">1. Complete Windows Update Service & Cache Purge (Recommended)</option>
+                            <option value="wsus_detect">2. Force WSUS Authorization & Re-detection (ResetAuthorization)</option>
+                            <option value="dism_online">3. DISM Online Component Store Cleanup & Repair</option>
+                            <option value="check_reg">4. Query Current WSUS Server Registry Values (WUServer / WUStatusServer)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>WSUS Server Target (Optional URL):</label>
+                        <input type="text" id="wsusUrl" value="http://wsus.company.local:8530" oninput="generateWsusCli()">
+                    </div>
+                </div>
+
+                <label>Admin PowerShell Script:</label>
+                <div class="input-with-copy">
+                    <textarea id="wsusCliResult" readonly rows="8" style="font-family:monospace; font-size:12px;"></textarea>
+                    <button class="copy-btn" onclick="copyField('wsusCliResult')">Copy Script</button>
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 2.18 WINDOWS CERTIFICATE STORE AUDIT (certStoreAudit) -->
+            <!-- =================================================================== -->
+            <div id="certStoreAudit" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-primary">PKI & Certificates</span>
+                    <span class="badge badge-info">SSL Expiration</span>
+                </div>
+                <h3>📜 Windows Certificate Store Audit & Expired SSL/TLS Scanner</h3>
+                <p class="tool-desc-text">ស្កេនពិនិត្យវិញ្ញាបនបត្រ SSL/TLS ក្នុងម៉ាស៊ីន (LocalMachine & CurrentUser Store) ដើម្បីដឹងមុននូវវិញ្ញាបនបត្រដែលជិតផុតកំណត់ (Expiry Warning) និងពិនិត្យរក Self-Signed Certificates មិនប្រក្រតី។</p>
+
+                <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); gap:10px; margin-bottom:12px;">
+                    <div>
+                        <label>Certificate Store Target:</label>
+                        <select id="certStoreTarget" onchange="generateCertAuditCli()">
+                            <option value="localmachine_my">LocalMachineMy (Personal Server SSL/IIS)</option>
+                            <option value="localmachine_root">LocalMachineRoot (Trusted Root Certification Auth)</option>
+                            <option value="currentuser_my">CurrentUserMy (User Code Signing & Email)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>ថ្ងៃជិតផុតកំណត់ដែលត្រូវព្រមាន (Days):</label>
+                        <input type="number" id="certDays" value="45" min="1" max="365" oninput="generateCertAuditCli()">
+                    </div>
+                </div>
+
+                <label>PowerShell Audit Command:</label>
+                <div class="input-with-copy">
+                    <textarea id="certAuditResult" readonly rows="6" style="font-family:monospace; font-size:12px;"></textarea>
+                    <button class="copy-btn" onclick="copyField('certAuditResult')">Copy PowerShell Query</button>
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 3.10 UFW & IPTABLES LINUX FIREWALL RULE GENERATOR (iptablesUfwGen) -->
+            <!-- =================================================================== -->
+            <div id="iptablesUfwGen" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-primary">Linux Security</span>
+                    <span class="badge badge-danger">Host Firewall</span>
+                </div>
+                <h3>🧱 UFW & Iptables Linux Host Firewall Rule Builder</h3>
+                <p class="tool-desc-text">បង្កើតកូដ Firewall ការពារម៉ាស៊ីន Linux (Ubuntu/Debian UFW និង RHEL/CentOS Iptables) រួមមានការកំណត់ Limit SSH Brute-Force, បើក Port សេវាកម្ម, និងទប់ស្កាត់ IP មិនស្គាល់មុខ។</p>
+
+                <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(160px, 1fr)); gap:10px; margin-bottom:12px;">
+                    <div>
+                        <label>Firewall Engine:</label>
+                        <select id="fwEngine" onchange="generateLinuxFwCli()">
+                            <option value="ufw">UFW (Ubuntu / Debian)</option>
+                            <option value="iptables">Iptables (RHEL / Enterprise Linux)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Source IP or Subnet:</label>
+                        <input type="text" id="fwSrc" value="192.168.1.0/24" oninput="generateLinuxFwCli()">
+                    </div>
+                    <div>
+                        <label>Destination Port:</label>
+                        <input type="text" id="fwPort" value="22" oninput="generateLinuxFwCli()">
+                    </div>
+                    <div>
+                        <label>Action & Protocol:</label>
+                        <select id="fwAction" onchange="generateLinuxFwCli()">
+                            <option value="allow_tcp">Allow TCP Port</option>
+                            <option value="limit_ssh">Rate Limit SSH (Anti Brute-Force)</option>
+                            <option value="deny">Deny / Drop Traffic</option>
+                        </select>
+                    </div>
+                </div>
+
+                <label>Terminal Commands:</label>
+                <div class="input-with-copy">
+                    <textarea id="fwCliResult" readonly rows="6" style="font-family:monospace; font-size:12px;"></textarea>
+                    <button class="copy-btn" onclick="copyField('fwCliResult')">Copy Commands</button>
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 3.11 CRONTAB SCHEDULE VISUALIZER & GENERATOR (crontabVisualizer) -->
+            <!-- =================================================================== -->
+            <div id="crontabVisualizer" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-primary">Linux Automation</span>
+                    <span class="badge badge-info">Cron Schedule</span>
+                </div>
+                <h3>⏰ Crontab Schedule Visualizer & Execution Generator</h3>
+                <p class="tool-desc-text">រៀបចំ និងពន្យល់ម៉ោងដំណើរការ Script លើ Linux (5-field cron syntax: minute, hour, day, month, weekday) ព្រមទាំងដាក់កូដ Safe Log Redirection (>> /var/log/cron.log 2>&1)។</p>
+
+                <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(130px, 1fr)); gap:10px; margin-bottom:12px;">
+                    <div>
+                        <label>Minute (0-59):</label>
+                        <input type="text" id="cronMin" value="0" oninput="visualizeCron()">
+                    </div>
+                    <div>
+                        <label>Hour (0-23):</label>
+                        <input type="text" id="cronHour" value="2" oninput="visualizeCron()">
+                    </div>
+                    <div>
+                        <label>Day of Month (1-31):</label>
+                        <input type="text" id="cronDom" value="*" oninput="visualizeCron()">
+                    </div>
+                    <div>
+                        <label>Month (1-12):</label>
+                        <input type="text" id="cronMon" value="*" oninput="visualizeCron()">
+                    </div>
+                    <div>
+                        <label>Weekday (0-6 Sun-Sat):</label>
+                        <input type="text" id="cronDow" value="*" oninput="visualizeCron()">
+                    </div>
+                </div>
+
+                <div style="margin-bottom:12px;">
+                    <label>Command or Script Path to Execute:</label>
+                    <input type="text" id="cronCmd" value="/usr/local/bin/backup.sh" oninput="visualizeCron()">
+                </div>
+
+                <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:12px; border-radius:8px; margin-bottom:12px;">
+                    <div style="font-weight:700; color:var(--primary); margin-bottom:4px;">⏱️ កាលវិភាគដំណើរការ (Schedule Meaning):</div>
+                    <div id="cronHumanDesc" style="font-size:13px; color:var(--text-main);">ដំណើរការរៀងរាល់ថ្ងៃនៅម៉ោង 02:00 ព្រឹក (At 02:00 AM every day)</div>
+                </div>
+
+                <label>Complete Crontab Line (crontab -e):</label>
+                <div class="input-with-copy">
+                    <textarea id="cronFinalResult" readonly rows="2" style="font-family:monospace; font-size:12px;"></textarea>
+                    <button class="copy-btn" onclick="copyField('cronFinalResult')">Copy Cron Line</button>
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 3.12 ZFS & BTRFS STORAGE POOL RAIDZ SIZING (zfsBtrfsPool) -->
+            <!-- =================================================================== -->
+            <div id="zfsBtrfsPool" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-success">Storage Systems</span>
+                    <span class="badge badge-primary">ZFS & Btrfs</span>
+                </div>
+                <h3>💾 ZFS RaidZ & Btrfs Storage Pool Usable Capacity Sizing</h3>
+                <p class="tool-desc-text">គណនាទំហំផ្ទុកជាក់ស្តែង (Usable Storage) និងកម្រិតធន់នឹងខូច Hard Drive (Drive Fault Tolerance) សម្រាប់ ZFS (Mirror, RAIDZ1, RAIDZ2, RAIDZ3) និង Btrfs RAID Pools។</p>
+
+                <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(150px, 1fr)); gap:10px; margin-bottom:12px;">
+                    <div>
+                        <label>Drive Capacity (TB each):</label>
+                        <input type="number" id="zfsDriveTb" value="8" min="1" max="64" oninput="calcZfsCapacity()">
+                    </div>
+                    <div>
+                        <label>ចំនួន Hard Drive សរុប:</label>
+                        <input type="number" id="zfsDriveCount" value="6" min="2" max="64" oninput="calcZfsCapacity()">
+                    </div>
+                    <div>
+                        <label>ZFS / Storage Topology:</label>
+                        <select id="zfsType" onchange="calcZfsCapacity()">
+                            <option value="raidz2" selected>RAIDZ2 (Double Parity - Can lose 2 drives)</option>
+                            <option value="raidz1">RAIDZ1 (Single Parity - Can lose 1 drive)</option>
+                            <option value="mirror">RAID10 / Mirrored VDevs (Can lose 1 drive per mirror)</option>
+                            <option value="raidz3">RAIDZ3 (Triple Parity - Can lose 3 drives)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(140px, 1fr)); gap:10px; margin-bottom:12px;">
+                    <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:10px; border-radius:8px; text-align:center;">
+                        <span style="font-size:11px; color:var(--text-muted);">Raw Capacity:</span>
+                        <div id="zfsRawRes" style="font-weight:700; font-size:15px; color:var(--text-main);">48 TB</div>
+                    </div>
+                    <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:10px; border-radius:8px; text-align:center;">
+                        <span style="font-size:11px; color:var(--text-muted);">Usable Usable Pool:</span>
+                        <div id="zfsUsableRes" style="font-weight:700; font-size:15px; color:var(--success);">32 TB</div>
+                    </div>
+                    <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:10px; border-radius:8px; text-align:center;">
+                        <span style="font-size:11px; color:var(--text-muted);">Drive Redundancy:</span>
+                        <div id="zfsFaultRes" style="font-weight:700; font-size:15px; color:var(--warning);">Up to 2 Drives</div>
+                    </div>
+                </div>
+
+                <label>ZFS Pool Creation CLI Command (zpool create):</label>
+                <div class="input-with-copy">
+                    <textarea id="zfsCliResult" readonly rows="3" style="font-family:monospace; font-size:12px;"></textarea>
+                    <button class="copy-btn" onclick="copyField('zfsCliResult')">Copy zpool Command</button>
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 4.12 REGULAR EXPRESSION (REGEX) TESTER (regexTester) -->
+            <!-- =================================================================== -->
+            <div id="regexTester" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-primary">Coding & Scripting</span>
+                    <span class="badge badge-success">RegEx Engine</span>
+                </div>
+                <h3>🧩 Interactive Regular Expression (RegEx) Tester & Common IT Patterns</h3>
+                <p class="tool-desc-text">តេស្តកូដ RegEx ភ្លាមៗក្នុងម៉ាស៊ីន (Offline) ជាមួយបណ្តុំគំរូ IT Patterns ស្តង់ដារដូចជា IPv4 Address, MAC Address, Email, ISO Timestamp, និង Guid/UUID។</p>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px;">
+                    <div>
+                        <label>Common IT Pattern Presets:</label>
+                        <select id="regexPresetSelect" onchange="applyRegexPreset()">
+                            <option value="ipv4">IPv4 Address Pattern</option>
+                            <option value="mac">MAC Address (Colons or Hyphens)</option>
+                            <option value="email">Standard Email Format</option>
+                            <option value="uuid">UUID / GUID Pattern</option>
+                            <option value="cisco_ip">Cisco IP Config Line</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Regular Expression Pattern:</label>
+                        <input type="text" id="regexInput" value="\b(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b" oninput="runRegexTest()">
+                    </div>
+                </div>
+
+                <label>Sample Test Text:</label>
+                <textarea id="regexTestText" rows="3" oninput="runRegexTest()" style="font-family:monospace; font-size:12px; margin-bottom:10px;">Router IP is 192.168.1.1 and DNS is 8.8.8.8 while secondary is 1.1.1.1.</textarea>
+
+                <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:12px; border-radius:8px; margin-bottom:10px;">
+                    <div style="font-weight:700; margin-bottom:4px; color:var(--text-main);">Matched Results:</div>
+                    <div id="regexMatchOutput" style="font-family:monospace; font-size:12.5px; color:var(--success);">3 matches found: [192.168.1.1, 8.8.8.8, 1.1.1.1]</div>
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 4.13 SQL QUERY & INDEX OPTIMIZER CHEAT SHEET (sqlQueryOptimizer) -->
+            <!-- =================================================================== -->
+            <div id="sqlQueryOptimizer" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-primary">Databases</span>
+                    <span class="badge badge-info">SQL Performance</span>
+                </div>
+                <h3>⚡ SQL Query Index Optimizer, EXPLAIN Analyzer & Anti-Patterns</h3>
+                <p class="tool-desc-text">គោលការណ៍បង្កើនល្បឿន Database Query, ការបង្កើត B-Tree / Composite Indexes ត្រឹមត្រូវ, ការប្រើប្រាស់ EXPLAIN ANALYZE, និងការជៀសវាង Anti-Patterns ដែលធ្វើឱ្យ Server ឡើង 100% CPU។</p>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px;">
+                    <div>
+                        <label>ជ្រើសរើសប្រធានបទបង្កើនល្បឿន (SQL Topic):</label>
+                        <select id="sqlTopicSelect" onchange="showSqlOptimization()">
+                            <option value="composite_index">1. Leftmost Prefix Rule ក្នុង Composite Index</option>
+                            <option value="explain_analyze">2. របៀបមើល EXPLAIN / EXPLAIN ANALYZE</option>
+                            <option value="like_wildcard">3. កំហុស Leading Wildcard (LIKE '%abc')</option>
+                            <option value="select_star">4. ផលប៉ះពាល់នៃ SELECT * លើ RAM & I/O</option>
+                            <option value="n_plus_one">5. ដោះស្រាយបញ្ហា ORM N+1 Query Problem</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Database Engine:</label>
+                        <select id="sqlDbSelect" onchange="showSqlOptimization()">
+                            <option value="mysql">MySQL / MariaDB</option>
+                            <option value="postgres">PostgreSQL</option>
+                            <option value="mssql">Microsoft SQL Server</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="sqlExplainCard" style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:14px; border-radius:8px; margin-bottom:12px;">
+                    <div id="sqlExplainTitle" style="font-weight:700; color:var(--primary); margin-bottom:6px;">Leftmost Prefix Rule ក្នុង Composite Index:</div>
+                    <div id="sqlExplainBody" style="font-size:12.5px; line-height:1.6; color:var(--text-main);">
+                        ពេលបង្កើត Index លើ (store_id, created_at, status) Query នឹងទាញយកល្បឿនលឿនទាល់តែ WHERE clause មាន <code>store_id</code> ជាចម្បង។ បើ Query រកតែ <code>created_at</code> ដោយគ្មាន <code>store_id</code> Database នឹងធ្វើ Full Table Scan!
+                    </div>
+                </div>
+
+                <label>Recommended SQL Code / Index Template:</label>
+                <div class="input-with-copy">
+                    <textarea id="sqlCodeResult" readonly rows="4" style="font-family:monospace; font-size:12px;"></textarea>
+                    <button class="copy-btn" onclick="copyField('sqlCodeResult')">Copy SQL</button>
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 4.14 TECHNICAL MARKDOWN TABLE & SOP RUNBOOK BUILDER (markdownCheatsheet) -->
+            <!-- =================================================================== -->
+            <div id="markdownCheatsheet" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-primary">Documentation</span>
+                    <span class="badge badge-success">Markdown Builder</span>
+                </div>
+                <h3>📝 Technical Markdown Table & SOP Runbook Generator</h3>
+                <p class="tool-desc-text">បង្កើតតារាង Markdown ស្តង់ដារ (GitHub Flavored Markdown), Callout Alerts (> [!NOTE]), Code Fences, និង Checklists យ៉ាងលឿនសម្រាប់ចងក្រងឯកសារបច្ចេកទេស IT និង Knowledge Base។</p>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px;">
+                    <div>
+                        <label>Table Columns (Comma-separated):</label>
+                        <input type="text" id="mdCols" value="Hostname, IP Address, VLAN, Device Role" oninput="generateMarkdownSnippet()">
+                    </div>
+                    <div>
+                        <label>Markdown Template Component:</label>
+                        <select id="mdComponent" onchange="generateMarkdownSnippet()">
+                            <option value="table">Table with Sample Data</option>
+                            <option value="alerts">GitHub Alerts (NOTE / WARNING / CAUTION)</option>
+                            <option value="checklist">IT Maintenance Checklist</option>
+                            <option value="codeblock">Code Fences with Copy</option>
+                        </select>
+                    </div>
+                </div>
+
+                <label>Generated Markdown Source Code:</label>
+                <div class="input-with-copy">
+                    <textarea id="mdOutput" readonly rows="7" style="font-family:monospace; font-size:12px;"></textarea>
+                    <button class="copy-btn" onclick="copyField('mdOutput')">Copy Markdown</button>
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 5.12 CCTV AUDIO & MICROPHONE WIRING SCHEMATIC (cctvAudioWiring) -->
+            <!-- =================================================================== -->
+            <div id="cctvAudioWiring" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-primary">CCTV Audio</span>
+                    <span class="badge badge-warning">Microphone Schematic</span>
+                </div>
+                <h3>🎙️ CCTV Audio Line-In, Active Mic & Two-Way Talk Schematic</h3>
+                <p class="tool-desc-text">ប្លង់តខ្សែសំឡេងកាមេរ៉ាសុវត្ថិភាព (Audio Line-In / RCA / 3.5mm), ការផ្តល់ភ្លើង 12V DC ឱ្យ Active Microphone (Sound Pickup), និងការកំណត់ Codec សំឡេងលើ NVR (G.711u / AAC)។</p>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px;">
+                    <div>
+                        <label>ប្រភេទកាមេរ៉ា និង Microphone:</label>
+                        <select id="cctvMicType" onchange="showCctvAudioGuide()">
+                            <option value="active_mic">1. Active CCTV Microphone (3-Wire: 12V+, Audio Out, GND)</option>
+                            <option value="builtin_mic">2. IP Camera with Built-in Mic (PoE Stream Configuration)</option>
+                            <option value="two_way">3. Two-Way Audio Talk (Intercom Speaker & Mic to NVR)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>NVR Audio Encoding Codec:</label>
+                        <select id="cctvCodec" onchange="showCctvAudioGuide()">
+                            <option value="g711u">G.711u (Default 64 kbps - High compatibility)</option>
+                            <option value="aac">AAC (16/32 kbps - High clarity, low bandwidth)</option>
+                            <option value="g711a">G.711a (PCMA European Standard)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:14px; border-radius:8px; margin-bottom:12px;">
+                    <div id="cctvAudioWiringTitle" style="font-weight:700; color:var(--primary); margin-bottom:6px;">ប្លង់តខ្សែ Active Microphone (3 ខ្សែ):</div>
+                    <div id="cctvAudioWiringBody" style="font-size:12.5px; line-height:1.6; color:var(--text-main);">
+                        • ខ្សែក្រហម (+12V Power): ភ្ជាប់ទៅភ្លើង DC 12V Adapter<br>
+                        • ខ្សែខ្មៅ (GND Ground): ភ្ជាប់រួមជាមួយ GND របស់ Adapter និង GND របស់ខ្សែ RCA/Camera<br>
+                        • ខ្សែស ឬលឿង (Audio Signal): ភ្ជាប់ទៅកាន់ RCA Center Pin (Line-In) របស់ Camera ឬ NVR
+                    </div>
+                </div>
+
+                <label>CCTV Audio Diagnostic Best Practices:</label>
+                <div class="input-with-copy">
+                    <textarea id="cctvAudioNotes" readonly rows="4" style="font-family:monospace; font-size:12px;"></textarea>
+                    <button class="copy-btn" onclick="copyField('cctvAudioNotes')">Copy Notes</button>
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 5.13 ANPR / LPR LICENSE PLATE OPTICAL ANGLE CALCULATOR (anprLprCalc) -->
+            <!-- =================================================================== -->
+            <div id="anprLprCalc" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-primary">ANPR / LPR</span>
+                    <span class="badge badge-info">Traffic Optics</span>
+                </div>
+                <h3>🚗 ANPR / LPR License Plate Camera Distance & Optical Sizing</h3>
+                <p class="tool-desc-text">គណនាមុំកាមេរ៉ា (Horizontal/Vertical Angles ក្រោម 30 ដឺក្រេ), ចម្ងាយថតស្លាកលេខឡាន (Capture Distance), Shutter Speed (1/1000s), និង Pixel Density (150-200 PPM) ដើម្បីចាប់ស្លាកលេខបានច្បាស់ 100%។</p>
+
+                <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(160px, 1fr)); gap:10px; margin-bottom:12px;">
+                    <div>
+                        <label>ល្បឿនឡានអតិបរមា (Speed km/h):</label>
+                        <input type="number" id="anprSpeed" value="40" min="5" max="200" oninput="calcAnprOptics()">
+                    </div>
+                    <div>
+                        <label>កម្ពស់ដំឡើងកាមេរ៉ា (Mount Height m):</label>
+                        <input type="number" id="anprHeight" value="3.5" step="0.5" min="1" max="15" oninput="calcAnprOptics()">
+                    </div>
+                    <div>
+                        <label>ចម្ងាយចាប់ផ្តើមថត (Distance m):</label>
+                        <input type="number" id="anprDist" value="15" min="3" max="100" oninput="calcAnprOptics()">
+                    </div>
+                </div>
+
+                <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(140px, 1fr)); gap:10px; margin-bottom:12px;">
+                    <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:10px; border-radius:8px; text-align:center;">
+                        <span style="font-size:11px; color:var(--text-muted);">Vertical Tilt Angle:</span>
+                        <div id="anprTiltRes" style="font-weight:700; font-size:15px; color:var(--success);">13.1° (Optimal &lt; 30°)</div>
+                    </div>
+                    <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:10px; border-radius:8px; text-align:center;">
+                        <span style="font-size:11px; color:var(--text-muted);">Recommended Shutter:</span>
+                        <div id="anprShutterRes" style="font-weight:700; font-size:15px; color:var(--primary);">1/1000s</div>
+                    </div>
+                    <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:10px; border-radius:8px; text-align:center;">
+                        <span style="font-size:11px; color:var(--text-muted);">Target Lens Focal:</span>
+                        <div id="anprLensRes" style="font-weight:700; font-size:15px; color:var(--warning);">8 - 32mm Varifocal</div>
+                    </div>
+                </div>
+
+                <label>ANPR Camera Installation Checklist:</label>
+                <div class="input-with-copy">
+                    <textarea id="anprNotes" readonly rows="4" style="font-family:monospace; font-size:12px;"></textarea>
+                    <button class="copy-btn" onclick="copyField('anprNotes')">Copy Recommendations</button>
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 6.19 HSRP / VRRP FIRST HOP REDUNDANCY PROTOCOL (hsrpVrrpGen) -->
+            <!-- =================================================================== -->
+            <div id="hsrpVrrpGen" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-primary">High Availability</span>
+                    <span class="badge badge-success">FHRP Gateway</span>
+                </div>
+                <h3>🔄 HSRP & VRRP First Hop Gateway Redundancy CLI Builder</h3>
+                <p class="tool-desc-text">បង្កើតកូដ High Availability Gateway Failover សម្រាប់ Router ឬ Core Switch ពីរគ្រឿង ដោយប្រើប្រាស់ Cisco HSRP ឬ Standard VRRP v2/v3 (MikroTik, FortiGate, Ruijie) ធានាថាពេល Router មួយដាច់ កុំព្យូទ័រមិនដាច់អ៊ីនធឺណិត។</p>
+
+                <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(160px, 1fr)); gap:10px; margin-bottom:12px;">
+                    <div>
+                        <label>Protocol:</label>
+                        <select id="fhrpProto" onchange="generateFhrpCli()">
+                            <option value="hsrp" selected>Cisco HSRP (Standby)</option>
+                            <option value="vrrp_cisco">Cisco VRRP</option>
+                            <option value="vrrp_mikrotik">MikroTik VRRP Interface</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Virtual Gateway IP (VIP):</label>
+                        <input type="text" id="fhrpVirtualIp" value="192.168.1.1" oninput="generateFhrpCli()">
+                    </div>
+                    <div>
+                        <label>Master Priority (e.g. 110):</label>
+                        <input type="number" id="fhrpPrio" value="110" min="1" max="254" oninput="generateFhrpCli()">
+                    </div>
+                    <div>
+                        <label>Interface Name:</label>
+                        <input type="text" id="fhrpIntf" value="Vlan 10" oninput="generateFhrpCli()">
+                    </div>
+                </div>
+
+                <label>Primary (Master) and Backup (Slave) Router CLI:</label>
+                <div class="input-with-copy">
+                    <textarea id="fhrpCliResult" readonly rows="8" style="font-family:monospace; font-size:12px;"></textarea>
+                    <button class="copy-btn" onclick="copyField('fhrpCliResult')">Copy FHRP Config</button>
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 6.20 LLDP & CDP NEIGHBOR DISCOVERY & PORT TRACING (lldpCdpNeighbor) -->
+            <!-- =================================================================== -->
+            <div id="lldpCdpNeighbor" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-primary">Network Discovery</span>
+                    <span class="badge badge-info">LLDP & CDP</span>
+                </div>
+                <h3>🔍 LLDP & CDP Switch Neighbor Discovery & Remote Port Tracing</h3>
+                <p class="tool-desc-text">ពាក្យបញ្ជាស្វែងរក Switch, Router, AP, ឬ IP Phone ដែលដោតភ្ជាប់គ្នាដោយស្វ័យប្រវត្តិ តាមរយៈ Link Layer Discovery Protocol (LLDP) និង Cisco Discovery Protocol (CDP) ដោយមិនបាច់ទៅដកខ្សែតាមមើល។</p>
+
+                <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(170px, 1fr)); gap:10px; margin-bottom:12px;">
+                    <div>
+                        <label>Switch / Router Brand:</label>
+                        <select id="lldpVendor" onchange="showLldpCli()">
+                            <option value="cisco">Cisco Catalyst / Nexus (CDP & LLDP)</option>
+                            <option value="mikrotik">MikroTik RouterOS (/ip neighbor)</option>
+                            <option value="ruijie">Ruijie / Reyee Switch</option>
+                            <option value="aruba">HPE / Aruba CX Series</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Query Scope:</label>
+                        <select id="lldpScope" onchange="showLldpCli()">
+                            <option value="summary">1. Neighbor Summary Table (Port, Remote Name, Model)</option>
+                            <option value="detail">2. Detailed Information (IP Address, Remote Port, VLAN)</option>
+                            <option value="enable">3. Enable LLDP Globally & on Specific Interface</option>
+                        </select>
+                    </div>
+                </div>
+
+                <label>Operational Commands:</label>
+                <div class="input-with-copy">
+                    <textarea id="lldpCliResult" readonly rows="6" style="font-family:monospace; font-size:12px;"></textarea>
+                    <button class="copy-btn" onclick="copyField('lldpCliResult')">Copy Commands</button>
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 6.21 ANSI/TIA-606-C STRUCTURED CABLING & PATCH PANEL (patchPanelLabel) -->
+            <!-- =================================================================== -->
+            <div id="patchPanelLabel" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-primary">Structured Cabling</span>
+                    <span class="badge badge-success">TIA-606-C Standard</span>
+                </div>
+                <h3>🏷️ ANSI/TIA-606-C Structured Cabling & Patch Panel Label Formatter</h3>
+                <p class="tool-desc-text">បង្កើតកូដសម្គាល់ខ្សែបណ្តាញ Patch Panel, Faceplate, និង Server Rack ស្តង់ដារអន្តរជាតិ (Floor-Room-Rack-Panel-Port e.g., 2A-B01-PP01-24) ដើម្បីងាយស្រួលគ្រប់គ្រង និងដោះស្រាយពេលខ្សែមានបញ្ហា។</p>
+
+                <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(130px, 1fr)); gap:10px; margin-bottom:12px;">
+                    <div>
+                        <label>Floor / Level (ជាន់):</label>
+                        <input type="text" id="tiaFloor" value="2" oninput="generateTiaLabels()">
+                    </div>
+                    <div>
+                        <label>Server Room / Space:</label>
+                        <input type="text" id="tiaRoom" value="A" oninput="generateTiaLabels()">
+                    </div>
+                    <div>
+                        <label>Rack / Cabinet ID:</label>
+                        <input type="text" id="tiaRack" value="R01" oninput="generateTiaLabels()">
+                    </div>
+                    <div>
+                        <label>Patch Panel Code:</label>
+                        <input type="text" id="tiaPanel" value="PP01" oninput="generateTiaLabels()">
+                    </div>
+                    <div>
+                        <label>Port Numbers (e.g. 1-24):</label>
+                        <input type="text" id="tiaPorts" value="1-24" oninput="generateTiaLabels()">
+                    </div>
+                </div>
+
+                <label>Standardized TIA-606-C Label Print List:</label>
+                <div class="input-with-copy">
+                    <textarea id="tiaResult" readonly rows="8" style="font-family:monospace; font-size:12px;"></textarea>
+                    <button class="copy-btn" onclick="copyField('tiaResult')">Copy Labels</button>
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 7.24 WI-FI CO-CHANNEL & DFS RADAR INTERFERENCE SOP (docWifiInterference) -->
+            <!-- =================================================================== -->
+            <div id="docWifiInterference" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-danger">Wireless Drops</span>
+                    <span class="badge badge-primary">RF Engineering</span>
+                </div>
+                <h3>📶 Enterprise Wi-Fi Co-Channel (CCI), Adjacent & DFS Radar Interference SOP</h3>
+                <p class="tool-desc-text">នីតិវិធីដោះស្រាយបញ្ហា Wi-Fi យឺត ឬដាច់ៗដោយសារ Co-Channel Interference (CCI) លើ 2.4GHz/5GHz, ការកំណត់ Transmit Power កុំឱ្យជាន់គ្នា, និងការជៀសវាង DFS Channels (52-144) ក្បែរព្រលានយន្តហោះ/Weather Radar។</p>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:14px;">
+                    <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:12px; border-radius:8px;">
+                        <h4 style="margin-top:0; color:var(--primary);">1. ច្បាប់ 2.4GHz Non-Overlapping:</h4>
+                        <div style="font-size:12.5px; line-height:1.6; color:var(--text-main);">
+                            ប្រើតែ Channel <strong>1, 6, 11</strong> ប៉ុណ្ណោះ ជាមួយទទឹងរលក <strong>20 MHz</strong> ដាច់ខាតកុំប្រើ 40 MHz លើ 2.4GHz ព្រោះវាធ្វើឱ្យរលកជាន់គ្នា (Overlapping) ពេញបន្ទប់។
+                        </div>
+                    </div>
+                    <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:12px; border-radius:8px;">
+                        <h4 style="margin-top:0; color:var(--warning);">2. DFS Radar Channels (5GHz):</h4>
+                        <div style="font-size:12.5px; line-height:1.6; color:var(--text-main);">
+                            Channel 52 ដល់ 144 ត្រូវប្រើ Dynamic Frequency Selection។ បើមានរលក Radar អាកាសធាតុ AP នឹងបង្ខំចិត្តបិទរលក 5GHz រយៈពេល 60 វិនាទី បណ្តាលឱ្យ Clients ដាច់ភ្លាមៗ! គួរប្រើ UNII-1 (36-48) ឬ UNII-3 (149-161)។
+                        </div>
+                    </div>
+                </div>
+
+                <label>Wi-Fi RF Audit Commands (MikroTik / Cisco):</label>
+                <div class="input-with-copy">
+                    <textarea id="wifiRfAuditCmd" readonly rows="4" style="font-family:monospace; font-size:12px;">/interface wifi scan wifi1
+/interface wifi actual-configuration print
+show dot11 associations
+show ap auto-rf 802.11a</textarea>
+                    <button class="copy-btn" onclick="copyField('wifiRfAuditCmd')">Copy Audit Commands</button>
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- 7.25 DNS TUNNELING & C2 BEACONING HUNTING SOP (docDnsExfiltration) -->
+            <!-- =================================================================== -->
+            <div id="docDnsExfiltration" class="tool-section">
+                <div class="tool-header-badge">
+                    <span class="badge badge-danger">Cyber Defense</span>
+                    <span class="badge badge-warning">C2 Hunting</span>
+                </div>
+                <h3>🚨 DNS Tunneling, Data Exfiltration & C2 Beaconing Incident Response SOP</h3>
+                <p class="tool-desc-text">នីតិវិធីស៊ើបអង្កេត និងទប់ស្កាត់ការលួចទិន្នន័យសម្ងាត់ចេញតាមរយៈ DNS Queries (DNS Tunneling ដូចជា dnscat2, iodine) និងការទាក់ទងរវាងមេរោគជាមួយ C2 Server តាម DGA (Domain Generation Algorithms)។</p>
+
+                <div style="background:var(--card-inner-bg); border:1px solid var(--card-border); padding:14px; border-radius:8px; margin-bottom:12px;">
+                    <div style="font-weight:700; color:var(--danger); margin-bottom:8px;">🚩 សញ្ញាសម្គាល់ DNS Tunneling (Indicators of Compromise):</div>
+                    <ul style="margin:0; padding-left:20px; font-size:12.5px; line-height:1.7; color:var(--text-main);">
+                        <li><strong>High Shannon Entropy</strong>: ឈ្មោះ Subdomain មានតួអក្សរចៃដន្យច្រើនមិនអាចអានបាន (e.g., <code>a9f4c3b288e1a.attacker-domain.com</code>)។</li>
+                        <li><strong>Unusual Record Types</strong>: មានចំនួន Query ប្រភេទ TXT, NULL, ឬ CNAME ខ្ពស់ខុសប្រក្រតី។</li>
+                        <li><strong>High Query Volume</strong>: ម៉ាស៊ីនតែមួយបាញ់ query រាប់ពាន់ទៅកាន់ Domain តែមួយក្នុងរយៈពេលប៉ុន្មាននាទី។</li>
+                    </ul>
+                </div>
+
+                <label>Firewall Containment & PowerShell DNS Query Hunt:</label>
+                <div class="input-with-copy">
+                    <textarea id="dnsHuntCli" readonly rows="5" style="font-family:monospace; font-size:12px;"># 1. ស្វែងរក Process ដែលផ្ញើ DNS ច្រើនមិនប្រក្រតី
+Get-WinEvent -FilterHashtable @{LogName='Microsoft-Windows-DNS-Client/Operational'; ID=3008} -MaxEvents 50 | Select-Object TimeCreated, Message
+
+# 2. Block External Direct DNS (Force all clients to use Internal DNS Server only)
+# FortiGate / Cisco: Drop UDP/TCP 53 towards WAN unless source is Domain Controller</textarea>
+                    <button class="copy-btn" onclick="copyField('dnsHuntCli')">Copy Incident Playbook</button>
+                </div>
+            </div>
+
                         <div class="credit">
-                IT Support Ultimate Toolkit • Created & Developed by <span style="font-weight:700; color:var(--primary); cursor:pointer;" onclick="openAboutModal()" title="Click to view developer profile">MEUK THAREACH</span> • Version 3.8 Enterprise Pro (110 IT & CCTV Tools) • ⚡ 100% Offline Core
+                IT Support Ultimate Toolkit • Created & Developed by <span style="font-weight:700; color:var(--primary); cursor:pointer;" onclick="openAboutModal()" title="Click to view developer profile">MEUK THAREACH</span> • Version 3.9 Enterprise Pro (130 IT & CCTV Tools) • ⚡ 100% Offline Core
             </div>
         </div>
     </div>
@@ -5542,14 +6371,14 @@ Write-Host "SMB Sharing Configuration Repaired!" -ForegroundColor Green</textare
                 <span class="kbd-badge" style="cursor:pointer;" onclick="closeSpotlight()">ESC</span>
             </div>
             <div class="spotlight-filters">
-                <button type="button" class="spotlight-filter-pill active" onclick="setSpotlightCategory('all', this)" id="spPillAll">All (110)</button>
-                <button type="button" class="spotlight-filter-pill" onclick="setSpotlightCategory('network', this)" id="spPillNet"><img src="app-icon.png" alt="Network" style="width:13px; height:13px; object-fit:contain; border-radius:2px; vertical-align:middle; margin-right:4px;">Network (20)</button>
-                <button type="button" class="spotlight-filter-pill" onclick="setSpotlightCategory('windows', this)" id="spPillWin">🪟 Windows (12)</button>
-                <button type="button" class="spotlight-filter-pill" onclick="setSpotlightCategory('linux', this)" id="spPillLin">🐧 Linux (10)</button>
-                <button type="button" class="spotlight-filter-pill" onclick="setSpotlightCategory('coding', this)" id="spPillCod">💻 Coding (11)</button>
-                <button type="button" class="spotlight-filter-pill" onclick="setSpotlightCategory('cctv', this)" id="spPillCctv">📹 CCTV (11)</button>
-                <button type="button" class="spotlight-filter-pill" onclick="setSpotlightCategory('devices', this)" id="spPillDev">🖧 Devices (18)</button>
-                <button type="button" class="spotlight-filter-pill" onclick="setSpotlightCategory('troubleshoot', this)" id="spPillTrouble">📚 Troubleshoot (23)</button>
+                <button type="button" class="spotlight-filter-pill active" onclick="setSpotlightCategory('all', this)" id="spPillAll">All (130)</button>
+                <button type="button" class="spotlight-filter-pill" onclick="setSpotlightCategory('network', this)" id="spPillNet"><img src="app-icon.png" alt="Network" style="width:13px; height:13px; object-fit:contain; border-radius:2px; vertical-align:middle; margin-right:4px;">Network (24)</button>
+                <button type="button" class="spotlight-filter-pill" onclick="setSpotlightCategory('windows', this)" id="spPillWin">🪟 Windows (15)</button>
+                <button type="button" class="spotlight-filter-pill" onclick="setSpotlightCategory('linux', this)" id="spPillLin">🐧 Linux (13)</button>
+                <button type="button" class="spotlight-filter-pill" onclick="setSpotlightCategory('coding', this)" id="spPillCod">💻 Coding (14)</button>
+                <button type="button" class="spotlight-filter-pill" onclick="setSpotlightCategory('cctv', this)" id="spPillCctv">📹 CCTV (13)</button>
+                <button type="button" class="spotlight-filter-pill" onclick="setSpotlightCategory('devices', this)" id="spPillDev">🖧 Devices (21)</button>
+                <button type="button" class="spotlight-filter-pill" onclick="setSpotlightCategory('troubleshoot', this)" id="spPillTrouble">📚 Troubleshoot (25)</button>
             </div>
             <div class="spotlight-list" id="spotlightResults">
                 <!-- Rendered dynamically -->
@@ -5560,7 +6389,7 @@ Write-Host "SMB Sharing Configuration Repaired!" -ForegroundColor Green</textare
                     <span><span class="kbd-badge">↵ Enter</span> Open</span>
                     <span><span class="kbd-badge">Esc</span> Close</span>
                 </div>
-                <div id="spotlightMatchCount">110 tools & playbooks available</div>
+                <div id="spotlightMatchCount">130 tools & playbooks available</div>
             </div>
         </div>
     </div>
@@ -5643,7 +6472,7 @@ Write-Host "SMB Sharing Configuration Repaired!" -ForegroundColor Green</textare
                 </div>
                 <div style="background:var(--card-inner-bg); padding:10px; border-radius:8px; border:1px solid var(--card-border);">
                     <div style="color:var(--text-muted);">Tools Available:</div>
-                    <div style="font-weight:700; color:var(--success);">110 Pro Utilities (7 Categories)</div>
+                    <div style="font-weight:700; color:var(--success);">130 Pro Utilities (7 Categories)</div>
                 </div>
                 <div style="background:var(--card-inner-bg); padding:10px; border-radius:8px; border:1px solid var(--card-border);">
                     <div style="color:var(--text-muted);">Offline Engine:</div>
@@ -7360,6 +8189,25 @@ NAT Traversal = Keep-Alive`;
             if (typeof calcCamBandwidth === 'function') calcCamBandwidth();
             if (typeof generateStpCli === 'function') generateStpCli();
             if (typeof generateRadiusCli === 'function') generateRadiusCli();
+            if (typeof generateLagCli === 'function') generateLagCli();
+            if (typeof generatePrefixListCli === 'function') generatePrefixListCli();
+            if (typeof generateDnsZone === 'function') generateDnsZone();
+            if (typeof generateVrfCli === 'function') generateVrfCli();
+            if (typeof generateAdReplCli === 'function') generateAdReplCli();
+            if (typeof generateWsusCli === 'function') generateWsusCli();
+            if (typeof generateCertAuditCli === 'function') generateCertAuditCli();
+            if (typeof generateLinuxFwCli === 'function') generateLinuxFwCli();
+            if (typeof visualizeCron === 'function') visualizeCron();
+            if (typeof calcZfsCapacity === 'function') calcZfsCapacity();
+            if (typeof runRegexTest === 'function') runRegexTest();
+            if (typeof showSqlOptimization === 'function') showSqlOptimization();
+            if (typeof generateMarkdownSnippet === 'function') generateMarkdownSnippet();
+            if (typeof showCctvAudioGuide === 'function') showCctvAudioGuide();
+            if (typeof calcAnprOptics === 'function') calcAnprOptics();
+            if (typeof generateFhrpCli === 'function') generateFhrpCli();
+            if (typeof showLldpCli === 'function') showLldpCli();
+            if (typeof generateTiaLabels === 'function') generateTiaLabels();
+
 
  
             try {
@@ -7763,6 +8611,28 @@ NAT Traversal = Keep-Alive`;
             { id: 'radius8021x', cat: 'devices', icon: '🔑', nameEn: '802.1X Port Security & Dynamic VLAN Setup', nameKm: 'កូដ 802.1X Port Authentication ជាមួយ RADIUS', desc: '802.1X EAP and dynamic VLAN assignment' },
             { id: 'docEmailDeliverability', cat: 'troubleshoot', icon: '📧', nameEn: 'SPF, DKIM & DMARC Anti-Spam Deliverability', nameKm: 'ការពារកុំឱ្យ Email ធ្លាក់ចូល Spam (SPF/DKIM/DMARC)', desc: 'Email deliverability, SPF, DKIM, DMARC' },
             { id: 'docServerMigration', cat: 'troubleshoot', icon: '🔄', nameEn: 'Physical-to-Virtual (P2V) & Server Migration', nameKm: 'នីតិវិធី P2V Server & Upgrade Windows Server', desc: 'P2V migration runbook and active directory rules' },
+            // --- 20 NEW TOOLS IN 130 TOOLS EXPANSION ---
+            { id: 'lacpEtherchannel', cat: 'network', icon: '🔗', nameEn: 'LACP & Static EtherChannel LAG Builder', nameKm: 'បង្កើត Link Aggregation LACP (2x Bandwidth)', desc: '802.3ad LACP bonding for Cisco, MikroTik, FortiGate' },
+            { id: 'bgpPrefixList', cat: 'network', icon: '📑', nameEn: 'BGP Prefix-List & Route-Map Filter Builder', nameKm: 'ក្បួន Filter BGP Routes ជាមួយ ISP (AS-Prepend)', desc: 'BGP prefix-list, route-maps, local-preference' },
+            { id: 'dnsZoneBuilder', cat: 'network', icon: '🌐', nameEn: 'DNS Forward & Reverse Zone File Generator', nameKm: 'បង្កើត DNS Zone File (SOA, NS, A, MX, PTR)', desc: 'RFC 1035 BIND9 and Windows DNS zone builder' },
+            { id: 'vrfMultiTenant', cat: 'network', icon: '🔀', nameEn: 'VRF-Lite Multi-Tenant Network Isolator', nameKm: 'បំបែក Routing Table តាម VRF (Guest vs LAN)', desc: 'VRF-Lite route distinguishers and tenant separation' },
+            { id: 'adReplicationFix', cat: 'windows', icon: '🔄', nameEn: 'AD Replication Diagnostics & Lingering Objects', nameKm: 'ជួសជុល AD Replication មិនដំណើរការ (repadmin)', desc: 'Repadmin syncall, replsummary, lingering objects' },
+            { id: 'wsusTroubleshoot', cat: 'windows', icon: '🛠️', nameEn: 'WSUS Client Reset & Windows Update Doctor', nameKm: 'ជួសជុល Windows Update ជាប់គាំង & Reset WSUS', desc: 'SoftwareDistribution purge, WSUS re-authorization' },
+            { id: 'certStoreAudit', cat: 'windows', icon: '📜', nameEn: 'Windows Certificate Store & Expired SSL Scanner', nameKm: 'ស្កេន SSL/TLS ក្នុងម៉ាស៊ីនដែលជិតផុតកំណត់', desc: 'LocalMachine / Root / My cert audit in PowerShell' },
+            { id: 'iptablesUfwGen', cat: 'linux', icon: '🧱', nameEn: 'UFW & Iptables Linux Firewall Rule Generator', nameKm: 'បង្កើត Host Firewall លើ Linux (Rate Limit SSH)', desc: 'UFW and iptables anti-brute force and service rules' },
+            { id: 'crontabVisualizer', cat: 'linux', icon: '⏰', nameEn: 'Crontab Schedule Visualizer & Safe Execution', nameKm: 'ពន្យល់ & រៀបចំម៉ោងដំណើរការ Script (Crontab)', desc: '5-field cron builder with log redirection' },
+            { id: 'zfsBtrfsPool', cat: 'linux', icon: '💾', nameEn: 'ZFS RaidZ & Btrfs Storage Pool Sizing', nameKm: 'គណនាទំហំផ្ទុក ZFS RAIDZ1/Z2/Z3 & Mirror', desc: 'Usable pool storage and drive fault tolerance' },
+            { id: 'regexTester', cat: 'coding', icon: '🧩', nameEn: 'RegEx Tester & Common IT Patterns', nameKm: 'តេស្ត Regular Expression (IPv4, MAC, Email, UUID)', desc: 'Interactive offline regex tester with IT presets' },
+            { id: 'sqlQueryOptimizer', cat: 'coding', icon: '⚡', nameEn: 'SQL Query Index Optimizer & EXPLAIN Analyzer', nameKm: 'បង្កើនល្បឿន Database Query & ជៀសវាង Full Scan', desc: 'Index optimization rules, EXPLAIN and anti-patterns' },
+            { id: 'markdownCheatsheet', cat: 'coding', icon: '📝', nameEn: 'Technical Markdown Table & SOP Runbook Formatter', nameKm: 'បង្កើតតារាង Markdown, Alerts & Checklist សម្រាប់ IT', desc: 'GFM table formatter, alerts, codeblocks' },
+            { id: 'cctvAudioWiring', cat: 'cctv', icon: '🎙️', nameEn: 'CCTV Line-In Audio & Active Mic Schematic', nameKm: 'ប្លង់តខ្សែសំឡេងកាមេរ៉ា (Active Mic RCA 3-Wire)', desc: 'CCTV microphone wiring, codecs, two-way intercom' },
+            { id: 'anprLprCalc', cat: 'cctv', icon: '🚗', nameEn: 'ANPR / LPR License Plate Recognition Optics', nameKm: 'គណនាមុំ & ចម្ងាយថតស្លាកលេខឡាន (PPM & Angle)', desc: 'License plate camera tilt angle, shutter speed, lens' },
+            { id: 'hsrpVrrpGen', cat: 'devices', icon: '🔄', nameEn: 'HSRP / VRRP First Hop Gateway Redundancy', nameKm: 'កូដ High Availability Gateway Failover (HSRP/VRRP)', desc: 'First hop gateway redundancy for Cisco, MikroTik' },
+            { id: 'lldpCdpNeighbor', cat: 'devices', icon: '🔍', nameEn: 'LLDP & CDP Switch Neighbor Discovery', nameKm: 'ស្វែងរក Switch/AP ដែលដោតភ្ជាប់គ្នាដោយស្វ័យប្រវត្តិ', desc: 'Query connected neighbors and remote port IDs' },
+            { id: 'patchPanelLabel', cat: 'devices', icon: '🏷️', nameEn: 'ANSI/TIA-606-C Structured Cabling Labels', nameKm: 'បង្កើតកូដសម្គាល់ខ្សែ Patch Panel & Rack ស្តង់ដារ', desc: 'Structured cabling numbering schema formatter' },
+            { id: 'docWifiInterference', cat: 'troubleshoot', icon: '📶', nameEn: 'Wi-Fi Co-Channel (CCI) & DFS Radar SOP', nameKm: 'ដោះស្រាយរលក Wi-Fi ជាន់គ្នា & បញ្ហា DFS Radar', desc: 'Co-channel interference, non-overlapping channels, DFS' },
+            { id: 'docDnsExfiltration', cat: 'troubleshoot', icon: '🚨', nameEn: 'DNS Tunneling & C2 Exfiltration Incident Response', nameKm: 'ទប់ស្កាត់ការលួចទិន្នន័យតាម DNS Queries (C2 Hunting)', desc: 'DNS data exfiltration detection and firewall containment' },
+,
 
         ];
 
@@ -10075,8 +10945,8 @@ add chain=forward action=accept connection-nat-state=dstnat in-interface=ether1-
                         </div>
                         <div style="font-size:12.5px; line-height:1.6; color:var(--text-main);">
                             ${currentLang === 'km' 
-                                ? 'លោកអ្នកកំពុងដំណើរការ <strong>Version ' + APP_CURRENT_VERSION + ' Enterprise Desktop</strong> ក្នុងរបៀប Offline។<br>ឧបករណ៍ចំនួន <strong>១០៨ ក្នុងចំណោម ១១០</strong> (រួមទាំង CLI Generators, Dual VPN Matcher, CCTV Suite, Subnet, Cisco, FortiGate, AD, Playbooks, RAID Calc) ដំណើរការបាន <strong>១០០% ពេញលេញដោយមិនបាច់មានអ៊ីនធឺណិតឡើយ</strong>។' 
-                                : 'You are running <strong>Version ' + APP_CURRENT_VERSION + ' Enterprise Desktop</strong> in offline mode.<br>One hundred eight (108) out of 110 tools (including CLI Generators, Dual VPN Matcher, CCTV Suite, Subnet, Cisco, FortiGate, AD, Playbooks, RAID Calc) operate <strong>100% locally with zero internet required</strong>.'}
+                                ? 'លោកអ្នកកំពុងដំណើរការ <strong>Version ' + APP_CURRENT_VERSION + ' Enterprise Desktop</strong> ក្នុងរបៀប Offline។<br>ឧបករណ៍ចំនួន <strong>១២៨ ក្នុងចំណោម ១៣០</strong> (រួមទាំង CLI Generators, Dual VPN Matcher, CCTV Suite, Subnet, Cisco, FortiGate, AD, Playbooks, RAID Calc) ដំណើរការបាន <strong>១០០% ពេញលេញដោយមិនបាច់មានអ៊ីនធឺណិតឡើយ</strong>។' 
+                                : 'You are running <strong>Version ' + APP_CURRENT_VERSION + ' Enterprise Desktop</strong> in offline mode.<br>One hundred twenty-eight (128) out of 130 tools (including CLI Generators, Dual VPN Matcher, CCTV Suite, Subnet, Cisco, FortiGate, AD, Playbooks, RAID Calc) operate <strong>100% locally with zero internet required</strong>.'}
                         </div>
                     </div>
 
@@ -10142,7 +11012,7 @@ add chain=forward action=accept connection-nat-state=dstnat in-interface=ether1-
                         <div style="font-size:12.5px; line-height:1.6; color:var(--text-main);">
                             Installed: <strong>v${APP_CURRENT_VERSION} Enterprise Desktop</strong><br>
                             Author: <strong>${(versionData && versionData.author) || 'MEUK THAREACH'}</strong><br>
-                            Total Tools: <strong>110 Pro Utilities & Playbooks</strong> (7 Categories Active)<br>
+                            Total Tools: <strong>130 Pro Utilities & Playbooks</strong> (7 Categories Active)<br>
                             Update Engine: <strong style="color:var(--primary);">${isNative ? '⚡ Native Desktop Disk Bridge (Active)' : (detectedBridge ? '🌐 Local Server Bridge (Port 3000)' : 'Standalone Browser Mode')}</strong>
                         </div>
                     </div>
@@ -11087,6 +11957,497 @@ add chain=forward action=accept connection-nat-state=dstnat in-interface=ether1-
 
             let cli = 'aaa new-model\nradius server NPS_SERVER\n address ipv4 ' + ip + ' auth-port 1812 acct-port 1813\n key ' + key + '\nexit\n\naaa group server radius RADIUS_GROUP\n server name NPS_SERVER\nexit\n\naaa authentication dot1x default group RADIUS_GROUP\naaa authorization network default group RADIUS_GROUP\ndot1x system-auth-control\n\ninterface GigabitEthernet1/0/1\n switchport mode access\n authentication port-control auto\n dot1x pae authenticator\nexit';
             document.getElementById('radCliResult').value = cli;
+        }
+
+    
+        // --- 20 NEW TOOLS LOGIC (130 TOOLS EDITION) ---
+
+        // 1. LACP & EtherChannel Builder
+        function generateLagCli() {
+            let vendor = document.getElementById('lagVendor').value;
+            let grp = document.getElementById('lagGroupId').value.trim() || '1';
+            let ports = document.getElementById('lagPorts').value.trim() || 'Gi1/0/1, Gi1/0/2';
+            let mode = document.getElementById('lagMode').value;
+            let res = '';
+
+            if (vendor === 'cisco') {
+                res = '! Cisco IOS EtherChannel LACP Configuration\n';
+                res += 'default interface range ' + ports + '\n';
+                res += 'interface range ' + ports + '\n';
+                res += ' description TRUNK_LAG_GROUP_' + grp + '\n';
+                res += ' channel-group ' + grp + ' mode ' + mode + '\n';
+                res += ' no shutdown\nexit\n\n';
+                res += 'interface Port-channel ' + grp + '\n';
+                res += ' switchport mode trunk\n';
+                res += ' switchport trunk allowed vlan all\n';
+                res += ' spanning-tree portfast trunk\nexit\n\n! Verification:\nshow etherchannel ' + grp + ' summary';
+            } else if (vendor === 'mikrotik') {
+                let pArr = ports.split(',').map(p => p.trim()).filter(Boolean);
+                res = '# MikroTik RouterOS v7 Bonding LACP\n';
+                res += '/interface bonding add name=bond' + grp + ' slaves=' + pArr.join(',') + ' mode=802.3ad transmit-hash-policy=layer-2-and-3 lacp-rate=1sec\n';
+                res += '/interface bridge port add bridge=bridge1 interface=bond' + grp + '\n\n# Verification:\n/interface bonding print\n/interface bonding monitor bond' + grp;
+            } else {
+                let pArr = ports.split(',').map(p => p.trim()).filter(Boolean);
+                res = '# FortiGate 802.3ad Aggregate Interface\n';
+                res += 'config system interface\n';
+                res += '    edit "lag' + grp + '"\n';
+                res += '        set type aggregate\n';
+                res += '        set member ' + pArr.map(p => '"' + p + '"').join(' ') + '\n';
+                res += '        set lacp-mode active\n';
+                res += '        set lacp-speed fast\n';
+                res += '    next\nend\n\n# Verification:\ndiagnose netlink aggregate name lag' + grp;
+            }
+            document.getElementById('lagCliResult').value = res;
+        }
+
+        // 2. BGP Prefix-List Generator
+        function generatePrefixListCli() {
+            let name = document.getElementById('pfxListName').value.trim() || 'ISP_POLICY';
+            let subnet = document.getElementById('pfxSubnet').value.trim() || '203.0.113.0/24';
+            let act = document.getElementById('pfxAction').value;
+            let asn = document.getElementById('pfxAsn').value.trim() || '64512';
+
+            let cli = '! 1. Standard IP Prefix-List Definition\n';
+            if (act === 'deny') {
+                cli += 'ip prefix-list ' + name + ' permit 10.0.0.0/8 le 32\n';
+                cli += 'ip prefix-list ' + name + ' permit 172.16.0.0/12 le 32\n';
+                cli += 'ip prefix-list ' + name + ' permit 192.168.0.0/16 le 32\n';
+                cli += 'ip prefix-list ' + name + ' permit 127.0.0.0/8 le 32\n\n';
+                cli += '! 2. Route-Map to Deny Bogons\n';
+                cli += 'route-map RM_' + name + ' deny 10\n';
+                cli += ' match ip address prefix-list ' + name + '\nexit\n';
+                cli += 'route-map RM_' + name + ' permit 20\nexit';
+            } else if (act === 'permit_prepend') {
+                cli += 'ip prefix-list ' + name + ' permit ' + subnet + '\n\n';
+                cli += '! 2. Route-Map with AS-Path Prepending 2x\n';
+                cli += 'route-map RM_' + name + ' permit 10\n';
+                cli += ' match ip address prefix-list ' + name + '\n';
+                cli += ' set as-path prepend ' + asn + ' ' + asn + '\nexit\n';
+                cli += 'route-map RM_' + name + ' deny 99\nexit';
+            } else {
+                cli += 'ip prefix-list ' + name + ' permit ' + subnet + '\n\n';
+                cli += '! 2. Route-Map with High Local Preference\n';
+                cli += 'route-map RM_' + name + ' permit 10\n';
+                cli += ' match ip address prefix-list ' + name + '\n';
+                cli += ' set local-preference 200\nexit\n';
+                cli += 'route-map RM_' + name + ' deny 99\nexit';
+            }
+            cli += '\n\n! 3. Apply to BGP Neighbor:\nrouter bgp ' + asn + '\n neighbor 198.51.100.1 route-map RM_' + name + ' out\nexit';
+            document.getElementById('pfxCliResult').value = cli;
+        }
+
+        // 3. DNS Zone Generator
+        function generateDnsZone() {
+            let domain = document.getElementById('dnsZoneDomain').value.trim() || 'company.internal';
+            let ns = document.getElementById('dnsZoneNs').value.trim() || 'ns1.company.internal.';
+            let email = document.getElementById('dnsZoneEmail').value.trim() || 'admin.company.internal.';
+            let ip = document.getElementById('dnsZoneHostIp').value.trim() || '192.168.10.50';
+
+            let serial = '2026091601';
+            let res = '; BIND9 / Standard RFC 1035 Zone File for ' + domain + '\n';
+            res += '$TTL 86400\n';
+            res += '@   IN  SOA ' + ns + ' ' + email + ' (\n';
+            res += '        ' + serial + ' ; Serial\n';
+            res += '        3600       ; Refresh (1 hour)\n';
+            res += '        1800       ; Retry (30 mins)\n';
+            res += '        1209600    ; Expire (2 weeks)\n';
+            res += '        86400 )    ; Minimum TTL (1 day)\n;\n';
+            res += '; Nameservers\n';
+            res += '@       IN  NS      ' + ns + '\n;\n';
+            res += '; Host Records\n';
+            res += '@       IN  A       ' + ip + '\n';
+            res += 'ns1     IN  A       ' + ip + '\n';
+            res += 'www     IN  CNAME   @\n';
+            res += 'mail    IN  A       ' + ip + '\n';
+            res += '@       IN  MX  10  mail.' + domain + '.\n';
+            document.getElementById('dnsZoneResult').value = res;
+        }
+
+        // 4. VRF-Lite Generator
+        function generateVrfCli() {
+            let name = document.getElementById('vrfName').value.trim() || 'GUEST_VRF';
+            let rd = document.getElementById('vrfRd').value.trim() || '65000:100';
+            let intf = document.getElementById('vrfIntf').value.trim() || 'Gi0/0/1.100';
+            let ip = document.getElementById('vrfIp').value.trim() || '10.100.1.1 255.255.255.0';
+
+            let cli = '! --- CISCO IOS VRF CONFIGURATION ---\nip vrf ' + name + '\n rd ' + rd + '\nexit\n\n';
+            cli += 'interface ' + intf + '\n encapsulation dot1Q 100\n ip vrf forwarding ' + name + '\n ip address ' + ip + '\n no shutdown\nexit\n\n';
+            cli += '! Default route inside VRF:\nip route vrf ' + name + ' 0.0.0.0 0.0.0.0 10.100.1.254\n\n';
+            cli += '# --- MIKROTIK ROUTEROS v7 VRF ---\n/ip route vrf add name=' + name + ' interfaces=' + intf + '\n';
+            cli += '/ip route add dst-address=0.0.0.0/0 gateway=10.100.1.254@' + name + ' routing-table=' + name;
+            document.getElementById('vrfCliResult').value = cli;
+        }
+
+        // 5. AD Replication Diagnostics
+        function generateAdReplCli() {
+            let act = document.getElementById('adReplAction').value;
+            let dc = document.getElementById('adReplDc').value.trim() || 'DC01';
+            let res = '';
+
+            if (act === 'summary') {
+                res = '# 1. Check Replication Health Summary Across All DCs\nrepadmin /replsummary\n\n# 2. View inbound replication partners and errors\nrepadmin /showrepl * /errorsonly';
+            } else if (act === 'syncall') {
+                res = '# Force Synchronization across all AD partitions (Schema, Config, Domain)\nrepadmin /syncall /AdeP\n\n# Verify if sync completed without RPC errors:\nrepadmin /showrepl ' + dc;
+            } else if (act === 'lingering') {
+                res = '# Remove Lingering Objects (Run on source DC referencing reliable partner)\nrepadmin /removelingeringobjects ' + dc + ' dc02-guid "DC=company,DC=local" /advisory_mode\n\n# Note: Remove /advisory_mode to commit deletion.';
+            } else if (act === 'kcc') {
+                res = '# Re-run Knowledge Consistency Checker (KCC) to recalculate broken topology\nrepadmin /kcc *\nrepadmin /kcc ' + dc;
+            } else {
+                res = '# Enforce Strict Replication Consistency to prevent reviving deleted objects\nrepadmin /regkey ' + dc + ' +strictReplicationConsistency';
+            }
+            document.getElementById('adReplResult').value = res;
+        }
+
+        // 6. WSUS Repair Doctor
+        function generateWsusCli() {
+            let mode = document.getElementById('wsusMode').value;
+            let url = document.getElementById('wsusUrl').value.trim() || 'http://wsus:8530';
+            let res = '';
+
+            if (mode === 'full_reset') {
+                res = '# Stop Windows Update Services\nStop-Service wuauserv, cryptSvc, bits, msiserver -Force\n\n# Purge SoftwareDistribution & Catroot2 cache\nRename-Item -Path "$env:windir\\SoftwareDistribution" -NewName "SoftwareDistribution.old" -Force -ErrorAction SilentlyContinue\nRename-Item -Path "$env:windir\\System32\\catroot2" -NewName "catroot2.old" -Force -ErrorAction SilentlyContinue\n\n# Restart Services\nStart-Service wuauserv, cryptSvc, bits, msiserver\n\n# Trigger Detection\n(New-Object -ComObject Microsoft.Update.AutoUpdate).DetectNow()';
+            } else if (mode === 'wsus_detect') {
+                res = '# Reset WSUS Client Authorization and Force Report\n$wsusKey = "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate"\nSet-ItemProperty -Path $wsusKey -Name "WUServer" -Value "' + url + '" -Force\nSet-ItemProperty -Path $wsusKey -Name "WUStatusServer" -Value "' + url + '" -Force\n\n# Force re-registration\nwuauclt /resetauthorization /detectnow\nusoclient StartScan';
+            } else if (mode === 'dism_online') {
+                res = '# DISM Component Store Health Check & Repair\nDISM.exe /Online /Cleanup-image /Restorehealth\n\n# SFC System File Checker\nsfc /scannow';
+            } else {
+                res = '# Query Current WSUS Configuration in Registry\nGet-ItemProperty "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate" | Format-List WUServer, WUStatusServer, TargetGroup';
+            }
+            document.getElementById('wsusCliResult').value = res;
+        }
+
+        // 7. Certificate Store Audit
+        function generateCertAuditCli() {
+            let target = document.getElementById('certStoreTarget').value;
+            let days = parseInt(document.getElementById('certDays').value, 10) || 45;
+            let path = 'Cert:\\LocalMachine\\My';
+            if (target === 'localmachine_root') path = 'Cert:\\LocalMachine\\Root';
+            if (target === 'currentuser_my') path = 'Cert:\\CurrentUser\\My';
+
+            let cli = '# Audit Certificates Expiring within ' + days + ' days in ' + path + '\n';
+            cli += 'Get-ChildItem -Path "' + path + '" | Where-Object {\n';
+            cli += '    $_.NotAfter -le (Get-Date).AddDays(' + days + ') -and $_.NotAfter -ge (Get-Date)\n';
+            cli += '} | Select-Object Subject, Thumbprint, NotAfter, @{n="DaysRemaining";e={($_.NotAfter - (Get-Date)).Days}} | Format-Table -AutoSize';
+            document.getElementById('certAuditResult').value = cli;
+        }
+
+        // 8. Linux Firewall (UFW/Iptables)
+        function generateLinuxFwCli() {
+            let engine = document.getElementById('fwEngine').value;
+            let src = document.getElementById('fwSrc').value.trim() || 'any';
+            let port = document.getElementById('fwPort').value.trim() || '22';
+            let act = document.getElementById('fwAction').value;
+            let cli = '';
+
+            if (engine === 'ufw') {
+                if (act === 'limit_ssh') {
+                    cli = '# UFW Rate Limit SSH (Deny IP if > 6 connections in 30s)\nsudo ufw limit ' + port + '/tcp comment "Rate limit SSH"\nsudo ufw enable\nsudo ufw status numbered';
+                } else if (act === 'deny') {
+                    cli = '# UFW Deny Rule\nsudo ufw deny from ' + src + ' to any port ' + port + '\nsudo ufw status numbered';
+                } else {
+                    cli = '# UFW Allow Rule\nsudo ufw allow from ' + src + ' to any port ' + port + ' proto tcp comment "Allowed Service"\nsudo ufw status numbered';
+                }
+            } else {
+                if (act === 'limit_ssh') {
+                    cli = '# Iptables Rate Limit SSH Brute-Force\nsudo iptables -A INPUT -p tcp --dport ' + port + ' -m state --state NEW -m recent --set\nsudo iptables -A INPUT -p tcp --dport ' + port + ' -m state --state NEW -m recent --update --seconds 60 --hitcount 5 -j DROP\nsudo iptables -A INPUT -p tcp --dport ' + port + ' -j ACCEPT';
+                } else if (act === 'deny') {
+                    cli = '# Iptables Drop Traffic\nsudo iptables -A INPUT -s ' + src + ' -p tcp --dport ' + port + ' -j DROP';
+                } else {
+                    cli = '# Iptables Allow Traffic\nsudo iptables -A INPUT -s ' + src + ' -p tcp --dport ' + port + ' -m state --state NEW,ESTABLISHED -j ACCEPT';
+                }
+            }
+            document.getElementById('fwCliResult').value = cli;
+        }
+
+        // 9. Crontab Schedule Visualizer
+        function visualizeCron() {
+            let m = document.getElementById('cronMin').value.trim() || '*';
+            let h = document.getElementById('cronHour').value.trim() || '*';
+            let dom = document.getElementById('cronDom').value.trim() || '*';
+            let mon = document.getElementById('cronMon').value.trim() || '*';
+            let dow = document.getElementById('cronDow').value.trim() || '*';
+            let cmd = document.getElementById('cronCmd').value.trim() || '/usr/local/bin/backup.sh';
+
+            let line = m + ' ' + h + ' ' + dom + ' ' + mon + ' ' + dow + ' ' + cmd + ' >> /var/log/cron.log 2>&1';
+            document.getElementById('cronFinalResult').value = line;
+
+            let desc = 'ដំណើរការ';
+            if (m === '*/5') desc += 'រៀងរាល់ 5 នាទីម្តង';
+            else if (m === '*/15') desc += 'រៀងរាល់ 15 នាទីម្តង';
+            else if (m === '0' && h === '*') desc += 'រៀងរាល់ម៉ោងគត់';
+            else if (m === '0' && h !== '*' && dow === '*') desc += 'រៀងរាល់ថ្ងៃនៅម៉ោង ' + h + ':00';
+            else if (dow === '1-5') desc += 'រៀងរាល់ថ្ងៃច័ន្ទ ដល់សុក្រ នៅម៉ោង ' + h + ':' + (m.length === 1 ? '0' + m : m);
+            else desc += 'តាមកាលវិភាគ: Min=' + m + ', Hour=' + h + ', Day=' + dom + ', Mon=' + mon + ', Weekday=' + dow;
+
+            document.getElementById('cronHumanDesc').innerText = desc + ' (' + m + ' ' + h + ' ' + dom + ' ' + mon + ' ' + dow + ')';
+        }
+
+        // 10. ZFS & Btrfs Pool Sizing
+        function calcZfsCapacity() {
+            let tb = parseFloat(document.getElementById('zfsDriveTb').value) || 8;
+            let count = parseInt(document.getElementById('zfsDriveCount').value, 10) || 6;
+            let type = document.getElementById('zfsType').value;
+
+            let rawTb = tb * count;
+            let usableTb = 0;
+            let faultText = '';
+
+            if (type === 'raidz2') {
+                usableTb = Math.max(0, tb * (count - 2));
+                faultText = 'Up to 2 Drives Failure Safe';
+            } else if (type === 'raidz1') {
+                usableTb = Math.max(0, tb * (count - 1));
+                faultText = '1 Drive Failure Safe';
+            } else if (type === 'raidz3') {
+                usableTb = Math.max(0, tb * (count - 3));
+                faultText = 'Up to 3 Drives Failure Safe';
+            } else {
+                usableTb = (tb * count) / 2;
+                faultText = '1 Drive per Mirrored VDev';
+            }
+
+            document.getElementById('zfsRawRes').innerText = rawTb + ' TB';
+            document.getElementById('zfsUsableRes').innerText = usableTb.toFixed(1) + ' TB';
+            document.getElementById('zfsFaultRes').innerText = faultText;
+
+            let cli = '# ZFS Storage Pool Creation (' + type.toUpperCase() + ')\n';
+            cli += 'zpool create -f -o ashift=12 tank ' + type + ' /dev/sd[b-g]\n';
+            cli += 'zpool status tank';
+            document.getElementById('zfsCliResult').value = cli;
+        }
+
+        // 11. RegEx Tester
+        function applyRegexPreset() {
+            let p = document.getElementById('regexPresetSelect').value;
+            let input = document.getElementById('regexInput');
+            if (p === 'ipv4') {
+                input.value = '\\b(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\b\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\b';
+            } else if (p === 'mac') {
+                input.value = '([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})';
+            } else if (p === 'email') {
+                input.value = '[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}';
+            } else if (p === 'uuid') {
+                input.value = '[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}';
+            } else {
+                input.value = 'ip address (\\d{1,3}(?:\\.\\d{1,3}){3}) (\\d{1,3}(?:\\.\\d{1,3}){3})';
+            }
+            runRegexTest();
+        }
+
+        function runRegexTest() {
+            let pat = document.getElementById('regexInput').value;
+            let text = document.getElementById('regexTestText').value;
+            let out = document.getElementById('regexMatchOutput');
+            try {
+                let re = new RegExp(pat, 'g');
+                let matches = text.match(re);
+                if (matches && matches.length > 0) {
+                    out.style.color = 'var(--success)';
+                    out.innerText = matches.length + ' match(es) found: [' + matches.join(', ') + ']';
+                } else {
+                    out.style.color = 'var(--text-muted)';
+                    out.innerText = 'No matches found.';
+                }
+            } catch (err) {
+                out.style.color = 'var(--danger)';
+                out.innerText = 'RegEx Syntax Error: ' + err.message;
+            }
+        }
+
+        // 12. SQL Index Optimizer
+        function showSqlOptimization() {
+            let topic = document.getElementById('sqlTopicSelect').value;
+            let title = document.getElementById('sqlExplainTitle');
+            let body = document.getElementById('sqlExplainBody');
+            let res = document.getElementById('sqlCodeResult');
+
+            if (topic === 'composite_index') {
+                title.innerText = 'Leftmost Prefix Rule ក្នុង Composite Index:';
+                body.innerText = 'ពេលបង្កើត Index លើ (store_id, created_at, status) Query នឹងទាញយកល្បឿនលឿនទាល់តែ WHERE clause មាន store_id ជាចម្បង។ បើ Query រកតែ created_at ដោយគ្មាន store_id Database នឹងធ្វើ Full Table Scan!';
+                res.value = '-- Correct Indexing Order:\nCREATE INDEX idx_orders_store_date ON orders(store_id, created_at DESC);\n\n-- High Speed Query (Index Hit):\nSELECT id, total FROM orders WHERE store_id = 101 AND created_at >= "2026-09-01";';
+            } else if (topic === 'explain_analyze') {
+                title.innerText = 'របៀបមើល EXPLAIN / EXPLAIN ANALYZE:';
+                body.innerText = 'ពិនិត្យមើលតម្លៃ "type: ALL" (Full Table Scan) ធៀបនឹង "type: ref/range" (Index Seek) និងចំនួន "rows" ដែលត្រូវ Scan។ គោលដៅគឺធ្វើឱ្យ rows តិចបំផុតតាមដែលអាចធ្វើទៅបាន។';
+                res.value = 'EXPLAIN ANALYZE\nSELECT users.id, users.name, COUNT(orders.id) \nFROM users \nLEFT JOIN orders ON users.id = orders.user_id \nWHERE users.status = "active" \nGROUP BY users.id;';
+            } else if (topic === 'like_wildcard') {
+                title.innerText = 'កំហុស Leading Wildcard (LIKE %abc):';
+                body.innerText = 'ការប្រើប្រាស់ LIKE %keyword នឹងបដិសេធ B-Tree Index ទាំងស្រុងព្រោះ Database មិនអាចដឹងតួអក្សរផ្តើម។ បើចង់ស្វែងរកពាក្យកណ្តាល ត្រូវប្រើ Full-Text Index (MATCH...AGAINST) ឬ GIN Index លើ Postgres។';
+                res.value = '-- Bad (Full Table Scan):\nSELECT * FROM products WHERE name LIKE "%camera%";\n\n-- Good (Full-Text Search):\nALTER TABLE products ADD FULLTEXT(name);\nSELECT * FROM products WHERE MATCH(name) AGAINST("camera" IN BOOLEAN MODE);';
+            } else if (topic === 'select_star') {
+                title.innerText = 'ផលប៉ះពាល់នៃ SELECT * លើ Memory & I/O:';
+                body.innerText = 'SELECT * បង្ខំឱ្យ Disk I/O ទាញយកគ្រប់ Column រួមទាំង TEXT/BLOB ធំៗ បណ្តាលឱ្យរារាំង "Covering Index" (ដែលឆ្លើយតប Query ភ្លាមៗពី RAM Index ដោយមិនបាច់បើក Table)។';
+                res.value = '-- Fast Covering Index Query:\nCREATE INDEX idx_user_lookup ON users(email, status);\n\n-- Responds purely from Index without touching table pages:\nSELECT email, status FROM users WHERE email = "user@company.com";';
+            } else {
+                title.innerText = 'ដោះស្រាយ ORM N+1 Query Problem:';
+                body.innerText = 'បញ្ហា N+1 កើតឡើងពេលកូដទាញយក 100 posts រួច Loop ធ្វើ 100 queries ផ្សេងទៀតដើម្បីទាញយក Author របស់ Post នីមួយៗ។ ដំណោះស្រាយគឺប្រើ Eager Loading (JOIN ឬ WHERE IN)។';
+                res.value = '-- Instead of 101 queries, execute 1 optimized JOIN query:\nSELECT p.*, u.name, u.avatar \nFROM posts p \nJOIN users u ON p.author_id = u.id \nWHERE p.published = 1;';
+            }
+        }
+
+        // 13. Technical Markdown Generator
+        function generateMarkdownSnippet() {
+            let cols = document.getElementById('mdCols').value.split(',').map(c => c.trim()).filter(Boolean);
+            let comp = document.getElementById('mdComponent').value;
+            let out = '';
+
+            if (comp === 'table') {
+                out = '| ' + cols.join(' | ') + ' |\n';
+                out += '| ' + cols.map(() => '---').join(' | ') + ' |\n';
+                out += '| ' + cols.map((c, i) => 'Sample ' + (i + 1)).join(' | ') + ' |\n';
+                out += '| ' + cols.map((c, i) => 'Value ' + (i + 1)).join(' | ') + ' |';
+            } else if (comp === 'alerts') {
+                out = '> [!NOTE]\n> Background context or useful configuration details.\n\n> [!IMPORTANT]\n> Critical prerequisites before restarting services.\n\n> [!WARNING]\n> Potential breaking change or network disruption.';
+            } else if (comp === 'checklist') {
+                out = '### IT Maintenance Checklist:\n- [x] Verify off-site immutable backup\n- [x] Test UPS battery runtime capacity\n- [ ] Install pending security patches\n- [ ] Review Active Directory replication health';
+            } else {
+                out = '~~~bash\n# Run diagnostic command\nping -c 4 192.168.1.1\nip route show\n~~~';
+            }
+            document.getElementById('mdOutput').value = out;
+        }
+
+        // 14. CCTV Audio Wiring
+        function showCctvAudioGuide() {
+            let mic = document.getElementById('cctvMicType').value;
+            let title = document.getElementById('cctvAudioWiringTitle');
+            let body = document.getElementById('cctvAudioWiringBody');
+            let notes = document.getElementById('cctvAudioNotes');
+
+            if (mic === 'active_mic') {
+                title.innerText = 'ប្លង់តខ្សែ Active Microphone (3 ខ្សែ):';
+                body.innerHTML = '• ខ្សែក្រហម (+12V Power): ភ្ជាប់ទៅភ្លើង DC 12V Adapter<br>• ខ្សែខ្មៅ (GND Ground): ភ្ជាប់រួមជាមួយ GND របស់ Adapter និង GND របស់ខ្សែ RCA/Camera<br>• ខ្សែស ឬលឿង (Audio Signal): ភ្ជាប់ទៅកាន់ RCA Center Pin (Line-In) របស់ Camera ឬ NVR';
+                notes.value = '1. ដាច់ខាតកុំយកភ្លើង 12V ដោតប៉ះខ្សែ Audio Signal ព្រោះវានឹងធ្វើឱ្យឆេះ IC Audio របស់កាមេរ៉ា!\n2. ត្រូវបើកជម្រើស "Audio Stream" ឬ "Video & Audio" ក្នុង Video Encode Settings លើ NVR។';
+            } else if (mic === 'builtin_mic') {
+                title.innerText = 'កាមេរ៉ាដែលមាន Built-in Mic ស្រាប់:';
+                body.innerHTML = 'កាមេរ៉ាបញ្ជូនសំឡេងតាមខ្សែ LAN (PoE) ស្រាប់។ មិនបាច់តខ្សែបន្ថែមទេ ប៉ុន្តែត្រូវចូលទៅ Configuration > Video/Audio > Stream Type > ជ្រើសរើស <strong>Video & Audio</strong> (បើទុកតែ Video វានឹងគ្មានសំឡេងទេ)។';
+                notes.value = 'NVR Web Interface:\n1. Configuration -> Video/Audio -> Stream Type = Video & Audio\n2. Audio Encoding = AAC ឬ G.711u\n3. Volume Level = 80%';
+            } else {
+                title.innerText = 'ប្លង់ Two-Way Audio Talk (Intercom):';
+                body.innerHTML = '• Audio Out (NVR/Camera): ភ្ជាប់ទៅកាន់ Active Speaker (Horn / Amplified Speaker)<br>• Audio In (Mic): ភ្ជាប់ទៅកាន់ Pickup Mic<br>• អនុញ្ញាតឱ្យសន្តិសុខនិយាយឆ្លើយឆ្លងពីទូរស័ព្ទ (Hik-Connect / DMSS) ទៅកាន់ Speaker ផ្ទាល់។';
+                notes.value = 'Impedance Match: Audio Out របស់កាមេរ៉ាជាទូទៅបញ្ចេញកម្លាំង Line-Out (~1Vpp) ដូច្នេះត្រូវប្រើ Powered Speaker ដែលមាន Amplifier ភ្ជាប់ជាមួយ។';
+            }
+        }
+
+        // 15. ANPR Optics Calculator
+        function calcAnprOptics() {
+            let speed = parseFloat(document.getElementById('anprSpeed').value) || 40;
+            let h = parseFloat(document.getElementById('anprHeight').value) || 3.5;
+            let dist = parseFloat(document.getElementById('anprDist').value) || 15;
+
+            // Tilt angle
+            let tiltRad = Math.atan(h / dist);
+            let tiltDeg = (tiltRad * 180 / Math.PI).toFixed(1);
+
+            let shutter = '1/1000s';
+            if (speed > 80) shutter = '1/2000s';
+            else if (speed < 20) shutter = '1/500s';
+
+            let lensText = '8 - 32mm Varifocal';
+            if (dist > 25) lensText = '16 - 50mm Telephoto';
+            else if (dist < 8) lensText = '2.8 - 12mm Standard';
+
+            document.getElementById('anprTiltRes').innerText = tiltDeg + '° ' + (tiltDeg <= 30 ? '(Optimal < 30°)' : '(Too Steep! Move back)');
+            document.getElementById('anprShutterRes').innerText = shutter;
+            document.getElementById('anprLensRes').innerText = lensText;
+
+            let rec = '1. Angle Rule: Vertical tilt & horizontal angle must be UNDER 30 degrees to avoid plate distortion.\n';
+            rec += '2. Pixel Density: Ensure at least 150-200 Pixels Per Meter (PPM) across the license plate.\n';
+            rec += '3. Lighting: Use high-power Supplemental IR or White Light to illuminate plates at night without headlight blinding.';
+            document.getElementById('anprNotes').value = rec;
+        }
+
+        // 16. HSRP / VRRP Redundancy
+        function generateFhrpCli() {
+            let proto = document.getElementById('fhrpProto').value;
+            let vip = document.getElementById('fhrpVirtualIp').value.trim() || '192.168.1.1';
+            let prio = parseInt(document.getElementById('fhrpPrio').value, 10) || 110;
+            let intf = document.getElementById('fhrpIntf').value.trim() || 'Vlan 10';
+
+            let cli = '';
+            if (proto === 'hsrp') {
+                cli = '! --- PRIMARY ROUTER (Active) ---\n';
+                cli += 'interface ' + intf + '\n';
+                cli += ' standby 1 ip ' + vip + '\n';
+                cli += ' standby 1 priority ' + prio + '\n';
+                cli += ' standby 1 preempt\n';
+                cli += ' standby 1 authentication md5 key-string SecretKey123\nexit\n\n';
+                cli += '! --- SECONDARY ROUTER (Standby) ---\n';
+                cli += 'interface ' + intf + '\n';
+                cli += ' standby 1 ip ' + vip + '\n';
+                cli += ' standby 1 priority 100\n';
+                cli += ' standby 1 preempt\n';
+                cli += ' standby 1 authentication md5 key-string SecretKey123\nexit';
+            } else if (proto === 'vrrp_cisco') {
+                cli = '! --- CISCO VRRP PRIMARY ---\n';
+                cli += 'interface ' + intf + '\n';
+                cli += ' vrrp 1 ip ' + vip + '\n';
+                cli += ' vrrp 1 priority ' + prio + '\n';
+                cli += ' vrrp 1 preempt\nexit\n\n';
+                cli += '! --- CISCO VRRP BACKUP ---\n';
+                cli += 'interface ' + intf + '\n';
+                cli += ' vrrp 1 ip ' + vip + '\n';
+                cli += ' vrrp 1 priority 100\nexit';
+            } else {
+                cli = '# --- MIKROTIK VRRP CONFIGURATION ---\n';
+                cli += '# Primary Router:\n';
+                cli += '/interface vrrp add interface=ether1 name=vrrp1 vrid=1 priority=' + prio + '\n';
+                cli += '/ip address add address=' + vip + '/24 interface=vrrp1\n\n';
+                cli += '# Backup Router:\n';
+                cli += '/interface vrrp add interface=ether1 name=vrrp1 vrid=1 priority=100\n';
+                cli += '/ip address add address=' + vip + '/24 interface=vrrp1';
+            }
+            document.getElementById('fhrpCliResult').value = cli;
+        }
+
+        // 17. LLDP & CDP Discovery
+        function showLldpCli() {
+            let vendor = document.getElementById('lldpVendor').value;
+            let scope = document.getElementById('lldpScope').value;
+            let res = '';
+
+            if (vendor === 'cisco') {
+                if (scope === 'summary') res = 'show cdp neighbors\nshow lldp neighbors';
+                else if (scope === 'detail') res = 'show cdp neighbors detail\nshow lldp neighbors detail';
+                else res = 'configure terminal\n cdp run\n lldp run\n interface range Gi1/0/1-48\n  cdp enable\n  lldp transmit\n  lldp receive\n exit';
+            } else if (vendor === 'mikrotik') {
+                if (scope === 'summary') res = '/ip neighbor print';
+                else if (scope === 'detail') res = '/ip neighbor print detail';
+                else res = '/ip neighbor discovery-settings set discover-interface-list=discover';
+            } else if (vendor === 'ruijie') {
+                if (scope === 'summary') res = 'show lldp neighbors\nshow lldp info';
+                else if (scope === 'detail') res = 'show lldp neighbors detail';
+                else res = 'configure terminal\n lldp enable';
+            } else {
+                if (scope === 'summary') res = 'show lldp info remote-device';
+                else if (scope === 'detail') res = 'show lldp info remote-device detail';
+                else res = 'configure terminal\n lldp run';
+            }
+            document.getElementById('lldpCliResult').value = res;
+        }
+
+        // 18. TIA-606-C Structured Cabling
+        function generateTiaLabels() {
+            let fl = document.getElementById('tiaFloor').value.trim() || '1';
+            let rm = document.getElementById('tiaRoom').value.trim() || 'A';
+            let rk = document.getElementById('tiaRack').value.trim() || 'R01';
+            let pn = document.getElementById('tiaPanel').value.trim() || 'PP01';
+            let range = document.getElementById('tiaPorts').value.trim() || '1-24';
+
+            let start = 1, end = 24;
+            if (range.includes('-')) {
+                let parts = range.split('-');
+                start = parseInt(parts[0], 10) || 1;
+                end = parseInt(parts[1], 10) || 24;
+            }
+
+            let lines = [];
+            lines.push('# ANSI/TIA-606-C Standard Label Schema:');
+            lines.push('# Format: [Floor][Room]-[Rack]-[Panel]-[Port]');
+            lines.push('');
+            for (let i = start; i <= end; i++) {
+                let portStr = i < 10 ? '0' + i : '' + i;
+                lines.push(fl + rm + '-' + rk + '-' + pn + '-' + portStr + '  <--->  Faceplate Jack: ' + fl + rm + '-WA-' + portStr);
+            }
+            document.getElementById('tiaResult').value = lines.join('\n');
         }
 
         </script>
